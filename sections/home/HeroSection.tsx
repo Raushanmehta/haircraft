@@ -16,32 +16,9 @@ interface HeroSlide {
     neonText?: string;
 }
 
-const slides: HeroSlide[] = [
-    {
-        id: 1,
-        subtitle: "LOOK GOOD | FEEL GREAT",
-        titlePart1: "Your Style",
-        titlePart2: "Our Expertise",
-        description: "From precision haircuts to transformative styles, we bring out the best version of you.",
-        image: "/images/banner1.jpg ",
-    },
-    {
-        id: 2,
-        subtitle: "PREMIUM GROOMING | MODERN CUTS",
-        titlePart1: "Redefining",
-        titlePart2: "Your Look",
-        description: "Experience world-class hair care and bespoke styling tailored to match your unique personality.",
-        image: "https://i.pinimg.com/1200x/3d/aa/06/3daa061d55d15d84381e7a8fee39795a.jpg",
-    },
-    {
-        id: 3,
-        subtitle: "LUXURY SALON EXPERIENCE",
-        titlePart1: "Mastering The",
-        titlePart2: "Art of Hair",
-        description: "Indulge in our signature hair treatments, spa therapies, and expert styling by top professionals.",
-        image: "https://i.pinimg.com/1200x/3d/aa/06/3daa061d55d15d84381e7a8fee39795a.jpg",
-    },
-];
+import siteData from "@/data/index";
+
+const { slides, ctaPrimary, ctaVideo, features } = siteData.home.hero;
 
 export default function HeroSection() {
     const [api, setApi] = useState<CarouselApi>();
@@ -101,38 +78,51 @@ export default function HeroSection() {
                                             {current === index && (
                                                 <motion.div
                                                     key={slide.id}
-                                                    initial={{ opacity: 0, y: 20 }}
-                                                    animate={{ opacity: 1, y: 0 }}
-                                                    exit={{ opacity: 0, y: -20 }}
-                                                    transition={{ duration: 0.5, delay: 0.2 }}
+                                                    initial="hidden"
+                                                    animate="visible"
+                                                    exit="exit"
+                                                    variants={{
+                                                        hidden: {},
+                                                        visible: { transition: { staggerChildren: 0.15, delayChildren: 0.2 } },
+                                                        exit: { opacity: 0, transition: { duration: 0.3 } }
+                                                    }}
                                                     className="space-y-4 lg:space-y-4 lg:mt-10"
                                                 >
                                                     {/* Subtitle */}
-                                                    <span className="inline-block text-sm sm:text- uppercase tracking-[0.2em] sm:tracking-[0.3em] text-gray-300 font-medium">
-                                                        {slide.subtitle}
-                                                    </span>
+                                                    <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }}>
+                                                        <span className="inline-block text-sm sm:text- uppercase tracking-[0.2em] sm:tracking-[0.3em] text-gray-300 font-medium">
+                                                            {slide.subtitle}
+                                                        </span>
+                                                    </motion.div>
 
                                                     {/* Main Heading */}
-                                                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight text-white leading-[1.1]" style={{ fontFamily: "'Playfair Display', serif" }}>
-                                                        {slide.titlePart1} <br />
-                                                        <span className="text-[#DFB261] font-normal">
-                                                            {slide.titlePart2}
-                                                        </span>
-                                                    </h1>
+                                                    <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }}>
+                                                        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-medium tracking-tight text-white leading-[1.1]" style={{ fontFamily: "'Playfair Display', serif" }}>
+                                                            {slide.titlePart1} <br />
+                                                            <span className="text-[#DFB261] font-normal">
+                                                                {slide.titlePart2}
+                                                            </span>
+                                                        </h1>
+                                                    </motion.div>
 
                                                     {/* Description */}
-                                                    <p className="text-gray-300 text-sm lg:text-base max-w-xl font-medium leading-relaxed">
-                                                        {slide.description}
-                                                    </p>
+                                                    <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }}>
+                                                        <p className="text-gray-300 text-sm lg:text-base max-w-xl font-medium leading-relaxed">
+                                                            {slide.description}
+                                                        </p>
+                                                    </motion.div>
 
                                                     {/* CTA Buttons */}
-                                                    <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 ">
+                                                    <motion.div 
+                                                        variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }}
+                                                        className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 "
+                                                    >
                                                         <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                                                             <Link
-                                                                href="/appointment"
-                                                                className="inline-flex items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-[#DFB261] text-black font-medium px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg shadow-[#DFB261]/20 transition-all duration-200 text-sm lg:text-base tracking-wide group"
+                                                                href={ctaPrimary.href}
+                                                                className="inline-flex items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black text-black hover:text-white border border-[#DFB261] hover:border-black px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg shadow-[#DFB261]/20 transition-all duration-300 text-sm lg:text-base tracking-wide group"
                                                             >
-                                                                <span>Book An Appointment</span>
+                                                                <span>{ctaPrimary.text}</span>
                                                                 <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                                                             </Link>
                                                         </motion.div>
@@ -145,26 +135,23 @@ export default function HeroSection() {
                                                                 <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-full border border-2 border-[#DFB261] text-black flex items-center justify-center">
                                                                     <Play className="w-4 h-4 sm:w-5 sm:h-5 text-white fill-white ml-0.5 " />
                                                                 </div>
-                                                                <span className="text-white">Watch Our Salon</span>
+                                                                <span className="text-white">{ctaVideo.text}</span>
                                                             </button>
                                                         </motion.div>
-                                                    </div>
+                                                    </motion.div>
 
                                                     {/* Bottom Feature Highlights */}
-                                                    <div className="grid grid-cols-3 sm:grid-cols-3 gap-4 sm:gap-4 pt-4 sm:pt-4 border-t border-white/10  sm:max-w-sm">
-                                                        <div className="border-l-2 border-[#DFB261] pl-3">
-                                                            <p className="text-white font-medium text-md sm:text-lg">Premium</p>
-                                                            <p className="text-gray-400 text-sm sm:text-md">Hair Care</p>
-                                                        </div>
-                                                        <div className="border-l-2 border-[#DFB261] pl-3">
-                                                            <p className="text-white font-medium text-md sm:text-lg">Expert</p>
-                                                            <p className="text-gray-400 text-sm sm:text-md">Stylists</p>
-                                                        </div>
-                                                        <div className="border-l-2 border-[#DFB261] pl-3">
-                                                            <p className="text-white font-medium text-md sm:text-lg">Personalized</p>
-                                                            <p className="text-gray-400 text-sm sm:text-md">Styling</p>
-                                                        </div>
-                                                    </div>
+                                                    <motion.div 
+                                                        variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }}
+                                                        className="grid grid-cols-3 sm:grid-cols-3 gap-4 sm:gap-4 pt-4 sm:pt-4 border-t border-white/10  sm:max-w-sm"
+                                                    >
+                                                        {features.map((feature, fIdx) => (
+                                                            <div key={fIdx} className="border-l-2 border-[#DFB261] pl-3">
+                                                                <p className="text-white font-medium text-md sm:text-lg">{feature.title}</p>
+                                                                <p className="text-gray-400 text-sm sm:text-md">{feature.subtitle}</p>
+                                                            </div>
+                                                        ))}
+                                                    </motion.div>
                                                 </motion.div>
                                             )}
                                         </AnimatePresence>

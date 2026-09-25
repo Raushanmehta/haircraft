@@ -1,0 +1,346 @@
+const fs = require('fs');
+
+const data = {
+  HairCraft: {
+    templateComponents: {
+      "template-1": {
+        shared: {
+          navbar: "HairCraftNavbar1",
+          footer: "HairCraftFooter1"
+        },
+        pages: {
+          home: {
+            components: [
+              { key: "hero", component: "HairCraftHero1" },
+              { key: "about", component: "HairCraftAbout1" },
+              { key: "services", component: "HairCraftServices1" },
+              { key: "process", component: "HairCraftProcess1" },
+              { key: "cta", component: "HairCraftCta1" },
+              { key: "team", component: "HairCraftTeam1" },
+              { key: "whyChooseUs", component: "HairCraftWhyChooseUs1" },
+              { key: "testimonials", component: "HairCraftTestimonials1" },
+              { key: "blog", component: "HairCraftBlog1" }
+            ]
+          }
+        }
+      }
+    },
+    sections: {
+      navbar: {
+        variants: {
+          HairCraftNavbar1: {
+            logo: {
+              src: "/logo/logo.png",
+              alt: "Logo",
+              href: "/"
+            },
+            bookButton: {
+              text: "Book An Appointment",
+              href: "/appointment"
+            },
+            navItems: [
+              { label: "Home", href: "/" },
+              { label: "About Us", href: "/about" },
+              {
+                label: "Services",
+                href: "",
+                subItems: [
+                  { label: "Haircut & Styling", href: "/services/haircut-styling" },
+                  { label: "Coloring", href: "/services/coloring" },
+                  { label: "Treatments", href: "/services/treatments" }
+                ]
+              },
+              { label: "Stylists", href: "/stylists" },
+              { label: "Gallery", href: "/gallery" },
+              { label: "Blog", href: "/blog" },
+              { label: "Contact Us", href: "/contact" }
+            ]
+          }
+        }
+      },
+      footer: {
+        variants: {
+          HairCraftFooter1: {
+            logo: { src: "/logo/logo.png", alt: "Logo", href: "/" },
+            description: "At Haicraft, we believe great hair creates confidence. Our expert stylists deliver personalized care, modern styles, and a premium salon experience tailored just for you.",
+            tagline: ["Style", "Care", "Confidence"],
+            socialLinks: [
+              { icon: "FaFacebook", href: "https://facebook.com", label: "Facebook" },
+              { icon: "BsInstagram", href: "https://instagram.com", label: "Instagram" },
+              { icon: "FaWhatsapp", href: "https://whatsapp.com", label: "WhatsApp" },
+              { icon: "BsYoutube", href: "https://youtube.com", label: "YouTube" }
+            ],
+            quickLinks: {
+              title: "Quick Links",
+              links: [
+                { label: "Home", href: "/" },
+                { label: "About Us", href: "/about" },
+                { label: "Our Services", href: "/services" },
+                { label: "Our Stylists", href: "/stylists" },
+                { label: "Blog", href: "/blog" },
+                { label: "Contact Us", href: "/contact" }
+              ]
+            },
+            services: {
+              title: "Our Services",
+              links: [
+                { label: "Haircut & Styling", href: "/services/haircut-styling" },
+                { label: "Hair Coloring", href: "/services/hair-coloring" },
+                { label: "Hair Treatment", href: "/services/hair-treatment" },
+                { label: "Hair Spa", href: "/services/hair-spa" },
+                { label: "Beard Grooming", href: "/services/beard-grooming" },
+                { label: "Hair Care Products", href: "/services/products" },
+                { label: "Bridal & Event Styling", href: "/services/bridal" },
+                { label: "Consultation", href: "/services/consultation" }
+              ]
+            },
+            contact: {
+              title: "Contact Us",
+              address: "123 Styling Street, New Delhi, India - 110001",
+              phone: "+91 98765 43210",
+              email: "info@haicraftsalon.com",
+              hours: { days: "Mon – Sun: 10:00 AM – 8:00 PM", note: "(Closed on Tuesday)" }
+            },
+            cta: { text: "Book an Appointment", href: "/appointment" },
+            bottomBar: {
+              copyright: "© 2026 Haircarft. All Rights Reserved. Powered by Lestow",
+              legalLinks: [
+                { label: "Privacy Policy", href: "/privacy-policy" },
+                { label: "Terms & Conditions", href: "/terms" },
+                { label: "FAQs", href: "/faqs" }
+              ]
+            }
+          }
+        }
+      },
+      hero: {
+        variants: {
+          HairCraftHero1: {
+            slides: [
+              {
+                id: 1, subtitle: "LOOK GOOD | FEEL GREAT", titlePart1: "Your Style", titlePart2: "Our Expertise",
+                description: "From precision haircuts to transformative styles, we bring out the best version of you.",
+                image: "/images/banner1.jpg"
+              },
+              {
+                id: 2, subtitle: "PREMIUM GROOMING | MODERN CUTS", titlePart1: "Redefining", titlePart2: "Your Look",
+                description: "Experience world-class hair care and bespoke styling tailored to match your unique personality.",
+                image: "https://i.pinimg.com/1200x/3d/aa/06/3daa061d55d15d84381e7a8fee39795a.jpg"
+              },
+              {
+                id: 3, subtitle: "LUXURY SALON EXPERIENCE", titlePart1: "Mastering The", titlePart2: "Art of Hair",
+                description: "Indulge in our signature hair treatments, spa therapies, and expert styling by top professionals.",
+                image: "https://i.pinimg.com/1200x/3d/aa/06/3daa061d55d15d84381e7a8fee39795a.jpg"
+              }
+            ],
+            ctaPrimary: { text: "Book An Appointment", href: "/appointment" },
+            ctaVideo: { text: "Watch Our Salon" },
+            features: [
+              { title: "Premium", subtitle: "Hair Care" },
+              { title: "Expert", subtitle: "Stylists" },
+              { title: "Personalized", subtitle: "Styling" }
+            ]
+          }
+        }
+      },
+      about: {
+        variants: {
+          HairCraftAbout1: {
+            subtitle: "About Us", titlePart1: "Welcome to", titlePart2: "Haicraft Salon",
+            tags: ["Beauty", "Style", "Confidence"],
+            paragraphs: [
+              "At Haicraft, we believe that great hair is more than just a style — it’s a reflection of your personality. Our expert stylists are passionate about creating looks that enhance your natural beauty and make you feel confident every day.",
+              "From precision cuts and vibrant color to advanced treatments and personalized care, we combine creativity, expertise, and premium products to give you an exceptional salon experience."
+            ],
+            cta: { text: "About Us", href: "/about" },
+            stats: [
+              { target: 20, suffix: "+", label: "Years Exp" },
+              { target: 10, suffix: "K+", label: "Clients" },
+              { target: 20, suffix: "+", label: "Stylists" }
+            ],
+            images: {
+              primary: "https://i.pinimg.com/736x/fb/3b/c0/fb3bc01991b6d3ebc24d5c2a26137d04.jpg",
+              secondary: "https://i.pinimg.com/1200x/e7/5f/a9/e75fa9e6161665f17af8baf58e393354.jpg"
+            },
+            watermark: "Beauty"
+          }
+        }
+      },
+      services: {
+        variants: {
+          HairCraftServices1: {
+            subtitle: "Our Services", titlePart1: "Premium Hair Care", titlePart2: "Services",
+            description: "From classic cuts to advanced treatments, we offer a complete hair care solutions to bring out your best look.",
+            cta: { text: "View All Services", href: "/services" },
+            list: [
+              {
+                id: "01", title: "Hair Wash & Dry", description: "Refresh your look with our professional hair wash & blow dry service, designed to leave your hair smooth and shiny.",
+                image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop", icon: "Sparkles", href: "/services/hair-wash-dry"
+              },
+              {
+                id: "02", title: "Beard & Shaving", description: "Expert grooming services for a sharp, clean and confident look. From beard trims to classic shaving, we've got you covered.",
+                image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=600&auto=format&fit=crop", icon: "Scissors", href: "/services/beard-shaving"
+              },
+              {
+                id: "03", title: "Global Hair Color", description: "Transform your look with our professional hair coloring services. From subtle tones to bold hues, we create your perfect shade.",
+                image: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=600&auto=format&fit=crop", icon: "Palette", href: "/services/global-hair-color"
+              },
+              {
+                id: "04", title: "Wedding Grooming", description: "Look your best on your special day with our customized bridal hair and grooming services, tailored to your style and occasion.",
+                image: "https://images.unsplash.com/photo-1583234947900-474d284fb8e9?q=80&w=600&auto=format&fit=crop", icon: "UserCheck", href: "/services/wedding-grooming"
+              },
+              {
+                id: "05", title: "Wedding Grooming", description: "Look your best on your special day with our customized bridal hair and grooming services, tailored to your style and occasion.",
+                image: "https://images.unsplash.com/photo-1583234947900-474d284fb8e9?q=80&w=600&auto=format&fit=crop", icon: "UserCheck", href: "/services/wedding-grooming"
+              }
+            ]
+          }
+        }
+      },
+      process: {
+        variants: {
+          HairCraftProcess1: {
+            subtitle: "How It Works", titlePart1: "Your Perfect Look in", titlePart2: "Simple Steps",
+            description: "We make your salon experience easy, seamless, and relaxing — from booking to beautiful results.",
+            steps: [
+              {
+                step: "01", title: "Book Your Appointment", description: "Schedule your visit online or give us a call. Choose your preferred service, date, and time — it's quick and easy.",
+                image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=600&auto=format&fit=crop"
+              },
+              {
+                step: "02", title: "Consultation", description: "Our expert stylist will understand your needs, suggest the best options, and create a personalized plan for your look.",
+                image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop"
+              },
+              {
+                step: "03", title: "Get Pampered", description: "Sit back and relax while our professionals work their magic using premium products and advanced techniques.",
+                image: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=600&auto=format&fit=crop"
+              },
+              {
+                step: "04", title: "Step Out with Confidence", description: "Enjoy your refreshed look and feel more confident, stylish, and you — because you deserve it[cite: 6].",
+                image: "https://images.unsplash.com/photo-1583234947900-474d284fb8e9?q=80&w=600&auto=format&fit=crop"
+              }
+            ]
+          }
+        }
+      },
+      cta: {
+        variants: {
+          HairCraftCta1: {
+            subtitle: "TRANSFORM YOUR LOOK", titlePart1: "Ready for a", titlePart2: "New You?",
+            description: "Book your appointment today and let our expert stylists bring out the best version of you.",
+            bgImage: "https://i.pinimg.com/736x/e8/10/e4/e810e4131f86a7d0848a9ea749087931.jpg",
+            features: [
+              { icon: "CalendarDays", text: "Easy Booking" },
+              { icon: "UserCog", text: "Expert Stylists" },
+              { icon: "Gem", text: "Premium Hair Care" }
+            ],
+            buttons: {
+              primary: { text: "Book An Appointment", href: "/book-appointment" },
+              secondary: { text: "Talk To Our Expert", href: "/consultation" }
+            },
+            badge: { line1: "BEAUTY", line2: "BEGINS", line3: "WITH", highlight: "Great Hair" },
+            bottomText: ["HAIR", "STYLE", "CONFIDENCE"]
+          }
+        }
+      },
+      team: {
+        variants: {
+          HairCraftTeam1: {
+            subtitle: "OUR EXPERTS", titlePart1: "Meet Our", titlePart2: "Professional Stylists",
+            description: "Our talented team of stylists are passionate about creating looks that make you feel confident and look your best.",
+            cta: { text: "View All Stylists", href: "/team" },
+            members: [
+              {
+                id: "1", name: "Devendra Chauhan", role: "SENIOR BARBER", description: "Specializes in modern haircuts, fades and classic grooming with attention to every detail.",
+                image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=600&auto=format&fit=crop", socials: { facebook: "#", instagram: "#", linkedin: "#" }
+              },
+              {
+                id: "2", name: "Simran Singh", role: "TRANSFORMATION EXPERT", description: "Expert in style makeovers, trendy cuts and personalized hair transformations for all hair types.",
+                image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=600&auto=format&fit=crop", socials: { facebook: "#", instagram: "#", linkedin: "#" }
+              },
+              {
+                id: "3", name: "Arvind Sharma", role: "GROOMING SPECIALIST", description: "Passionate about precision grooming, beard styling and creating sharp, confident looks.",
+                image: "https://images.unsplash.com/photo-1622287162692-0382f1e0b64f?q=80&w=600&auto=format&fit=crop", socials: { facebook: "#", instagram: "#", linkedin: "#" }
+              },
+              {
+                id: "4", name: "Rohit Mehta", role: "HAIR COLOR SPECIALIST", description: "Creative color expert known for natural tones, bold looks and long-lasting results.",
+                image: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=600&auto=format&fit=crop", socials: { facebook: "#", instagram: "#", linkedin: "#" }
+              }
+            ]
+          }
+        }
+      },
+      whyChooseUs: {
+        variants: {
+          HairCraftWhyChooseUs1: {
+            subtitle: "WHY CHOOSE US", titlePart1: "More Than a Haircut", titlePart2: "A Better You",
+            description: "We combine skill, style, and a passion for grooming to give you an exceptional experience every time you visit.",
+            features: [
+              { number: "01", title: "Personalized Experience", description: "We understand your style, hair type, and preferences to create a look that's uniquely yours.", icon: "Calendar" },
+              { number: "02", title: "Expert & Friendly Stylists", description: "Our experienced barbers and stylists are passionate about grooming and dedicated to your comfort.", icon: "Users" },
+              { number: "03", title: "Premium Products", description: "We use high-quality, professional products to ensure the best results for your hair and skin.", icon: "Award" },
+              { number: "04", title: "Relaxing Atmosphere", description: "Enjoy a clean, modern, and comfortable space designed for a premium grooming experience.", icon: "Gem" }
+            ],
+            image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1000&auto=format&fit=crop",
+            stats: { prefix: "OVER", number: "10", suffix: "+", text: "YEARS OF GROOMING EXCELLENCE" },
+            cta: { text: "Book Appointment", href: "/appointment" }
+          }
+        }
+      },
+      testimonials: {
+        variants: {
+          HairCraftTestimonials1: {
+            subtitle: "CLIENT TESTIMONIALS", titlePart1: "What Our", titlePart2: "Happy Clients",
+            description: "Real people. Real experiences. Here’s what our clients have to say about their journey with us.",
+            list: [
+              {
+                id: "1", name: "Ralph Edwards", role: "BUSINESS PROFESSIONAL", comment: "“I've been coming here for over six months now, and every visit is better than the last. The attention to detail and the skill of the stylists is simply outstanding.”",
+                image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=600&auto=format&fit=crop", rating: 5
+              },
+              {
+                id: "2", name: "Simran Singh", role: "FREELANCER", comment: "“The best haircut I've ever had! The team is professional, friendly, and really understands what suits you. I always leave feeling fresh and confident.”",
+                image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=600&auto=format&fit=crop", rating: 5
+              },
+              {
+                id: "3", name: "John Doe", role: "MARKETING MANAGER", comment: "“Clean, modern, and professional. The atmosphere is great, the stylists are experts, and the results speak for themselves. Highly recommended!”",
+                image: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=600&auto=format&fit=crop", rating: 5
+              },
+              {
+                id: "4", name: "Aarav Sharma", role: "SOFTWARE ENGINEER", comment: "“Exceptional service from start to finish. The grooming advice and precision styling are top tier. Won't trust anyone else with my hair now.”",
+                image: "https://images.unsplash.com/photo-1622287162692-0382f1e0b64f?q=80&w=600&auto=format&fit=crop", rating: 5
+              }
+            ]
+          }
+        }
+      },
+      blog: {
+        variants: {
+          HairCraftBlog1: {
+            subtitle: "OUR BLOG", titlePart1: "Latest Tips, Trends,", titlePart2: "Expert Advice Guides",
+            description: "Stay updated with the latest grooming trends, expert tips, and style inspiration from our professionals, stylish, and confident.",
+            posts: [
+              {
+                id: "1", category: "HAIR CARE", date: "12 AUG 2025", title: "Top Haircut Trends for Men This Season",
+                description: "Discover the latest haircut styles that are right now and find the perfect look to match your personality.",
+                image: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=600&auto=format&fit=crop", slug: "/blog/top-haircut-trends-for-men"
+              },
+              {
+                id: "2", category: "BEARD CARE", date: "08 AUG 2025", title: "How to Maintain a Perfect Beard",
+                description: "Learn simple tips and routines to keep your beard clean, healthy, and stylish every day.",
+                image: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=600&auto=format&fit=crop", slug: "/blog/how-to-maintain-a-perfect-beard"
+              },
+              {
+                id: "3", category: "SKINCARE", date: "05 AUG 2025", title: "Skincare Routine for a Fresh Look",
+                description: "A simple skincare guide to keep your face clean, healthy, and glowing throughout the day.",
+                image: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=600&auto=format&fit=crop", slug: "/blog/skincare-routine-for-a-fresh-look"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+};
+
+fs.writeFileSync('c:/Users/raush/Desktop/Css Founder/hair-carft/data/site.json', JSON.stringify(data, null, 2), 'utf8');
+console.log('Successfully recreated site.json with navItems inside navbar!');
