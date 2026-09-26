@@ -15,7 +15,6 @@ export default function OurTeamPage() {
             <section className="bg-[#FFFFFF] text-[#1a1a1a] py-8 lg:py-14 relative overflow-hidden">
                 {/* Background Ambient Glow */}
                 <div className="absolute top-1/3 right-0 w-80 h-80 bg-[#d4af37]/5 rounded-full blur-3xl pointer-events-none" />
-
                 <div className="max-w-[1400px] mx-auto px-4 relative z-10">
 
                     {/* Header Section with Title & "View All Stylists" Button */}
@@ -49,8 +48,7 @@ export default function OurTeamPage() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.2 }}
-                        variants={staggerContainerFast}
-                    >
+                        variants={staggerContainerFast}>
                         {team.members.map((member) => (
                             <motion.div key={member.id} variants={fadeInUpVariants}>
                                 <TeamCard item={member} />

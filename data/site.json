@@ -166,12 +166,20 @@
                   "href": "/our-team"
                 },
                 {
-                  "label": "Blog",
-                  "href": "/blog"
+                  "label": "Career",
+                  "href": "/career"
                 },
                 {
                   "label": "Contact Us",
                   "href": "/contact"
+                },
+                {
+                  "label": "Testimonials",
+                  "href": "/testimonials"
+                },
+                {
+                  "label": "Get A Quote",
+                  "href": "/get-a-quote"
                 }
               ]
             },
@@ -354,46 +362,390 @@
               "text": "View All Services",
               "href": "/services"
             },
-            "list": [
+            "appointmentCard": {
+              "icon": "Calendar",
+              "title": "Book Your \nAppointment",
+              "description": "Get expert care and a fresh new look. Choose your preferred date and time.",
+              "buttonText": "Book Now",
+              "buttonHref": "/appointment"
+            },
+            "needHelpCard": {
+              "title": "Need Help?",
+              "phone": "+91 98765 43210",
+              "phoneIcon": "MdCall",
+              "email": "info@haicraftsalon.com",
+              "emailIcon": "IoMdMail",
+              "address": "123 Styling Street, New Delhi, India",
+              "addressIcon": "FaMapMarkerAlt"
+            },
+            "ServiceItem": [
               {
-                "id": "01",
-                "title": "Hair Wash & Dry",
-                "description": "Refresh your look with our professional hair wash & blow dry service, designed to leave your hair smooth and shiny.",
-                "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop",
-                "icon": "Sparkles",
-                "href": "/services/hair-wash-dry"
-              },
-              {
-                "id": "02",
-                "title": "Beard & Shaving",
-                "description": "Expert grooming services for a sharp, clean and confident look. From beard trims to classic shaving, we've got you covered.",
-                "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=600&auto=format&fit=crop",
+                "id": "haircut-styling",
+                "title": "Haircut & Styling",
+                "detailTitle": "A Style That Defines You",
+                "description": [
+                  "Our Haircut & Styling service is designed to enhance your natural look with precision, creativity, and expert techniques. Whether you prefer a classic cut or a modern trend, our professional stylists tailor each look to match your personality, face shape, and lifestyle.",
+                  "We use advanced cutting techniques and premium styling products to ensure you get a look that's sharp, stylish, and easy to maintain. From everyday grooming to complete makeovers, we're here to bring out the best version of you."
+                ],
+                "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1000&auto=format&fit=crop",
+                "secondaryImage": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop",
                 "icon": "Scissors",
-                "href": "/services/beard-shaving"
+                "href": "/services/haircut-styling",
+                "features": [
+                  {
+                    "icon": "Scissors",
+                    "title": "Personalized Consultation",
+                    "desc": "Understand your style and recommend the best look."
+                  },
+                  {
+                    "icon": "Users",
+                    "title": "Expert Stylists",
+                    "desc": "Skilled professionals with years of experience."
+                  },
+                  {
+                    "icon": "Star",
+                    "title": "Modern & Classic Styles",
+                    "desc": "From timeless cuts to trending looks."
+                  },
+                  {
+                    "icon": "Leaf",
+                    "title": "Premium Products",
+                    "desc": "High-quality products for long-lasting style."
+                  }
+                ],
+                "includedSection": {
+                  "title": "What's Included in This Service",
+                  "subtitle": "Everything you need for a complete and professional haircut & styling experience.",
+                  "items": [
+                    "Hair consultation and style planning",
+                    "Precision haircut by expert stylist",
+                    "Hair wash and conditioning",
+                    "Professional blow dry and styling",
+                    "Styling tips for at-home care"
+                  ]
+                }
               },
               {
-                "id": "03",
+                "id": "hair-wash-dry",
+                "title": "Hair Wash & Dry",
+                "detailTitle": "Refresh & Revitalize Your Hair",
+                "description": [
+                  "Refresh your look with our professional hair wash & blow dry service, designed to leave your hair smooth, shiny, and full of volume.",
+                  "Using premium nourishing shampoos and lightweight conditioners suited for your specific hair type, we cleanse away impurities while restoring softness and natural brilliance."
+                ],
+                "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000&auto=format&fit=crop",
+                "secondaryImage": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop",
+                "icon": "Sparkles",
+                "href": "/services/hair-wash-dry",
+                "features": [
+                  {
+                    "icon": "Leaf",
+                    "title": "Nourishing Shampoos",
+                    "desc": "Sulfate-free formulas that protect hair health."
+                  },
+                  {
+                    "icon": "Users",
+                    "title": "Gentle Scalp Massage",
+                    "desc": "Stimulates circulation and relieves tension."
+                  },
+                  {
+                    "icon": "Star",
+                    "title": "Instant Volume",
+                    "desc": "Professional blow drying for a bouncy finish."
+                  },
+                  {
+                    "icon": "Scissors",
+                    "title": "Heat Protection",
+                    "desc": "Shields hair from thermal styling damage."
+                  }
+                ],
+                "includedSection": {
+                  "title": "What's Included in This Service",
+                  "subtitle": "Everything you need for a complete and professional hair wash & dry experience.",
+                  "items": [
+                    "Deep cleansing scalp wash",
+                    "Hydrating conditioner treatment",
+                    "Relaxing scalp massage",
+                    "Professional blow drying & setting",
+                    "Finishing shine serum application"
+                  ]
+                }
+              },
+              {
+                "id": "beard-shaving",
+                "title": "Beard & Shaving",
+                "detailTitle": "Sharp, Clean, and Confident",
+                "description": [
+                  "Expert grooming services for a sharp, clean, and confident look. From precision beard trims to hot towel classic shaves, we've got you covered.",
+                  "Our master barbers use traditional techniques combined with premium oils and balms to condition your skin and sculpt your facial hair to absolute perfection."
+                ],
+                "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1000&auto=format&fit=crop",
+                "secondaryImage": "https://images.unsplash.com/photo-1622287162692-0382f1e0b64f?q=80&w=800&auto=format&fit=crop",
+                "icon": "Scissors",
+                "href": "/services/beard-shaving",
+                "features": [
+                  {
+                    "icon": "Scissors",
+                    "title": "Beard Sculpting",
+                    "desc": "Expert trimming tailored to your jawline."
+                  },
+                  {
+                    "icon": "Star",
+                    "title": "Hot Towel Treatment",
+                    "desc": "Opens pores and softens facial hair."
+                  },
+                  {
+                    "icon": "Leaf",
+                    "title": "Organic Oils",
+                    "desc": "Prevents itchiness and promotes healthy beard growth."
+                  },
+                  {
+                    "icon": "Users",
+                    "title": "Straight Razor Finish",
+                    "desc": "Ultra-precise lining for a sharp edge."
+                  }
+                ],
+                "includedSection": {
+                  "title": "What's Included in This Service",
+                  "subtitle": "Everything you need for a complete and professional beard & shaving experience.",
+                  "items": [
+                    "Consultation on beard style & length",
+                    "Hot towel facial preparation",
+                    "Precision trimming and shaping",
+                    "Straight razor neck and cheek cleanup",
+                    "Beard oil and conditioning balm finish"
+                  ]
+                }
+              },
+              {
+                "id": "global-hair-color",
                 "title": "Global Hair Color",
-                "description": "Transform your look with our professional hair coloring services. From subtle tones to bold hues, we create your perfect shade.",
-                "image": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=600&auto=format&fit=crop",
+                "detailTitle": "Vibrant Shades & Rich Tones",
+                "description": [
+                  "Transform your look with our professional hair coloring services. From subtle highlights to bold global shades, we create your ideal color.",
+                  "Our color specialists use gentle, ammonia-free formulas that lock in vibrant tone while nourishing your hair strands for long-lasting radiant shine."
+                ],
+                "image": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1000&auto=format&fit=crop",
+                "secondaryImage": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop",
                 "icon": "Palette",
-                "href": "/services/global-hair-color"
+                "href": "/services/global-hair-color",
+                "features": [
+                  {
+                    "icon": "FaLeaf",
+                    "title": "Ammonia-Free Options",
+                    "desc": "Gentle formulas that protect hair strands."
+                  },
+                  {
+                    "icon": "IoIosStar",
+                    "title": "Custom Color Matching",
+                    "desc": "Matched precisely to your skin tone."
+                  },
+                  {
+                    "icon": "Users",
+                    "title": "Certified Colorists",
+                    "desc": "Advanced knowledge of modern dye techniques."
+                  },
+                  {
+                    "icon": "RiScissors2Fill",
+                    "title": "Shine Lock Treatment",
+                    "desc": "Locks in color vibrancy for weeks."
+                  }
+                ],
+                "includedSection": {
+                  "title": "What's Included in This Service",
+                  "subtitle": "Everything you need for a complete and professional hair coloring experience.",
+                  "items": [
+                    "Hair color consultation",
+                    "Root or global application",
+                    "Post-color nourishing mask",
+                    "Blow dry and styling",
+                    "Color protection advice"
+                  ]
+                }
               },
               {
-                "id": "04",
-                "title": "Wedding Grooming",
-                "description": "Look your best on your special day with our customized bridal hair and grooming services, tailored to your style and occasion.",
-                "image": "https://images.unsplash.com/photo-1583234947900-474d284fb8e9?q=80&w=600&auto=format&fit=crop",
-                "icon": "UserCheck",
-                "href": "/services/wedding-grooming"
+                "id": "hair-treatment",
+                "title": "Hair Treatment",
+                "detailTitle": "Restore Health & Vitality",
+                "description": [
+                  "Revive damaged and dry hair with our intensive keratin, spa, and repair treatments designed to restore moisture, strength, and brilliant shine.",
+                  "Targeting deep hair fibers, our treatments rebuild broken protein bonds and shield your hair against humidity, environmental pollutants, and daily heat styling."
+                ],
+                "image": "https://images.unsplash.com/photo-1583234947900-474d284fb8e9?q=80&w=1000&auto=format&fit=crop",
+                "secondaryImage": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=800&auto=format&fit=crop",
+                "icon": "Sparkles",
+                "href": "/services/hair-treatment",
+                "features": [
+                  {
+                    "icon": "Star",
+                    "title": "Deep Repair",
+                    "desc": "Rebuilds keratin bonds within the hair."
+                  },
+                  {
+                    "icon": "Leaf",
+                    "title": "Botanical Extracts",
+                    "desc": "Natural oils that infuse vital moisture."
+                  },
+                  {
+                    "icon": "Scissors",
+                    "title": "Split End Defense",
+                    "desc": "Seals damaged cuticles seamlessly."
+                  },
+                  {
+                    "icon": "Users",
+                    "title": "Hair Diagnostics",
+                    "desc": "Tailored treatment based on porosity test."
+                  }
+                ],
+                "includedSection": {
+                  "title": "What's Included in This Service",
+                  "subtitle": "Everything you need for an intensive and restorative hair treatment experience.",
+                  "items": [
+                    "Hair porosity analysis",
+                    "Deep conditioning mask",
+                    "Steam therapy",
+                    "Blowout finish",
+                    "Home care maintenance guide"
+                  ]
+                }
               },
               {
-                "id": "05",
+                "id": "hair-spa",
+                "title": "Hair Spa",
+                "detailTitle": "Ultimate Relaxation & Care",
+                "description": [
+                  "Indulge in a relaxing hair spa session that nourishes your scalp, strengthens roots, and leaves your hair silky smooth and completely revitalized.",
+                  "Our signature ritual includes an acupressure scalp massage that relieves tension, improves blood circulation, and infuses deep hydration directly into your hair roots."
+                ],
+                "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000&auto=format&fit=crop",
+                "secondaryImage": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1000&auto=format&fit=crop",
+                "icon": "Heart",
+                "href": "/services/hair-spa",
+                "features": [
+                  {
+                    "icon": "Users",
+                    "title": "Stress Relief",
+                    "desc": "Relieves scalp tension and promotes hair growth."
+                  },
+                  {
+                    "icon": "Leaf",
+                    "title": "Aromatherapy Oils",
+                    "desc": "Calming essential oils for holistic relaxation."
+                  },
+                  {
+                    "icon": "Star",
+                    "title": "Deep Hydration",
+                    "desc": "Locks moisture deep into thirsty follicles."
+                  },
+                  {
+                    "icon": "Scissors",
+                    "title": "Root Strengthening",
+                    "desc": "Fortifies roots to minimize hair fall."
+                  }
+                ],
+                "includedSection": {
+                  "title": "What's Included in This Service",
+                  "subtitle": "Everything you need for an indulgent, tension-relieving hair spa experience.",
+                  "items": [
+                    "Scalp massage with warm essential oils",
+                    "Nourishing spa cream application",
+                    "Micro-mist steam treatment",
+                    "Cleansing wash and restorative conditioning",
+                    "Gentle blow dry and finishing essence"
+                  ]
+                }
+              },
+              {
+                "id": "hair-texturizing",
+                "title": "Hair Texturizing",
+                "detailTitle": "Curls, Waves & Smoothness",
+                "description": [
+                  "Add bounce, beach waves, or sleek straightening to your hair with our professional texturizing and smoothing services.",
+                  "We customize every texturizing treatment to suit your hair's unique density and structure, achieving flexible movement, easy manageability, and frizz-free confidence."
+                ],
+                "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1000&auto=format&fit=crop",
+                "secondaryImage": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1000&auto=format&fit=crop",
+                "icon": "Layers",
+                "href": "/services/hair-texturizing",
+                "features": [
+                  {
+                    "icon": "Scissors",
+                    "title": "Precision Control",
+                    "desc": "Customized wave or straightening strength."
+                  },
+                  {
+                    "icon": "Star",
+                    "title": "Frizz Resistance",
+                    "desc": "Seals out humidity for weeks."
+                  },
+                  {
+                    "icon": "Leaf",
+                    "title": "Protein Infused",
+                    "desc": "Protects hair elasticity during treatment."
+                  },
+                  {
+                    "icon": "Users",
+                    "title": "Expert Consultation",
+                    "desc": "Personalized wave mapping."
+                  }
+                ],
+                "includedSection": {
+                  "title": "What's Included in This Service",
+                  "subtitle": "Everything you need for a smooth, manageable texturizing transformation.",
+                  "items": [
+                    "Texturizing consultation and strand test",
+                    "Gentle cleansing preparation",
+                    "Controlled application process",
+                    "Neutralizing wash and conditioning",
+                    "Style finish with thermal protectant"
+                  ]
+                }
+              },
+              {
+                "id": "wedding-grooming",
                 "title": "Wedding Grooming",
-                "description": "Look your best on your special day with our customized bridal hair and grooming services, tailored to your style and occasion.",
-                "image": "https://images.unsplash.com/photo-1583234947900-474d284fb8e9?q=80&w=600&auto=format&fit=crop",
+                "detailTitle": "Look Your Absolute Best",
+                "description": [
+                  "Customized bridal and groom grooming packages tailored to make your special day flawless, picture-perfect, and unforgettable.",
+                  "From pre-wedding consultations and styling trials to day-of finishing touches, our dedicated master stylists ensure you look radiant and feel confident walking down the aisle."
+                ],
+                "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1000&auto=format&fit=crop",
+                "secondaryImage": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1000&auto=format&fit=crop",
                 "icon": "UserCheck",
-                "href": "/services/wedding-grooming"
+                "href": "/services/wedding-grooming",
+                "features": [
+                  {
+                    "icon": "Star",
+                    "title": "VIP Treatment",
+                    "desc": "Dedicated stylist and private styling session."
+                  },
+                  {
+                    "icon": "Users",
+                    "title": "Trial Session",
+                    "desc": "Comprehensive run-through before the big day."
+                  },
+                  {
+                    "icon": "Scissors",
+                    "title": "Precision Styling",
+                    "desc": "Long-lasting hair setting with camera-ready shine."
+                  },
+                  {
+                    "icon": "Leaf",
+                    "title": "Luxury Grooming",
+                    "desc": "Relaxing facial prep and beard shaping."
+                  }
+                ],
+                "includedSection": {
+                  "title": "What's Included in This Service",
+                  "subtitle": "Everything you need for a complete and unforgettable wedding grooming experience.",
+                  "items": [
+                    "Pre-wedding consultation & trial session",
+                    "Full haircut & occasion styling",
+                    "Beard grooming, sharp line-up & facial care",
+                    "Scalp cleanse and energizing blow dry",
+                    "Final touch-ups and photography-ready set"
+                  ]
+                }
               }
             ]
           }
@@ -719,6 +1071,46 @@
                 "comment": "“Exceptional service from start to finish. The grooming advice and precision styling are top tier. Won't trust anyone else with my hair now.”",
                 "image": "https://images.unsplash.com/photo-1622287162692-0382f1e0b64f?q=80&w=600&auto=format&fit=crop",
                 "rating": 5
+              },
+              {
+                "id": "5",
+                "name": "Marcus Vance",
+                "role": "CREATIVE DIRECTOR",
+                "comment": "“A truly premium salon experience. From the scalp therapy to the custom beard trim, everything was executed with master-level precision.”",
+                "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+                "rating": 5
+              },
+              {
+                "id": "6",
+                "name": "Elena Rostova",
+                "role": "ARCHITECT & DESIGNER",
+                "comment": "“The aesthetic ambiance and personalized hair coloring consultation exceeded all my expectations. My hair feels healthier and looks vibrant.”",
+                "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
+                "rating": 5
+              },
+              {
+                "id": "7",
+                "name": "Devon Campbell",
+                "role": "FINANCIAL CONSULTANT",
+                "comment": "“Top notch hospitality and punctual appointments. Their hot towel shave and bespoke haircut give me the crisp, executive edge I need for meetings.”",
+                "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+                "rating": 5
+              },
+              {
+                "id": "8",
+                "name": "Rohan Mehta",
+                "role": "ENTREPRENEUR",
+                "comment": "“HairCraft sets the gold standard in male grooming. Consistent quality, luxury vibes, and styling products that actually keep hair healthy.”",
+                "image": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=600&auto=format&fit=crop",
+                "rating": 5
+              },
+              {
+                "id": "9",
+                "name": "David Mitchell",
+                "role": "SENIOR EXECUTIVE",
+                "comment": "“Consistently world-class service. The master barbers understand hair textures thoroughly and deliver flawless styling every single time.”",
+                "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop",
+                "rating": 5
               }
             ]
           }
@@ -778,6 +1170,629 @@
               }
             ],
             "backgroundImage": "https://i.pinimg.com/736x/79/7a/57/797a57fa5f5a63b6a6057592b0b436d9.jpg"
+          }
+        }
+      },
+      "getAQuote": {
+        "variants": {
+          "HairCraftGetAQuote1": {
+            "subtitle": "GET A QUOTE",
+            "title": "Request Your Quote",
+            "description": "Fill out the form below and our team will get back to you with a custom quote based on your needs.",
+            "form": {
+              "fullName": {
+                "label": "Full Name",
+                "placeholder": "Enter your full name",
+                "icon": "User"
+              },
+              "phoneNumber": {
+                "label": "Phone Number",
+                "placeholder": "Enter your phone number",
+                "icon": "Phone"
+              },
+              "emailAddress": {
+                "label": "Email Address",
+                "placeholder": "Enter your email address",
+                "icon": "Mail"
+              },
+              "service": {
+                "label": "Service Interested In",
+                "placeholder": "Select a service",
+                "icon": "Scissors",
+                "options": [
+                  "Haircut & Styling",
+                  "Hair Wash & Dry",
+                  "Beard & Shaving",
+                  "Global Hair Color",
+                  "Hair Treatment",
+                  "Wedding Grooming"
+                ]
+              },
+              "preferredDate": {
+                "label": "Preferred Date",
+                "icon": "Calendar"
+              },
+              "preferredTime": {
+                "label": "Preferred Time",
+                "placeholder": "Select a time",
+                "icon": "Clock",
+                "options": [
+                  "Morning (10 AM - 1 PM)",
+                  "Afternoon (1 PM - 4 PM)",
+                  "Evening (4 PM - 8 PM)"
+                ]
+              },
+              "message": {
+                "label": "Additional Message (Optional)",
+                "placeholder": "Write your requirements here...",
+                "icon": "MessageSquare"
+              },
+              "submitButton": {
+                "text": "Submit Request",
+                "icon": "ArrowRight"
+              }
+            },
+            "successState": {
+              "icon": "CheckCircle2",
+              "title": "Quote Request Received!",
+              "description": "Thank you, {fullName}. We have received your request and will contact you via phone or email shortly.",
+              "buttonText": "Submit Another Request"
+            },
+            "sideImage": {
+              "src": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop",
+              "alt": "Stylist working on client",
+              "badge": {
+                "line1": "Look Good",
+                "line2": "Feel Great"
+              }
+            },
+            "whyChooseUs": {
+              "title": "Why Get a Quote from Us?",
+              "features": [
+                {
+                  "icon": "Gem",
+                  "title": "Personalized Recommendations",
+                  "description": "Tailored to your hair type and style goals."
+                },
+                {
+                  "icon": "Clock",
+                  "title": "Transparent Pricing",
+                  "description": "No hidden charges. Know the cost upfront."
+                },
+                {
+                  "icon": "Users",
+                  "title": "Expert Guidance",
+                  "description": "Get advice from our professional stylists."
+                },
+                {
+                  "icon": "Zap",
+                  "title": "Quick Response",
+                  "description": "Our team will get back to you shortly."
+                }
+              ]
+            }
+          }
+        }
+      },
+      "career": {
+        "variants": {
+          "HairCraftCareer1": {
+            "pageTop": {
+              "title": "Career",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Career",
+                  "href": "/career"
+                }
+              ]
+            },
+            "subtitle": "JOIN OUR TEAM",
+            "title": "Current Job Openings",
+            "description": "We're always looking for talented, passionate and motivated individuals to join our growing team. Explore our latest opportunities below.",
+            "buttons": {
+              "apply": {
+                "text": "Apply",
+                "icon": "ArrowRight"
+              },
+              "details": {
+                "text": "Details"
+              }
+            },
+            "whyWorkWithUs": {
+              "title": "Why Work With Us?",
+              "benefits": [
+                {
+                  "icon": "Gem",
+                  "title": "Professional Growth",
+                  "description": "Learn, improve and build a long-term career with us."
+                },
+                {
+                  "icon": "Users",
+                  "title": "Supportive Team",
+                  "description": "Work with passionate and friendly professionals."
+                },
+                {
+                  "icon": "Heart",
+                  "title": "Creative Environment",
+                  "description": "Be part of a stylish and inspiring workplace."
+                },
+                {
+                  "icon": "Star",
+                  "title": "Competitive Pay",
+                  "description": "We value your talent and hard work."
+                },
+                {
+                  "icon": "Leaf",
+                  "title": "Work-Life Balance",
+                  "description": "Flexible schedules and a positive work culture."
+                }
+              ]
+            },
+            "dontSeeFit": {
+              "title": "Don't See a Fit?",
+              "description": "We're always open to talented individuals who are passionate about beauty, hair craft, and wellness. Send us your resume and we'll keep it on file for future openings.",
+              "button": {
+                "text": "Send Your Resume",
+                "icon": "Mail",
+                "arrowIcon": "ArrowRight"
+              }
+            },
+            "detailPage": {
+              "metaLabels": {
+                "location": {
+                  "label": "Location",
+                  "icon": "MapPin"
+                },
+                "jobType": {
+                  "label": "Job Type",
+                  "icon": "Briefcase"
+                },
+                "experience": {
+                  "label": "Experience",
+                  "icon": "Clock"
+                },
+                "department": {
+                  "label": "Department",
+                  "icon": "Users"
+                }
+              },
+              "overview": {
+                "badge": "POSITION DETAILS",
+                "title": "Job Overview"
+              },
+              "responsibilities": {
+                "title": "Key Responsibilities",
+                "icon": "CheckCircle"
+              },
+              "qualifications": {
+                "title": "Qualifications",
+                "icon": "CheckCircle"
+              },
+              "perks": {
+                "title": "What We Offer"
+              }
+            },
+            "jobs": [
+              {
+                "id": "senior-hair-stylist",
+                "title": "Senior Hair Stylist",
+                "location": "New Delhi",
+                "type": "Full Time",
+                "experience": "3-5 Years",
+                "department": "Hair Styling",
+                "description": "We are looking for an experienced Senior Hair Stylist with strong technical skills and a passion for creating exceptional looks for our clients.",
+                "jobOverview": "We are looking for an experienced Senior Hair Stylist with strong technical skills and a passion for creating exceptional looks for our clients. If you have a keen eye for style, a creative mindset, and a commitment to client satisfaction, we'd love to hear from you.",
+                "responsibilities": [
+                  "Consult with clients to understand their preferences and suggest suitable styles",
+                  "Provide expert haircuts, styling, and treatments",
+                  "Stay updated with the latest hair trends and techniques",
+                  "Ensure high standards of hygiene and safety",
+                  "Build and maintain strong client relationships",
+                  "Support and mentor junior stylists"
+                ],
+                "qualifications": [
+                  "Proven experience as a Hair Stylist (3+ years preferred)",
+                  "Strong knowledge of hair cutting, coloring, and styling techniques",
+                  "Excellent communication and interpersonal skills",
+                  "Passion for beauty and customer service",
+                  "Relevant certification or diploma in hair styling (preferred)"
+                ],
+                "perks": [
+                  {
+                    "icon": "Users",
+                    "title": "Competitive Salary",
+                    "description": "Attractive pay with performance incentives"
+                  },
+                  {
+                    "icon": "Leaf",
+                    "title": "Career Growth",
+                    "description": "Opportunities for advancement"
+                  },
+                  {
+                    "icon": "Heart",
+                    "title": "Supportive Team",
+                    "description": "Work with friendly professionals"
+                  },
+                  {
+                    "icon": "Star",
+                    "title": "Modern Workplace",
+                    "description": "State-of-the-art salon facilities"
+                  }
+                ]
+              },
+              {
+                "id": "salon-manager",
+                "title": "Salon Manager",
+                "location": "New Delhi",
+                "type": "Full Time",
+                "experience": "3-6 Years",
+                "department": "Operations & Management",
+                "description": "Join our team as a Salon Manager to lead daily operations, support the team and ensure an outstanding client experience.",
+                "jobOverview": "We are seeking a proactive Salon Manager to lead daily salon operations, motivate stylists, maintain exceptional guest service standards, and drive luxury salon excellence.",
+                "responsibilities": [
+                  "Oversee daily salon operations and front desk scheduling",
+                  "Manage inventory, equipment maintenance, and supply orders",
+                  "Lead team meetings and motivate salon staff to achieve targets",
+                  "Resolve client inquiries with premium hospitality standards",
+                  "Monitor revenue, appointments, and service quality benchmarks"
+                ],
+                "qualifications": [
+                  "3+ years of experience in salon or hospitality management",
+                  "Strong team leadership and conflict resolution abilities",
+                  "Financial acumen and familiarity with salon scheduling software",
+                  "Outstanding interpersonal and customer service skills"
+                ],
+                "perks": [
+                  {
+                    "icon": "Users",
+                    "title": "Competitive Salary",
+                    "description": "Executive package with performance bonuses"
+                  },
+                  {
+                    "icon": "Leaf",
+                    "title": "Leadership Growth",
+                    "description": "Direct career path to regional management"
+                  },
+                  {
+                    "icon": "Heart",
+                    "title": "Supportive Team",
+                    "description": "Empowering and positive workplace culture"
+                  },
+                  {
+                    "icon": "Star",
+                    "title": "Modern Workplace",
+                    "description": "High-end luxury salon environment"
+                  }
+                ]
+              },
+              {
+                "id": "hair-color-specialist",
+                "title": "Hair Color Specialist",
+                "location": "Mumbai",
+                "type": "Full Time",
+                "experience": "2-4 Years",
+                "department": "Color & Chemistry",
+                "description": "We are seeking a skilled Hair Color Specialist with a creative eye and knowledge of the latest color techniques.",
+                "jobOverview": "Join Haicraft as a Hair Color Specialist to deliver high-end coloring services, from balayage and highlights to rich global tones, ensuring healthy and vibrant results.",
+                "responsibilities": [
+                  "Perform consultations on color formulation and hair integrity",
+                  "Execute advanced coloring techniques including balayage, ombre, and corrective color",
+                  "Recommend specialized aftercare regimens to protect color vibrancy",
+                  "Stay on top of seasonal trends and innovative coloring products"
+                ],
+                "qualifications": [
+                  "2+ years experience dedicated to professional hair coloring",
+                  "Thorough understanding of color chemistry and hair health",
+                  "Portfolio demonstrating mastery of balayage, highlights, and toning",
+                  "Colorist certification from an accredited academy preferred"
+                ],
+                "perks": [
+                  {
+                    "icon": "Users",
+                    "title": "Attractive Earnings",
+                    "description": "Generous commission structure on color services"
+                  },
+                  {
+                    "icon": "Leaf",
+                    "title": "Masterclasses",
+                    "description": "Sponsored training with global master colorists"
+                  },
+                  {
+                    "icon": "Heart",
+                    "title": "Creative Freedom",
+                    "description": "Work with top-tier international color lines"
+                  },
+                  {
+                    "icon": "Star",
+                    "title": "Premium Tools",
+                    "description": "Access to the finest color products and styling gear"
+                  }
+                ]
+              },
+              {
+                "id": "receptionist",
+                "title": "Receptionist",
+                "location": "New Delhi",
+                "type": "Full Time",
+                "experience": "1-2 Years",
+                "department": "Front Desk & Hospitality",
+                "description": "We are looking for a friendly and organized Receptionist to provide excellent customer service and support our salon team.",
+                "jobOverview": "As the first point of contact for our luxury salon guests, the Receptionist delivers warm greetings, manages bookings seamlessly, and ensures client delight.",
+                "responsibilities": [
+                  "Greet salon clients warmly and offer welcome beverages",
+                  "Schedule and confirm appointments via phone, email, and booking portal",
+                  "Process payments and handle cashier reconciliation",
+                  "Coordinate with stylists to manage appointment flow smoothly"
+                ],
+                "qualifications": [
+                  "1-2 years front desk or customer relations experience",
+                  "Impeccable communication and polite telephone etiquette",
+                  "Comfortable using computers, POS systems, and booking software",
+                  "Polished presentation aligning with luxury salon standards"
+                ],
+                "perks": [
+                  {
+                    "icon": "Users",
+                    "title": "Competitive Salary",
+                    "description": "Fixed salary with monthly service rewards"
+                  },
+                  {
+                    "icon": "Leaf",
+                    "title": "Skill Building",
+                    "description": "Training in luxury hospitality and salon administration"
+                  },
+                  {
+                    "icon": "Heart",
+                    "title": "Warm Team",
+                    "description": "Collaborative environment with caring colleagues"
+                  },
+                  {
+                    "icon": "Star",
+                    "title": "Salon Perks",
+                    "description": "Complimentary salon grooming services"
+                  }
+                ]
+              },
+              {
+                "id": "salon-assistant",
+                "title": "Salon Assistant",
+                "location": "Mumbai",
+                "type": "Full Time",
+                "experience": "0-1 Years",
+                "department": "Apprenticeship & Support",
+                "description": "Join our team as a Salon Assistant and help maintain a clean, organized and welcoming environment for our clients.",
+                "jobOverview": "An ideal opportunity for an enthusiastic grooming enthusiast looking to launch their career, assisting senior stylists and learning luxury salon standards.",
+                "responsibilities": [
+                  "Prepare styling stations and sanitize equipment between clients",
+                  "Assist with client shampooing, conditioning, and scalp treatments",
+                  "Ensure laundry, fresh towels, and beverage stations are well-stocked",
+                  "Shadow master stylists and participate in ongoing training sessions"
+                ],
+                "qualifications": [
+                  "0-1 year experience or recent cosmetology/hair styling graduate",
+                  "Eagerness to learn and positive work ethic",
+                  "Punctual, attentive, and reliable team player",
+                  "Passion for building a career in the hair styling industry"
+                ],
+                "perks": [
+                  {
+                    "icon": "Users",
+                    "title": "Fair Compensation",
+                    "description": "Competitive starting pay plus daily client tips"
+                  },
+                  {
+                    "icon": "Leaf",
+                    "title": "Stylist Fast-Track",
+                    "description": "Accelerated mentorship to junior stylist role"
+                  },
+                  {
+                    "icon": "Heart",
+                    "title": "Mentorship",
+                    "description": "1-on-1 coaching by award-winning senior stylists"
+                  },
+                  {
+                    "icon": "Star",
+                    "title": "Education",
+                    "description": "Free hands-on workshops and masterclasses"
+                  }
+                ]
+              }
+            ],
+            "applicationForm": {
+              "title": "Apply for This Position",
+              "subtitle": "APPLY NOW",
+              "description": "Fill out the form below and take the next step in your luxury styling career with Haicraft.",
+              "modalJobSubtitle": "Job Application",
+              "modalGeneralSubtitle": "General Submission",
+              "modalJobTitlePrefix": "Applying for ",
+              "modalGeneralTitle": "Send Your Resume",
+              "fields": {
+                "fullName": {
+                  "label": "Full Name",
+                  "placeholder": "Enter your full name",
+                  "icon": "User"
+                },
+                "emailAddress": {
+                  "label": "Email Address",
+                  "placeholder": "Enter your email address",
+                  "icon": "Mail"
+                },
+                "phoneNumber": {
+                  "label": "Phone Number",
+                  "placeholder": "Enter your phone number",
+                  "icon": "Phone"
+                },
+                "currentLocation": {
+                  "label": "Current Location",
+                  "placeholder": "Enter your current location",
+                  "icon": "MapPin"
+                },
+                "relevantExperience": {
+                  "label": "Relevant Experience",
+                  "placeholder": "Select experience",
+                  "icon": "Briefcase",
+                  "options": [
+                    "0-1 Years",
+                    "1-3 Years",
+                    "3-5 Years",
+                    "5+ Years"
+                  ]
+                },
+                "resume": {
+                  "label": "Upload Resume (PDF / DOCX)",
+                  "placeholder": "Choose resume file",
+                  "buttonText": "Browse",
+                  "icon": "FileText"
+                },
+                "message": {
+                  "label": "Additional Message (Optional)",
+                  "placeholder": "Tell us something about yourself...",
+                  "icon": "MessageSquare"
+                }
+              },
+              "submitButton": {
+                "text": "Submit Application",
+                "icon": "ArrowRight"
+              },
+              "successState": {
+                "icon": "CheckCircle2",
+                "title": "Application Submitted!",
+                "description": "Thank you, {fullName}. We have received your application for {jobTitle} and will contact you shortly.",
+                "buttonText": "Submit Another"
+              },
+              "securityNote": "🔒 Your information is secure and treated with luxury privacy."
+            }
+          }
+        }
+      },
+      "gallery": {
+        "variants": {
+          "HairCraftGallery1": {
+            "imageSection": {
+              "badge": "GALLERY",
+              "title": "Image Gallery",
+              "description": "Explore moments from our salon, client transformations, styling sessions and the vibrant atmosphere at Haicraft.",
+              "images": [
+                {
+                  "id": "1",
+                  "src": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop",
+                  "alt": "Salon interior stations"
+                },
+                {
+                  "id": "2",
+                  "src": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop",
+                  "alt": "Highlighted hair styling"
+                },
+                {
+                  "id": "3",
+                  "src": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop",
+                  "alt": "Product shelf display"
+                },
+                {
+                  "id": "4",
+                  "src": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800&auto=format&fit=crop",
+                  "alt": "Stylist trimming hair"
+                },
+                {
+                  "id": "5",
+                  "src": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=800&auto=format&fit=crop",
+                  "alt": "Long wavy hair result"
+                },
+                {
+                  "id": "6",
+                  "src": "https://images.unsplash.com/photo-1622287162692-0382f1e0b64f?q=80&w=800&auto=format&fit=crop",
+                  "alt": "Mens fading haircut"
+                },
+                {
+                  "id": "7",
+                  "src": "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=800&auto=format&fit=crop",
+                  "alt": "Hair washing session"
+                },
+                {
+                  "id": "8",
+                  "src": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=800&auto=format&fit=crop",
+                  "alt": "Short bob haircut style"
+                },
+                {
+                  "id": "9",
+                  "src": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop",
+                  "alt": "Blow drying with round brush"
+                },
+                {
+                  "id": "10",
+                  "src": "https://images.unsplash.com/photo-1583234947900-474d284fb8e9?q=80&w=800&auto=format&fit=crop",
+                  "alt": "Shampoo sinks setup"
+                },
+                {
+                  "id": "11",
+                  "src": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop",
+                  "alt": "Wavy hair styling"
+                },
+                {
+                  "id": "12",
+                  "src": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800&auto=format&fit=crop",
+                  "alt": "Green plants & counter products"
+                },
+                {
+                  "id": "13",
+                  "src": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=800&auto=format&fit=crop",
+                  "alt": "Haircut back profile"
+                },
+                {
+                  "id": "14",
+                  "src": "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=800&auto=format&fit=crop",
+                  "alt": "Illuminated styling mirrors"
+                },
+                {
+                  "id": "15",
+                  "src": "https://images.unsplash.com/photo-1583234947900-474d284fb8e9?q=80&w=800&auto=format&fit=crop",
+                  "alt": "Brunette highlights look"
+                }
+              ]
+            },
+            "videoSection": {
+              "badge": "VIDEOS",
+              "title": "Video Gallery",
+              "description": "Watch our experts in action and get inspired by real transformations, styling tips and behind-the-scenes moments.",
+              "videos": [
+                {
+                  "id": "v1",
+                  "title": "Client Transformation",
+                  "description": "A fresh look, a confident you.",
+                  "duration": "02:18",
+                  "thumbnail": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop",
+                  "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                },
+                {
+                  "id": "v2",
+                  "title": "Hair Care Routine",
+                  "description": "Expert tips for healthier hair.",
+                  "duration": "01:45",
+                  "thumbnail": "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=800&auto=format&fit=crop",
+                  "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                },
+                {
+                  "id": "v3",
+                  "title": "Styling Techniques",
+                  "description": "Create the look you love.",
+                  "duration": "03:12",
+                  "thumbnail": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop",
+                  "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                },
+                {
+                  "id": "v4",
+                  "title": "Salon Tour",
+                  "description": "Take a look inside Haicraft.",
+                  "duration": "03:10",
+                  "thumbnail": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop",
+                  "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                }
+              ]
+            }
           }
         }
       }

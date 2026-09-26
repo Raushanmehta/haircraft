@@ -5,12 +5,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import ServiceCard from "@/components/cards/ServiceCard";
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    type CarouselApi,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi, } from "@/components/ui/carousel";
 
 import siteData from "@/data/index";
 import * as Icons from "lucide-react";
@@ -19,9 +14,9 @@ import { staggerContainerFast, fadeInUpVariants, buttonHoverGlow } from "@/utils
 export interface ServiceItem {
     id: string;
     title: string;
-    description: string;
+    description: string | string[];
     image: string;
-    icon: React.ElementType;
+    icon: React.ElementType | string;
     href: string;
 }
 
@@ -53,19 +48,17 @@ export default function ServiceSection() {
             <motion.div
                 animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.6, 0.3] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#DFB261]/10 rounded-full blur-[100px] pointer-events-none" 
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#DFB261]/10 rounded-full blur-[100px] pointer-events-none"
             />
-
             <div className="max-w-[1400px] mx-auto px-4 relative z-10">
 
                 {/* Section Header */}
-                <motion.div 
+                <motion.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-100px" }}
                     variants={staggerContainerFast}
-                    className="text-center max-w-3xl mx-auto mb-6 lg:mb-8 space-y-2"
-                >
+                    className="text-center max-w-3xl mx-auto mb-6 lg:mb-8 space-y-2">
                     <motion.div variants={fadeInUpVariants} className="flex items-center justify-center gap-3">
                         <span className="w-10 lg:w-16 h-[2px] bg-[#DFB261]"></span>
                         <span className="text-xs lg:text-sm uppercase tracking-[0.3em] text-[#DFB261] font-semibold">
@@ -88,8 +81,7 @@ export default function ServiceSection() {
                     initial={{ opacity: 0, scale: 0.95, y: 30 }}
                     whileInView={{ opacity: 1, scale: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
+                    transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}>
                     <Carousel
                         setApi={setApi}
                         opts={{
@@ -110,13 +102,12 @@ export default function ServiceSection() {
                 </motion.div>
 
                 {/* Bottom Carousel Indicators & "View All Services" Button */}
-                <motion.div 
+                <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-                    className="pt-10 flex flex-col items-center justify-center gap-6 relative w-full"
-                >
+                    className="pt-10 flex flex-col items-center justify-center gap-6 relative w-full">
 
                     {/* Pagination Indicators */}
                     <div className="flex items-center gap-2">
@@ -132,11 +123,10 @@ export default function ServiceSection() {
                     </div>
 
                     {/* View All Services Link */}
-                    <motion.div {...buttonHoverGlow} className="sm:absolute right-0">
+                    <motion.div {...buttonHoverGlow} className="sm:absolute right-0 pl-4 ">
                         <Link
                             href={services.cta.href}
-                            className="inline-flex items-center gap-3 text-sm font-medium text-white hover:text-[#DFB261] transition-colors group"
-                        >
+                            className="inline-flex items-center gap-3 text-sm font-medium text-white hover:text-[#DFB261] transition-colors group ">
                             <span>{services.cta.text}</span>
                             <div className="w-10 h-10 rounded-full border border-white/20 group-hover:border-[#DFB261] group-hover:bg-[#DFB261] group-hover:text-black flex items-center justify-center transition-all duration-300">
                                 <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
