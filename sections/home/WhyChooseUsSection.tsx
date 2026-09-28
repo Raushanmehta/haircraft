@@ -129,11 +129,10 @@ export default function WhyChooseUsSection() {
 
                             {/* Action Button below image container */}
                             <div className="mt-12 flex justify-start">
-                                <motion.div {...buttonHoverGlow}>
+                                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                                     <Link
                                         href={whyChooseUs.cta.href}
-                                        className="inline-flex items-center gap-3 bg-[#DFB261] hover:bg-[#DFB261] text-black font-medium px-4 md:px-8 py-3 md:py-4 rounded-full shadow-lg shadow-[#DFB261]/25 transition-all duration-200 text-sm tracking-wide group"
-                                    >
+                                        className="inline-flex items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-4 py-2.5 sm:px-8 lg:py-3 rounded-full  transition-all duration-300 text-sm lg:text-base tracking-wide group">
                                         <span>{whyChooseUs.cta.text}</span>
                                         <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                                     </Link>

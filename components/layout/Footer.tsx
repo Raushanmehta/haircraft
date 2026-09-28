@@ -66,9 +66,9 @@ export default function Footer() {
                                         whileHover={{ scale: 1.15, y: -3 }}
                                         whileTap={{ scale: 0.92 }}
                                         transition={{ type: "spring", stiffness: 350 }}
-                                        className="w-14 h-14 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:bg-black hover:text-white hover:border-black transition-colors duration-200"
+                                        className="w-10 h-10 lg:w-14 lg:h-14 rounded-full border border-white/20 flex items-center justify-center text-gray-300 hover:bg-black hover:text-white hover:border-black transition-colors duration-200"
                                     >
-                                        {IconComponent && <IconComponent className="w-7 h-7" />}
+                                        {IconComponent && <IconComponent className="w-5 h-5 lg:w-7 lg:h-7" />}
                                     </motion.a>
                                 );
                             })}
@@ -81,7 +81,7 @@ export default function Footer() {
                             {footerData.quickLinks.title}
                             <span className="absolute bottom-0 left-0 w-8 h-[2px] bg-[#DFB261]"></span>
                         </h3>
-                        <motion.ul variants={linkContainerVariants} className="space-y-3 pt-2">
+                        <motion.ul variants={linkContainerVariants} className="space-y-2.5 pt-2">
                             {footerData.quickLinks.links.map((link, index) => (
                                 <motion.li key={index} variants={linkItemVariants} whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
                                     <Link
@@ -102,7 +102,7 @@ export default function Footer() {
                             {footerData.services.title}
                             <span className="absolute bottom-0 left-0 w-8 h-[2px] bg-[#DFB261]"></span>
                         </h3>
-                        <motion.ul variants={linkContainerVariants} className="grid grid-cols-1 gap-3 pt-2">
+                        <motion.ul variants={linkContainerVariants} className="grid grid-cols-1 gap-2.5 pt-2">
                             {footerData.services.links.map((service, index) => (
                                 <motion.li key={index} variants={linkItemVariants} whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
                                     <Link

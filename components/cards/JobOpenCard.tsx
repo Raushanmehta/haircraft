@@ -102,17 +102,12 @@ export default function JobOpenCard({
 
                 {/* Action Buttons: on small screen placed on far right bottom; links to detail page */}
                 <div className="flex items-center gap-2.5 shrink-0 justify-end self-end sm:self-auto w-full sm:w-auto">
-                    <motion.div {...buttonLuxuryLift} className="inline-block">
+                    <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-fit lg:w-full">
                         <Link
                             href={`/career/${job.id}`}
-                            className="inline-flex items-center gap-1.5 bg-[#DFB261] hover:bg-[#DFB261]/90 text-black font-medium px-8 py-2.5 rounded-full shadow-md shadow-[#DFB261]/20 transition-all text-xs tracking-wider uppercase group/btn cursor-pointer"
-                        >
+                            className="inline-flex lg:flex w-auto lg:w-full items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-6 py-1 sm:px-8 sm:py-2 rounded-full transition-all duration-300 text-sm lg:text-base tracking-wide group">
                             <span>{buttonText}</span>
-                            {renderIcon(
-                                applyButton?.icon || "ArrowRight",
-                                LucideIcons.ArrowRight,
-                                "w-3.5 h-3.5 transform group-hover/btn:translate-x-1 transition-transform"
-                            )}
+                            <LucideIcons.ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                         </Link>
                     </motion.div>
                 </div>

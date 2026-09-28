@@ -31,8 +31,7 @@ export default function BlogSection() {
                     whileInView="visible"
                     viewport={{ once: true, margin: "-50px" }}
                     variants={staggerContainerFast}
-                    className="text-center max-w-4xl mx-auto mb-4 lg:mb-8 space-y-2"
-                >
+                    className="text-center max-w-4xl mx-auto mb-4 lg:mb-8 space-y-2">
                     <motion.div variants={fadeInUpVariants} className="flex items-center justify-center gap-3">
                         <span className="w-10 lg:w-16 h-[2px] bg-[#DFB261]"></span>
                         <span className="text-xs lg:text-sm uppercase tracking-[0.3em] text-[#DFB261] font-semibold">
@@ -58,7 +57,7 @@ export default function BlogSection() {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
                     variants={staggerContainerFast}>
-                    {blog.posts.map((post) => (
+                    {blog.posts.slice(0, 3).map((post) => (
                         <BlogCard key={post.id} post={post} cardVariants={fadeInUpVariants} />
                     ))}
                 </motion.div>

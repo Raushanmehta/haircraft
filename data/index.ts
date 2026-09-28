@@ -29,12 +29,22 @@ export type HairCraftTeamData = HairCraftSections["team"]["variants"]["HairCraft
 export type HairCraftWhyChooseUsData = HairCraftSections["whyChooseUs"]["variants"]["HairCraftWhyChooseUs1"];
 export type HairCraftTestimonialsData = HairCraftSections["testimonials"]["variants"]["HairCraftTestimonials1"];
 export type HairCraftBlogData = HairCraftSections["blog"]["variants"]["HairCraftBlog1"];
+export type BlogPost = HairCraftBlogData["posts"][number];
+export type BlogDetailPageData = HairCraftBlogData["detailPage"];
 export type HairCraftPageTopData = HairCraftSections["pageTopSection"]["variants"]["HairCraftPageTop1"];
 export type HairCraftGetAQuoteData = HairCraftSections["getAQuote"]["variants"]["HairCraftGetAQuote1"];
 export type HairCraftCareerData = HairCraftSections["career"]["variants"]["HairCraftCareer1"];
 export type JobOpening = HairCraftCareerData["jobs"][number];
 export type JobPerk = NonNullable<JobOpening["perks"]>[number];
 export type HairCraftGalleryData = HairCraftSections["gallery"]["variants"]["HairCraftGallery1"];
+export type HairCraftFaqsData = HairCraftSections["faqs"]["variants"]["HairCraftFaqs1"];
+export type FAQItem = HairCraftFaqsData["items"][number];
+export type HairCraftContactData = HairCraftSections["contact"]["variants"]["HairCraftContact1"];
+export type ContactInfoCard = HairCraftContactData["infoCards"][number];
+export type HairCraftLegalData = HairCraftSections["legal"];
+export type PolicyPageData = HairCraftLegalData["privacyPolicy"];
+export type PolicySectionItem = PolicyPageData["sections"][number];
+export type HairCraftNotFoundData = HairCraftSections["notFound"]["variants"]["HairCraftNotFound1"];
 
 // ── Canonical Mapped Site Data Object ──
 const sec = siteData.HairCraft.sections;
@@ -64,6 +74,13 @@ const siteMap = {
   getAQuote: sec.getAQuote.variants.HairCraftGetAQuote1,
   career: sec.career.variants.HairCraftCareer1,
   gallery: sec.gallery.variants.HairCraftGallery1,
+  faqs: sec.faqs.variants.HairCraftFaqs1,
+  contact: sec.contact.variants.HairCraftContact1,
+  legal: sec.legal,
+  privacyPolicy: sec.legal.privacyPolicy,
+  termsAndConditions: sec.legal.termsAndConditions,
+  cancellationPolicy: sec.legal.cancellationPolicy,
+  notFound: sec.notFound.variants.HairCraftNotFound1,
 
   // Compatibility object so existing components importing `siteData.home.hero` don't break
   home: {

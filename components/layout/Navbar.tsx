@@ -2,8 +2,9 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Calendar, CalendarDays, Menu, X, ChevronDown } from "lucide-react";
+import { Calendar, CalendarDays, Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import siteData from "@/data/index";
 
@@ -16,9 +17,24 @@ interface NavItem {
 const navItems: NavItem[] = siteData.navItems;
 
 export default function Navbar() {
-    const [activeTab, setActiveTab] = useState("Home");
+    const rawPathname = usePathname();
+    const pathname = rawPathname || "";
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [expandedMobileItem, setExpandedMobileItem] = useState<string | null>(null);
     const [isScrolled, setIsScrolled] = useState(false);
+
+    const isItemActive = (item: NavItem) => {
+        if (item.href === "/" || item.label === "Home") {
+            return pathname === "/";
+        }
+        if (item.href && item.href !== "#" && item.href !== "" && (pathname === item.href || pathname.startsWith(item.href + "/"))) {
+            return true;
+        }
+        if (item.subItems && item.subItems.some((sub) => pathname === sub.href || pathname.startsWith(sub.href + "/"))) {
+            return true;
+        }
+        return false;
+    };
 
     useEffect(() => {
         const handleScroll = () => {
@@ -32,6 +48,11 @@ export default function Navbar() {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    // Automatically close mobile menu when route changes
+    useEffect(() => {
+        setMobileMenuOpen(false);
+    }, [pathname]);
 
     return (
         <motion.header
@@ -65,7 +86,7 @@ export default function Navbar() {
                         className="hidden lg:flex items-center space-x-8 h-full"
                     >
                         {navItems.map((item) => {
-                            const isActive = activeTab === item.label;
+                            const isActive = isItemActive(item);
                             const hasSubItems = item.subItems && item.subItems.length > 0;
                             return (
                                 <motion.div
@@ -77,8 +98,7 @@ export default function Navbar() {
                                     className="relative group h-full flex items-center"
                                 >
                                     <Link
-                                        href={item.href}
-                                        onClick={() => setActiveTab(item.label)}
+                                        href={item.href || "#"}
                                         className={`flex items-center gap-1 relative text-md font-medium transition-colors duration-200 py-2 ${isActive ? "text-[#DFB261]" : "text-gray-300 hover:text-white"
                                             }`}
                                     >
@@ -96,19 +116,22 @@ export default function Navbar() {
                                     </Link>
 
                                     {hasSubItems && (
-                                        <div className="absolute top-[60px] left-0 w-52 bg-[#1a1a1a] border border-white/10 rounded-b-md shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-[70px] transition-all duration-300 z-50 overflow-hidden">
-                                            <div className="py-2">
-                                                {item.subItems!.map((subItem) => (
+                                        <div className="absolute top-[60px] left-0 w-64 bg-[#141414]/95 backdrop-blur-md border border-white/10 rounded-lg shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:top-[68px] transition-all duration-200 z-50 overflow-hidden py-1.5">
+                                            {item.subItems!.map((subItem) => {
+                                                const isSubActive = pathname === subItem.href || pathname.startsWith(subItem.href + "/");
+                                                return (
                                                     <Link
                                                         key={subItem.label}
                                                         href={subItem.href}
-                                                        className="block px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-[#DFB261]"
-                                                        onClick={() => setActiveTab(item.label)}
+                                                        className={`block px-4 py-2.5 text-sm transition-colors ${isSubActive
+                                                            ? "text-[#DFB261] bg-white/10 font-semibold"
+                                                            : "text-gray-300 hover:bg-white/5 hover:text-[#DFB261]"
+                                                            }`}
                                                     >
                                                         {subItem.label}
                                                     </Link>
-                                                ))}
-                                            </div>
+                                                );
+                                            })}
                                         </div>
                                     )}
                                 </motion.div>
@@ -126,9 +149,10 @@ export default function Navbar() {
                         <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                             <Link
                                 href={siteData.navbar.bookButton.href}
-                                className="flex items-center gap-2 bg-[#DFB261] hover:bg-[#DFB261] text-black font-medium px-6 py-3 rounded-full shadow-lg shadow-[#DFB261]/20 transition-all duration-200 text-md tracking-wide">
-                                <CalendarDays className="w-5 h-5" />
+                                className="inline-flex items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-6 py-1.5 sm:px-4 sm:py-3 rounded-full  transition-all duration-300 text-sm lg:text-base tracking-wide group">
+                                <CalendarDays className="w-4 h-4" />
                                 <span>{siteData.navbar.bookButton.text}</span>
+                                <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </motion.div>
                     </motion.div>
@@ -157,46 +181,57 @@ export default function Navbar() {
                     >
                         <div className="px-4 pt-2 pb-6 space-y-2">
                             {navItems.map((item) => {
-                                const isActive = activeTab === item.label;
+                                const isActive = isItemActive(item);
                                 const hasSubItems = item.subItems && item.subItems.length > 0;
+                                const isExpanded = expandedMobileItem === item.label;
                                 return (
                                     <div key={item.label}>
                                         <Link
-                                            href={item.href}
-                                            onClick={() => {
-                                                setActiveTab(item.label);
-                                                if (!hasSubItems) setMobileMenuOpen(false);
+                                            href={item.href || "#"}
+                                            onClick={(e) => {
+                                                if (hasSubItems) {
+                                                    e.preventDefault();
+                                                    setExpandedMobileItem(isExpanded ? null : item.label);
+                                                } else {
+                                                    setMobileMenuOpen(false);
+                                                }
                                             }}
                                             className={`flex justify-between items-center px-3 py-2 rounded-md text-base font-medium transition-colors ${isActive
-                                                ? "text-[#d4af37] bg-white/5"
+                                                ? "text-[#DFB261] bg-white/5 font-semibold"
                                                 : "text-gray-300 hover:text-white hover:bg-white/5"
                                                 }`}
                                         >
                                             {item.label}
                                             {hasSubItems && (
-                                                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isActive ? "rotate-180" : ""}`} />
+                                                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isExpanded ? "rotate-180 text-[#DFB261]" : ""}`} />
                                             )}
                                         </Link>
 
-                                        {hasSubItems && isActive && (
+                                        {hasSubItems && isExpanded && (
                                             <motion.div
                                                 initial={{ opacity: 0, height: 0 }}
                                                 animate={{ opacity: 1, height: "auto" }}
                                                 exit={{ opacity: 0, height: 0 }}
                                                 className="pl-6 space-y-1 mt-1 overflow-hidden"
                                             >
-                                                {item.subItems!.map((subItem) => (
-                                                    <Link
-                                                        key={subItem.label}
-                                                        href={subItem.href}
-                                                        onClick={() => {
-                                                            setMobileMenuOpen(false);
-                                                        }}
-                                                        className="block px-3 py-2 rounded-md text-sm text-gray-400 hover:text-white hover:bg-white/5"
-                                                    >
-                                                        {subItem.label}
-                                                    </Link>
-                                                ))}
+                                                {item.subItems!.map((subItem) => {
+                                                    const isSubActive = pathname === subItem.href || pathname.startsWith(subItem.href + "/");
+                                                    return (
+                                                        <Link
+                                                            key={subItem.label}
+                                                            href={subItem.href}
+                                                            onClick={() => {
+                                                                setMobileMenuOpen(false);
+                                                            }}
+                                                            className={`block px-3 py-2 rounded-md text-sm transition-colors ${isSubActive
+                                                                ? "text-[#DFB261] font-semibold bg-white/5"
+                                                                : "text-gray-400 hover:text-white hover:bg-white/5"
+                                                                }`}
+                                                        >
+                                                            {subItem.label}
+                                                        </Link>
+                                                    );
+                                                })}
                                             </motion.div>
                                         )}
                                     </div>

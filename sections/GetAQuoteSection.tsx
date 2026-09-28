@@ -403,17 +403,12 @@ export default function GetAQuoteSection({ data }: GetAQuoteSectionProps) {
 
                 {/* Submit Button */}
                 <div className="pt-2">
-                  <motion.div {...buttonLuxuryLift} className="inline-block w-full sm:w-auto">
+                  <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-fit lg:w-full">
                     <button
-                      type="submit"
-                      className="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-[#DFB261] hover:bg-[#DFB261]/90 text-black font-medium px-8 py-3.5 rounded-full shadow-lg shadow-[#DFB261]/20 transition-all text-sm tracking-wide group"
-                    >
+                      onClick={handleSubmit}
+                      className="inline-flex lg:flex w-auto lg:w-full items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-6 py-2.5 sm:px-8 sm:py-3 rounded-full transition-all duration-300 text-sm lg:text-base tracking-wide group">
                       <span>{formConfig?.submitButton?.text || "Submit Request"}</span>
-                      {renderIcon(
-                        formConfig?.submitButton?.icon,
-                        LucideIcons.ArrowRight,
-                        "w-4 h-4 transform group-hover:translate-x-1.5 transition-transform"
-                      )}
+                      <LucideIcons.ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                     </button>
                   </motion.div>
                 </div>

@@ -10,17 +10,30 @@ import { staggerContainerFast, fadeInUpVariants, buttonHoverGlow } from "@/utils
 const { cta } = siteData.home;
 
 export default function CtaSection() {
+    const mobileBg = (cta as any).bgImageMobile || "https://i.pinimg.com/736x/ad/1a/87/ad1a8727d6eb8337b3cc5ab9d47844dd.jpg";
+    const desktopBg = cta.bgImage;
 
     return (
-        <section
-            className="relative w-full bg-[#121212] text-white overflow-hidden bg-cover bg-top py-10 lg:py-12"
-            style={{ backgroundImage: `url(${cta.bgImage})` }}>
-            {/* Gradient Overlays to ensure text is readable on the left */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#121212] via-[#121212]/80 to-transparent z-0"></div>
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#121212] to-transparent z-0"></div>
-            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#121212] to-transparent z-0"></div>
+        <section className="relative w-full bg-[#121212] text-white overflow-hidden py-10 lg:py-12">
+            {/* Mobile Background Image (< md screens) */}
+            <div
+                className="absolute inset-0 bg-cover bg-center md:hidden pointer-events-none"
+                style={{ backgroundImage: `url(${mobileBg})` }}
+            />
 
-            <div className="relative z-10 max-w-[1400px] mx-auto px-4 ">
+            {/* Desktop Background Image (md+ screens) */}
+            <div
+                className="absolute inset-0 bg-cover bg-top hidden md:block pointer-events-none"
+                style={{ backgroundImage: `url(${desktopBg})` }}
+            />
+
+            {/* Gradient Overlays to ensure text is readable */}
+            <div className="absolute inset-0 bg-black/70 sm:bg-black/60 md:hidden z-0 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#121212] via-[#121212]/80 to-transparent z-0 hidden md:block pointer-events-none" />
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#121212] to-transparent z-0 pointer-events-none" />
+            <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#121212] to-transparent z-0 pointer-events-none" />
+
+            <div className="relative z-10 max-w-[1400px] mx-auto px-4">
                 <motion.div
                     className="max-w-2xl space-y-4"
                     initial="hidden"
@@ -67,20 +80,19 @@ export default function CtaSection() {
 
                     {/* CTA Buttons Row */}
                     <motion.div variants={fadeInUpVariants} className="flex flex-col sm:flex-row items-center gap-6 pt-4">
-                        <motion.div {...buttonHoverGlow} className="w-full sm:w-auto">
+                        <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                             <Link
                                 href={cta.buttons.primary.href}
-                                className="w-full inline-flex items-center justify-center gap-3 bg-[#DFB261] hover:bg-[#c59b27] text-black font-medium px-8 py-4 rounded-full shadow-lg shadow-[#d4af37]/10 transition-all duration-300 group text-sm tracking-wide"
-                            >
+                                className="inline-flex items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-6 py-2.5 sm:px-8 lg:py-3 rounded-full  transition-all duration-300 text-sm lg:text-base tracking-wide group">
                                 <span>{cta.buttons.primary.text}</span>
                                 <Icons.ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                             </Link>
                         </motion.div>
 
-                        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full sm:w-auto">
+                        <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                             <Link
                                 href={cta.buttons.secondary.href}
-                                className="w-full inline-flex items-center justify-center gap-3 bg-black/50 hover:bg-black border border-white/20 text-white font-medium px-8 py-4 rounded-full transition-all duration-300 text-sm tracking-wide backdrop-blur-sm"
+                                className="inline-flex items-center justify-center font-medium gap-3 bg-black/50 hover:bg-[#DFB261] hover:border hover:border-black hover:text-black border border-white/20 text-white px-10 py-2.5 sm:px-8 lg:py-3 rounded-full transition-all duration-300 text-sm lg:text-base tracking-wide backdrop-blur-sm group"
                             >
                                 <Icons.Phone className="w-4 h-4" />
                                 <span>{cta.buttons.secondary.text}</span>

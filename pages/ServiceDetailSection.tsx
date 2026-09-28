@@ -219,13 +219,12 @@ export default function ServiceDetailSection({
                                     {appointmentCard?.description || "Get expert care and a fresh new look. Choose your preferred date and time."}
                                 </p>
                                 <div className="pt-2">
-                                    <motion.div {...buttonLuxuryLift}>
+                                    <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-fit lg:w-full">
                                         <Link
-                                            href={appointmentCard?.buttonHref || "/appointment"}
-                                            className="inline-flex items-center justify-center gap-2 w-full bg-[#DFB261] hover:bg-[#DFB261]/90 text-black font-medium py-3 rounded-full text-sm shadow-lg shadow-[#DFB261]/20 transition-all group"
-                                        >
+                                            href={appointmentCard?.buttonHref || "/contact-us"}
+                                            className="inline-flex lg:flex w-auto lg:w-full items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-6 py-2.5 sm:px-8 lg:py-3 rounded-full transition-all duration-300 text-sm lg:text-base tracking-wide group">
                                             <span>{appointmentCard?.buttonText || "Book Now"}</span>
-                                            <LucideIcons.ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform" />
+                                            <LucideIcons.ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                                         </Link>
                                     </motion.div>
                                 </div>

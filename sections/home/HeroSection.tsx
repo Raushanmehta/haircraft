@@ -52,12 +52,12 @@ export default function HeroSection() {
     }, [api]);
 
     return (
-        <section className="relative min-h-[70svh] md:min-h-[60svh] lg:min-h-[100svh] flex items-center bg-[#121212] overflow-hidden">
+        <section className="relative min-h-[100svh] md:min-h-[100svh] lg:min-h-[100svh] flex items-center bg-[#121212] overflow-hidden">
             <Carousel
                 setApi={setApi}
                 opts={{ loop: true, align: "start", duration: 40 }}
                 className="w-full h-full absolute inset-0 z-0">
-                <CarouselContent className="h-[70svh] md:h-[60svh] lg:h-[100svh] ml-0">
+                <CarouselContent className="h-[100svh] md:h-[100svh] lg:h-[100svh] ml-0">
                     {slides.map((slide, index) => (
                         <CarouselItem key={slide.id} className="pl-0 relative h-full w-full">
                             {/* Background Image */}
@@ -113,15 +113,13 @@ export default function HeroSection() {
                                                     </motion.div>
 
                                                     {/* CTA Buttons */}
-                                                    <motion.div 
+                                                    <motion.div
                                                         variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }}
-                                                        className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 "
-                                                    >
+                                                        className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 ">
                                                         <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                                                             <Link
                                                                 href={ctaPrimary.href}
-                                                                className="inline-flex items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black text-black hover:text-white border border-[#DFB261] hover:border-black px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg shadow-[#DFB261]/20 transition-all duration-300 text-sm lg:text-base tracking-wide group"
-                                                            >
+                                                                className="inline-flex items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-6 py-3 sm:px-8 sm:py-4 rounded-full  transition-all duration-300 text-sm lg:text-base tracking-wide group">
                                                                 <span>{ctaPrimary.text}</span>
                                                                 <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                                                             </Link>
@@ -141,7 +139,7 @@ export default function HeroSection() {
                                                     </motion.div>
 
                                                     {/* Bottom Feature Highlights */}
-                                                    <motion.div 
+                                                    <motion.div
                                                         variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }}
                                                         className="grid grid-cols-3 sm:grid-cols-3 gap-4 sm:gap-4 pt-4 sm:pt-4 border-t border-white/10  sm:max-w-sm"
                                                     >

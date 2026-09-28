@@ -210,22 +210,20 @@ export default function TeamDetailSection({
                             {/* Action Buttons */}
                             <motion.div
                                 variants={fadeInUpVariants}
-                                className="flex flex-wrap items-center gap-4 pt-3"
-                            >
-                                <motion.div {...buttonLuxuryLift}>
+                                className="flex flex-wrap items-center gap-4 pt-3">
+                                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                                     <Link
-                                        href="/appointment"
-                                        className="inline-flex items-center gap-2 bg-[#DFB261] hover:bg-[#DFB261]/90 text-black font-medium px-8 py-3.5 rounded-full shadow-lg shadow-[#DFB261]/20 transition-all text-sm tracking-wide group"
-                                    >
-                                        <span>Book an Appointment</span>
-                                        <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform" />
+                                        href='/contact-us'
+                                        className="inline-flex items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-6 py-2.5 sm:px-8 lg:py-3 rounded-full  transition-all duration-300 text-sm lg:text-base tracking-wide group">
+                                        <span>Book Appointment</span>
+                                        <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                                     </Link>
                                 </motion.div>
 
                                 <motion.div {...buttonLuxuryLift}>
                                     <Link
                                         href="/our-team"
-                                        className="inline-flex items-center gap-2 border border-gray-300 hover:border-[#DFB261] bg-white text-[#121212] px-6 py-3.5 rounded-full transition-all text-sm font-medium group"
+                                        className="inline-flex items-center gap-2 border border-gray-300 hover:border-[#DFB261] hover:bg-black hover:text-white bg-white text-[#121212] px-6 py-3.5 rounded-full transition-all text-sm font-medium group"
                                     >
                                         <span>View Our Team</span>
                                         <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform" />

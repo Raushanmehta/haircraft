@@ -46,6 +46,390 @@
                 "component": "HairCraftBlog1"
               }
             ]
+          },
+          "about": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "about",
+                "component": "HairCraftAbout1"
+              },
+              {
+                "key": "whyChooseUs",
+                "component": "HairCraftWhyChooseUs1"
+              },
+              {
+                "key": "process",
+                "component": "HairCraftProcess1"
+              }
+            ]
+          },
+          "services": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "services",
+                "component": "HairCraftServices1"
+              }
+            ]
+          },
+          "whyChooseUs": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "whyChooseUs",
+                "component": "HairCraftWhyChooseUs1"
+              },
+              {
+                "key": "process",
+                "component": "HairCraftProcess1"
+              }
+            ]
+          },
+          "why-choose-us": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "whyChooseUs",
+                "component": "HairCraftWhyChooseUs1"
+              },
+              {
+                "key": "process",
+                "component": "HairCraftProcess1"
+              }
+            ]
+          },
+          "team": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "team",
+                "component": "HairCraftTeam1"
+              }
+            ]
+          },
+          "ourTeam": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "team",
+                "component": "HairCraftTeam1"
+              }
+            ]
+          },
+          "our-team": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "team",
+                "component": "HairCraftTeam1"
+              }
+            ]
+          },
+          "testimonials": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "testimonials",
+                "component": "HairCraftTestimonials1"
+              }
+            ]
+          },
+          "blog": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "blog",
+                "component": "HairCraftBlog1"
+              }
+            ]
+          },
+          "career": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "career",
+                "component": "HairCraftCareer1"
+              }
+            ]
+          },
+          "gallery": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "gallery",
+                "component": "HairCraftGallery1"
+              }
+            ]
+          },
+          "getAQuote": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "getAQuote",
+                "component": "HairCraftGetAQuote1"
+              }
+            ]
+          },
+          "get-a-quote": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "getAQuote",
+                "component": "HairCraftGetAQuote1"
+              }
+            ]
+          },
+          "faqs": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "faqs",
+                "component": "HairCraftFaqs1"
+              }
+            ]
+          },
+          "faqsPage": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "faqs",
+                "component": "HairCraftFaqs1"
+              }
+            ]
+          },
+          "contact": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "contact",
+                "component": "HairCraftContact1"
+              }
+            ]
+          },
+          "contactUs": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "contact",
+                "component": "HairCraftContact1"
+              }
+            ]
+          },
+          "contactPage": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "contact",
+                "component": "HairCraftContact1"
+              }
+            ]
+          },
+          "contact-us": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "contact",
+                "component": "HairCraftContact1"
+              }
+            ]
+          },
+          "privacyPolicy": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "legal",
+                "component": "HairCraftLegal1"
+              }
+            ]
+          },
+          "privacy-policy": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "legal",
+                "component": "HairCraftLegal1"
+              }
+            ]
+          },
+          "termsConditions": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "legal",
+                "component": "HairCraftLegal1"
+              }
+            ]
+          },
+          "termsAndConditions": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "legal",
+                "component": "HairCraftLegal1"
+              }
+            ]
+          },
+          "terms-conditions": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "legal",
+                "component": "HairCraftLegal1"
+              }
+            ]
+          },
+          "cancellationPolicy": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "legal",
+                "component": "HairCraftLegal1"
+              }
+            ]
+          },
+          "cancellation-policy": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "legal",
+                "component": "HairCraftLegal1"
+              }
+            ]
+          },
+          "notFound": {
+            "components": [
+              {
+                "key": "notFound",
+                "component": "HairCraftNotFound1"
+              }
+            ]
+          },
+          "pageTopSection": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              }
+            ]
+          },
+          "hero": {
+            "components": [
+              {
+                "key": "hero",
+                "component": "HairCraftHero1"
+              }
+            ]
+          },
+          "process": {
+            "components": [
+              {
+                "key": "process",
+                "component": "HairCraftProcess1"
+              }
+            ]
+          },
+          "cta": {
+            "components": [
+              {
+                "key": "cta",
+                "component": "HairCraftCta1"
+              }
+            ]
+          },
+          "legal": {
+            "components": [
+              {
+                "key": "legal",
+                "component": "HairCraftLegal1"
+              }
+            ]
+          },
+          "legalPage": {
+            "components": [
+              {
+                "key": "legal",
+                "component": "HairCraftLegal1"
+              }
+            ]
           }
         }
       }
@@ -61,7 +445,7 @@
             },
             "bookButton": {
               "text": "Book An Appointment",
-              "href": "/appointment"
+              "href": "/contact-us"
             },
             "navItems": [
               {
@@ -74,19 +458,39 @@
               },
               {
                 "label": "Services",
-                "href": "",
+                "href": "/services",
                 "subItems": [
                   {
                     "label": "Haircut & Styling",
                     "href": "/services/haircut-styling"
                   },
                   {
-                    "label": "Coloring",
-                    "href": "/services/coloring"
+                    "label": "Hair Wash & Dry",
+                    "href": "/services/hair-wash-dry"
                   },
                   {
-                    "label": "Treatments",
-                    "href": "/services/treatments"
+                    "label": "Beard & Shaving",
+                    "href": "/services/beard-shaving"
+                  },
+                  {
+                    "label": "Global Hair Color",
+                    "href": "/services/global-hair-color"
+                  },
+                  {
+                    "label": "Hair Treatment",
+                    "href": "/services/hair-treatment"
+                  },
+                  {
+                    "label": "Hair Spa",
+                    "href": "/services/hair-spa"
+                  },
+                  {
+                    "label": "Hair Texturizing",
+                    "href": "/services/hair-texturizing"
+                  },
+                  {
+                    "label": "Wedding Grooming",
+                    "href": "/services/wedding-grooming"
                   }
                 ]
               },
@@ -104,7 +508,7 @@
               },
               {
                 "label": "Contact Us",
-                "href": "/contact"
+                "href": "/contact-us"
               }
             ]
           }
@@ -154,32 +558,32 @@
                   "href": "/"
                 },
                 {
-                  "label": "About Us",
-                  "href": "/about"
-                },
-                {
-                  "label": "Our Services",
-                  "href": "/services"
-                },
-                {
-                  "label": "Our Stylists",
-                  "href": "/our-team"
-                },
-                {
-                  "label": "Career",
-                  "href": "/career"
-                },
-                {
-                  "label": "Contact Us",
-                  "href": "/contact"
+                  "label": "Our Blog",
+                  "href": "/blog"
                 },
                 {
                   "label": "Testimonials",
                   "href": "/testimonials"
                 },
                 {
+                  "label": "Why Choose Us",
+                  "href": "/why-choose-us"
+                },
+                {
+                  "label": "Career",
+                  "href": "/career"
+                },
+                {
                   "label": "Get A Quote",
                   "href": "/get-a-quote"
+                },
+                {
+                  "label": "FAQs",
+                  "href": "/faqs"
+                },
+                {
+                  "label": "Contact Us",
+                  "href": "/contact-us"
                 }
               ]
             },
@@ -191,8 +595,16 @@
                   "href": "/services/haircut-styling"
                 },
                 {
-                  "label": "Hair Coloring",
-                  "href": "/services/hair-coloring"
+                  "label": "Hair Wash & Dry",
+                  "href": "/services/hair-wash-dry"
+                },
+                {
+                  "label": "Beard & Shaving",
+                  "href": "/services/beard-shaving"
+                },
+                {
+                  "label": "Global Hair Color",
+                  "href": "/services/global-hair-color"
                 },
                 {
                   "label": "Hair Treatment",
@@ -203,20 +615,12 @@
                   "href": "/services/hair-spa"
                 },
                 {
-                  "label": "Beard Grooming",
-                  "href": "/services/beard-grooming"
+                  "label": "Hair Texturizing",
+                  "href": "/services/hair-texturizing"
                 },
                 {
-                  "label": "Hair Care Products",
-                  "href": "/services/products"
-                },
-                {
-                  "label": "Bridal & Event Styling",
-                  "href": "/services/bridal"
-                },
-                {
-                  "label": "Consultation",
-                  "href": "/services/consultation"
+                  "label": "Wedding Grooming",
+                  "href": "/services/wedding-grooming"
                 }
               ]
             },
@@ -232,7 +636,7 @@
             },
             "cta": {
               "text": "Book an Appointment",
-              "href": "/appointment"
+              "href": "/contact-us"
             },
             "bottomBar": {
               "copyright": "© 2026 Haircarft. All Rights Reserved. Powered by Lestow",
@@ -243,7 +647,11 @@
                 },
                 {
                   "label": "Terms & Conditions",
-                  "href": "/terms"
+                  "href": "/terms-conditions"
+                },
+                {
+                  "label": "Cancellation Policy",
+                  "href": "/cancellation-policy"
                 },
                 {
                   "label": "FAQs",
@@ -285,7 +693,7 @@
             ],
             "ctaPrimary": {
               "text": "Book An Appointment",
-              "href": "/appointment"
+              "href": "/contact-us"
             },
             "ctaVideo": {
               "text": "Watch Our Salon"
@@ -367,7 +775,7 @@
               "title": "Book Your \nAppointment",
               "description": "Get expert care and a fresh new look. Choose your preferred date and time.",
               "buttonText": "Book Now",
-              "buttonHref": "/appointment"
+              "buttonHref": "/contact-us"
             },
             "needHelpCard": {
               "title": "Need Help?",
@@ -387,8 +795,8 @@
                   "Our Haircut & Styling service is designed to enhance your natural look with precision, creativity, and expert techniques. Whether you prefer a classic cut or a modern trend, our professional stylists tailor each look to match your personality, face shape, and lifestyle.",
                   "We use advanced cutting techniques and premium styling products to ensure you get a look that's sharp, stylish, and easy to maintain. From everyday grooming to complete makeovers, we're here to bring out the best version of you."
                 ],
-                "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1000&auto=format&fit=crop",
-                "secondaryImage": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/1200x/a9/55/8a/a9558a5b52c5e542b785a5cb61639b84.jpg",
+                "secondaryImage": "https://i.pinimg.com/1200x/2c/15/6b/2c156bbdf80c718f1ed5fa62d5e6c8ed.jpg",
                 "icon": "Scissors",
                 "href": "/services/haircut-styling",
                 "features": [
@@ -433,8 +841,8 @@
                   "Refresh your look with our professional hair wash & blow dry service, designed to leave your hair smooth, shiny, and full of volume.",
                   "Using premium nourishing shampoos and lightweight conditioners suited for your specific hair type, we cleanse away impurities while restoring softness and natural brilliance."
                 ],
-                "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000&auto=format&fit=crop",
-                "secondaryImage": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/736x/2d/37/79/2d377922a58d05cea8b6e481bc086eac.jpg",
+                "secondaryImage": "https://i.pinimg.com/1200x/9e/c8/ad/9ec8ad08a50f23d54527bb4984c56abe.jpg",
                 "icon": "Sparkles",
                 "href": "/services/hair-wash-dry",
                 "features": [
@@ -479,8 +887,8 @@
                   "Expert grooming services for a sharp, clean, and confident look. From precision beard trims to hot towel classic shaves, we've got you covered.",
                   "Our master barbers use traditional techniques combined with premium oils and balms to condition your skin and sculpt your facial hair to absolute perfection."
                 ],
-                "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1000&auto=format&fit=crop",
-                "secondaryImage": "https://images.unsplash.com/photo-1622287162692-0382f1e0b64f?q=80&w=800&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/1200x/1c/59/6e/1c596ebd5c4d2e990897274ff982c5bb.jpg",
+                "secondaryImage": "https://i.pinimg.com/736x/9a/53/ec/9a53ec7b6b746bb611f63883260bb38b.jpg",
                 "icon": "Scissors",
                 "href": "/services/beard-shaving",
                 "features": [
@@ -525,8 +933,8 @@
                   "Transform your look with our professional hair coloring services. From subtle highlights to bold global shades, we create your ideal color.",
                   "Our color specialists use gentle, ammonia-free formulas that lock in vibrant tone while nourishing your hair strands for long-lasting radiant shine."
                 ],
-                "image": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1000&auto=format&fit=crop",
-                "secondaryImage": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/736x/8f/df/e9/8fdfe9937a71c143b174315ecc271f2f.jpg",
+                "secondaryImage": "https://i.pinimg.com/1200x/33/b5/f1/33b5f1a4e90e02faf73be4d88cc9f090.jpg",
                 "icon": "Palette",
                 "href": "/services/global-hair-color",
                 "features": [
@@ -571,8 +979,8 @@
                   "Revive damaged and dry hair with our intensive keratin, spa, and repair treatments designed to restore moisture, strength, and brilliant shine.",
                   "Targeting deep hair fibers, our treatments rebuild broken protein bonds and shield your hair against humidity, environmental pollutants, and daily heat styling."
                 ],
-                "image": "https://images.unsplash.com/photo-1583234947900-474d284fb8e9?q=80&w=1000&auto=format&fit=crop",
-                "secondaryImage": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=800&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/1200x/e4/f5/8d/e4f58d485ae549f47471c5fed98f6f81.jpg",
+                "secondaryImage": "https://i.pinimg.com/1200x/8f/3d/02/8f3d0255a589f3837dc23dfad9e6c48d.jpg",
                 "icon": "Sparkles",
                 "href": "/services/hair-treatment",
                 "features": [
@@ -617,8 +1025,8 @@
                   "Indulge in a relaxing hair spa session that nourishes your scalp, strengthens roots, and leaves your hair silky smooth and completely revitalized.",
                   "Our signature ritual includes an acupressure scalp massage that relieves tension, improves blood circulation, and infuses deep hydration directly into your hair roots."
                 ],
-                "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000&auto=format&fit=crop",
-                "secondaryImage": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1000&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/736x/bb/ad/9e/bbad9e35b3f9fd2ca930cb5869920f30.jpg",
+                "secondaryImage": "https://i.pinimg.com/1200x/50/83/32/508332da5f8f7acd1a9549c125151073.jpg",
                 "icon": "Heart",
                 "href": "/services/hair-spa",
                 "features": [
@@ -663,8 +1071,8 @@
                   "Add bounce, beach waves, or sleek straightening to your hair with our professional texturizing and smoothing services.",
                   "We customize every texturizing treatment to suit your hair's unique density and structure, achieving flexible movement, easy manageability, and frizz-free confidence."
                 ],
-                "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1000&auto=format&fit=crop",
-                "secondaryImage": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1000&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/1200x/d9/39/0a/d9390a067f55d5c4c2084e8d44b9e9a5.jpg",
+                "secondaryImage": "https://i.pinimg.com/1200x/6e/3f/c2/6e3fc2cbcf2eb2c0354987bbb7314bba.jpg",
                 "icon": "Layers",
                 "href": "/services/hair-texturizing",
                 "features": [
@@ -709,8 +1117,8 @@
                   "Customized bridal and groom grooming packages tailored to make your special day flawless, picture-perfect, and unforgettable.",
                   "From pre-wedding consultations and styling trials to day-of finishing touches, our dedicated master stylists ensure you look radiant and feel confident walking down the aisle."
                 ],
-                "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1000&auto=format&fit=crop",
-                "secondaryImage": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1000&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/1200x/f0/3f/67/f03f67f1c3bef18fa4cb12e114fee523.jpg",
+                "secondaryImage": "https://i.pinimg.com/1200x/4f/cc/9f/4fcc9fe10239d3720199cb595c09c177.jpg",
                 "icon": "UserCheck",
                 "href": "/services/wedding-grooming",
                 "features": [
@@ -763,25 +1171,25 @@
                 "step": "01",
                 "title": "Book Your Appointment",
                 "description": "Schedule your visit online or give us a call. Choose your preferred service, date, and time — it's quick and easy.",
-                "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=600&auto=format&fit=crop"
+                "image": "https://i.pinimg.com/1200x/0e/90/80/0e9080e0aed183f95d78ddb323084a4f.jpg"
               },
               {
                 "step": "02",
                 "title": "Consultation",
                 "description": "Our expert stylist will understand your needs, suggest the best options, and create a personalized plan for your look.",
-                "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop"
+                "image": "https://i.pinimg.com/736x/40/46/3e/40463e4e89417731a37a146da39a59e4.jpg"
               },
               {
                 "step": "03",
                 "title": "Get Pampered",
                 "description": "Sit back and relax while our professionals work their magic using premium products and advanced techniques.",
-                "image": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=600&auto=format&fit=crop"
+                "image": "https://i.pinimg.com/1200x/b1/ce/ad/b1cead0b901fd6aa77a9290750fed49e.jpg"
               },
               {
                 "step": "04",
                 "title": "Step Out with Confidence",
                 "description": "Enjoy your refreshed look and feel more confident, stylish, and you — because you deserve it[cite: 6].",
-                "image": "https://images.unsplash.com/photo-1583234947900-474d284fb8e9?q=80&w=600&auto=format&fit=crop"
+                "image": "https://i.pinimg.com/736x/38/f9/08/38f90808ad90cd2daf0d2c3b202ecd93.jpg"
               }
             ]
           }
@@ -795,6 +1203,7 @@
             "titlePart2": "New You?",
             "description": "Book your appointment today and let our expert stylists bring out the best version of you.",
             "bgImage": "https://i.pinimg.com/736x/e8/10/e4/e810e4131f86a7d0848a9ea749087931.jpg",
+            "bgImageMobile": "https://i.pinimg.com/736x/ad/1a/87/ad1a8727d6eb8337b3cc5ab9d47844dd.jpg",
             "features": [
               {
                 "icon": "CalendarDays",
@@ -812,7 +1221,7 @@
             "buttons": {
               "primary": {
                 "text": "Book An Appointment",
-                "href": "/book-appointment"
+                "href": "/contact-us"
               },
               "secondary": {
                 "text": "Talk To Our Expert",
@@ -860,7 +1269,7 @@
                 "email": "devendra@haicraftsalon.com",
                 "phone": "+91 98765 43210",
                 "description": "Specializes in modern haircuts, fades and classic grooming with attention to every detail.",
-                "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=600&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/1200x/61/f4/6c/61f46c28fb398260a0507f46ed258a64.jpg",
                 "skills": [],
                 "socials": {
                   "facebook": "#",
@@ -884,7 +1293,7 @@
                 "name": "Simran Singh",
                 "role": "TRANSFORMATION EXPERT",
                 "description": "Expert in style makeovers, trendy cuts and personalized hair transformations for all hair types.",
-                "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=600&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/736x/d7/52/19/d75219e8ec84231921f800553b4b26c9.jpg",
                 "socials": {
                   "facebook": "#",
                   "instagram": "#",
@@ -918,7 +1327,7 @@
                 "name": "Arvind Sharma",
                 "role": "GROOMING SPECIALIST",
                 "description": "Passionate about precision grooming, beard styling and creating sharp, confident looks.",
-                "image": "https://images.unsplash.com/photo-1622287162692-0382f1e0b64f?q=80&w=600&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/736x/c1/37/4e/c1374eb6c8f08450960795f69765b396.jpg",
                 "socials": {
                   "facebook": "#",
                   "instagram": "#",
@@ -952,7 +1361,7 @@
                 "name": "Rohit Mehta",
                 "role": "HAIR COLOR SPECIALIST",
                 "description": "Creative color expert known for natural tones, bold looks and long-lasting results.",
-                "image": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=600&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/736x/9b/90/56/9b90564da73fff97f3c61cde71a8a834.jpg",
                 "socials": {
                   "facebook": "#",
                   "instagram": "#",
@@ -1018,7 +1427,7 @@
                 "icon": "Gem"
               }
             ],
-            "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1000&auto=format&fit=crop",
+            "image": "https://i.pinimg.com/736x/dd/a4/92/dda49295c69cb25cc47e1d112e5048b9.jpg",
             "stats": {
               "prefix": "OVER",
               "number": "10",
@@ -1027,7 +1436,7 @@
             },
             "cta": {
               "text": "Book Appointment",
-              "href": "/appointment"
+              "href": "/contact-us"
             }
           }
         }
@@ -1045,7 +1454,7 @@
                 "name": "Ralph Edwards",
                 "role": "BUSINESS PROFESSIONAL",
                 "comment": "“I've been coming here for over six months now, and every visit is better than the last. The attention to detail and the skill of the stylists is simply outstanding.”",
-                "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=600&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/1200x/b0/25/73/b025739366afa068ed5e2079d543b2d0.jpg",
                 "rating": 5
               },
               {
@@ -1053,7 +1462,7 @@
                 "name": "Simran Singh",
                 "role": "FREELANCER",
                 "comment": "“The best haircut I've ever had! The team is professional, friendly, and really understands what suits you. I always leave feeling fresh and confident.”",
-                "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=600&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/1200x/41/d4/f5/41d4f5df346201b35458f408c190268d.jpg",
                 "rating": 5
               },
               {
@@ -1061,7 +1470,7 @@
                 "name": "John Doe",
                 "role": "MARKETING MANAGER",
                 "comment": "“Clean, modern, and professional. The atmosphere is great, the stylists are experts, and the results speak for themselves. Highly recommended!”",
-                "image": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=600&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/1200x/29/5c/61/295c61683eebd2c909caaf6b050b6316.jpg",
                 "rating": 5
               },
               {
@@ -1069,7 +1478,7 @@
                 "name": "Aarav Sharma",
                 "role": "SOFTWARE ENGINEER",
                 "comment": "“Exceptional service from start to finish. The grooming advice and precision styling are top tier. Won't trust anyone else with my hair now.”",
-                "image": "https://images.unsplash.com/photo-1622287162692-0382f1e0b64f?q=80&w=600&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/1200x/56/0f/94/560f94daf523cc7cb1c395851f9d632d.jpg",
                 "rating": 5
               },
               {
@@ -1077,7 +1486,7 @@
                 "name": "Marcus Vance",
                 "role": "CREATIVE DIRECTOR",
                 "comment": "“A truly premium salon experience. From the scalp therapy to the custom beard trim, everything was executed with master-level precision.”",
-                "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/1200x/a6/e6/06/a6e606404af08b6397b117d4eadf326b.jpg",
                 "rating": 5
               },
               {
@@ -1085,7 +1494,7 @@
                 "name": "Elena Rostova",
                 "role": "ARCHITECT & DESIGNER",
                 "comment": "“The aesthetic ambiance and personalized hair coloring consultation exceeded all my expectations. My hair feels healthier and looks vibrant.”",
-                "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/1200x/d2/79/71/d27971256e16cd92caabcea3f21afb67.jpg",
                 "rating": 5
               },
               {
@@ -1093,7 +1502,7 @@
                 "name": "Devon Campbell",
                 "role": "FINANCIAL CONSULTANT",
                 "comment": "“Top notch hospitality and punctual appointments. Their hot towel shave and bespoke haircut give me the crisp, executive edge I need for meetings.”",
-                "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/1200x/d2/79/71/d27971256e16cd92caabcea3f21afb67.jpg",
                 "rating": 5
               },
               {
@@ -1101,7 +1510,7 @@
                 "name": "Rohan Mehta",
                 "role": "ENTREPRENEUR",
                 "comment": "“HairCraft sets the gold standard in male grooming. Consistent quality, luxury vibes, and styling products that actually keep hair healthy.”",
-                "image": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=600&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/736x/65/14/41/65144127c0a26353dae9419f83337e23.jpg",
                 "rating": 5
               },
               {
@@ -1109,7 +1518,7 @@
                 "name": "David Mitchell",
                 "role": "SENIOR EXECUTIVE",
                 "comment": "“Consistently world-class service. The master barbers understand hair textures thoroughly and deliver flawless styling every single time.”",
-                "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop",
+                "image": "https://i.pinimg.com/736x/65/14/41/65144127c0a26353dae9419f83337e23.jpg",
                 "rating": 5
               }
             ]
@@ -1119,37 +1528,277 @@
       "blog": {
         "variants": {
           "HairCraftBlog1": {
+            "pageTop": {
+              "title": "Blogs",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Blogs",
+                  "href": "/blog"
+                }
+              ]
+            },
             "subtitle": "OUR BLOG",
             "titlePart1": "Latest Tips, Trends,",
             "titlePart2": "Expert Advice Guides",
             "description": "Stay updated with the latest grooming trends, expert tips, and style inspiration from our professionals, stylish, and confident.",
+            "badge": "BLOG DETAILS",
+            "metaIcons": {
+              "calendar": "Calendar",
+              "author": "User",
+              "readTime": "Clock",
+              "quote": "Quote",
+              "arrowRight": "ArrowRight",
+              "chevronRight": "ChevronRight"
+            },
+            "detailPage": {
+              "badge": "BLOG DETAILS",
+              "sidebar": {
+                "recentPostsTitle": "Recent Posts",
+                "categoriesTitle": "Categories",
+                "categories": [
+                  "Hair Care",
+                  "Styling Tips",
+                  "Hair Treatments",
+                  "Trends & Inspiration",
+                  "Salon Life"
+                ],
+                "promoCard": {
+                  "title": "Ready for Healthier, More Beautiful Hair?",
+                  "description": "Book your appointment today and let our experts take care of your styling needs.",
+                  "backgroundImage": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=600&auto=format&fit=crop",
+                  "button": {
+                    "text": "Book an Appointment",
+                    "href": "/contact-us",
+                    "icon": "ArrowRight"
+                  }
+                }
+              }
+            },
             "posts": [
               {
                 "id": "1",
                 "category": "HAIR CARE",
                 "date": "12 AUG 2025",
+                "author": "Senior Stylist",
+                "readTime": "5 Min Read",
                 "title": "Top Haircut Trends for Men This Season",
                 "description": "Discover the latest haircut styles that are right now and find the perfect look to match your personality.",
-                "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=600&auto=format&fit=crop",
-                "slug": "/blog/top-haircut-trends-for-men"
+                "image": "https://i.pinimg.com/1200x/18/d7/53/18d753382d91c489fa8ef4b74bc2c813.jpg",
+                "slug": "/blog/top-haircut-trends-for-men",
+                "introText": "Healthy, shiny hair is not just about looking good — it's a reflection of proper care, a balanced lifestyle, and the right hair routine. At Haicraft, we believe that beautiful hair begins with healthy habits. Whether you have straight, wavy, or curly hair, following a few essential care tips can make a big difference in the way your hair looks and feels.",
+                "sections": [
+                  {
+                    "number": "1.",
+                    "heading": "Use the Right Shampoo and Conditioner",
+                    "content": "Choosing the right shampoo and conditioner for your hair type is the first step towards healthy hair. A good shampoo cleanses your scalp without stripping natural oils, while a nourishing conditioner keeps your hair soft and manageable."
+                  },
+                  {
+                    "number": "2.",
+                    "heading": "Don't Skip Regular Trims",
+                    "content": "Regular trims help remove split ends, prevent breakage, and keep your hair looking fresh and healthy. Even if you're trying to grow your hair, a small trim every few months can make it stronger in the long run."
+                  },
+                  {
+                    "number": "3.",
+                    "heading": "Protect Your Hair from Heat",
+                    "content": "Excessive use of heat styling tools like straighteners, curling irons, and blow dryers can damage your hair. Always use a heat protectant spray and try to keep the heat setting on a moderate level."
+                  },
+                  {
+                    "number": "4.",
+                    "heading": "Keep Your Scalp Healthy",
+                    "content": "A healthy scalp is the foundation for healthy hair. Regular cleansing, gentle massage, and proper hydration can improve blood circulation and promote hair growth."
+                  },
+                  {
+                    "number": "5.",
+                    "heading": "Maintain a Balanced Diet",
+                    "content": "Your diet plays a crucial role in the health of your hair. Include foods rich in vitamins, minerals, and proteins such as leafy greens, eggs, nuts, and fish to nourish your hair from within."
+                  }
+                ],
+                "quote": "“Great hair doesn't happen by chance, it happens by care.”",
+                "quoteAuthor": "Hair Experts at Haicraft"
               },
               {
                 "id": "2",
                 "category": "BEARD CARE",
                 "date": "08 AUG 2025",
+                "author": "Master Barber",
+                "readTime": "4 Min Read",
                 "title": "How to Maintain a Perfect Beard",
                 "description": "Learn simple tips and routines to keep your beard clean, healthy, and stylish every day.",
-                "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=600&auto=format&fit=crop",
-                "slug": "/blog/how-to-maintain-a-perfect-beard"
+                "image": "https://i.pinimg.com/1200x/19/02/ae/1902aedc1d1532ac583cc09c95d64c4e.jpg",
+                "slug": "/blog/how-to-maintain-a-perfect-beard",
+                "introText": "A well-groomed beard is a powerful statement of personal style and confidence. However, keeping facial hair looking sharp, healthy, and clean requires a regular grooming regimen and the right techniques.",
+                "sections": [
+                  {
+                    "number": "1.",
+                    "heading": "Wash and Cleanse Regularly",
+                    "content": "Use a specialized beard wash rather than regular body soap to clean facial hair. It cleanses deeply while preserving natural moisture and preventing beard itch."
+                  },
+                  {
+                    "number": "2.",
+                    "heading": "Hydrate with Premium Beard Oil",
+                    "content": "Apply beard oil daily to nourish the hair follicles and hydrate the underlying skin. This prevents beard dandruff and promotes a softer, healthier shine."
+                  },
+                  {
+                    "number": "3.",
+                    "heading": "Brush and Comb Consistently",
+                    "content": "A boar-bristle brush trains beard hairs to grow in a uniform direction while evenly distributing natural oils and beard balms throughout the beard."
+                  },
+                  {
+                    "number": "4.",
+                    "heading": "Define the Neckline and Cheeklines",
+                    "content": "Keep your beard lines crisp by trimming the neckline two fingers above the Adam's apple and maintaining clean natural cheeklines."
+                  }
+                ],
+                "quote": "“A well-maintained beard is an art form of masculine precision.”",
+                "quoteAuthor": "Master Groomers at Haicraft"
               },
               {
                 "id": "3",
                 "category": "SKINCARE",
                 "date": "05 AUG 2025",
+                "author": "Dermatology Specialist",
+                "readTime": "6 Min Read",
                 "title": "Skincare Routine for a Fresh Look",
                 "description": "A simple skincare guide to keep your face clean, healthy, and glowing throughout the day.",
-                "image": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=600&auto=format&fit=crop",
-                "slug": "/blog/skincare-routine-for-a-fresh-look"
+                "image": "https://i.pinimg.com/1200x/e4/59/0d/e4590d78efc48dab53c12591cdbc360a.jpg",
+                "slug": "/blog/skincare-routine-for-a-fresh-look",
+                "introText": "Radiant, clear skin doesn't require dozens of complicated products. A disciplined, minimalist routine tailored to your skin type will keep your complexion vibrant, energized, and protected from daily environmental stressors.",
+                "sections": [
+                  {
+                    "number": "1.",
+                    "heading": "Gentle Cleansing Morning & Night",
+                    "content": "Wash away pollutants and excess sebum with a gentle, sulfate-free cleanser that respects your skin's natural moisture barrier."
+                  },
+                  {
+                    "number": "2.",
+                    "heading": "Exfoliate Twice a Week",
+                    "content": "Gentle exfoliation lifts away dead skin cells, unclogs pores, and allows hydrating moisturizers and serums to penetrate more effectively."
+                  },
+                  {
+                    "number": "3.",
+                    "heading": "Never Skip Broad-Spectrum Sunscreen",
+                    "content": "UV radiation causes premature aging and hyperpigmentation. Daily application of SPF 30 or higher provides essential defense every single day."
+                  },
+                  {
+                    "number": "4.",
+                    "heading": "Hydrate Inside and Out",
+                    "content": "Drink ample water throughout the day and seal in hydration with a lightweight hyaluronic acid moisturizer suitable for your skin."
+                  }
+                ],
+                "quote": "“Investing in your skin is an investment that shines for a lifetime.”",
+                "quoteAuthor": "Skin Therapists at Haicraft"
+              },
+              {
+                "id": "4",
+                "category": "HAIR TREATMENTS",
+                "date": "02 AUG 2025",
+                "author": "Keratin Specialist",
+                "readTime": "7 Min Read",
+                "title": "The Ultimate Guide to Keratin Treatments",
+                "description": "Unlock smooth, frizz-free, and lustrous hair with our comprehensive guide to professional keratin hair therapy.",
+                "image": "https://i.pinimg.com/1200x/42/de/fc/42defc6427189cf6e3451fca721cd6bc.jpg",
+                "slug": "/blog/the-ultimate-guide-to-keratin-treatments",
+                "introText": "Frizz, humidity, and daily heat exposure can leave hair feeling unmanageable and dry. Keratin treatments have revolutionized modern hair therapy by restoring essential protein and sealing moisture deep into the hair cuticle for silky, lasting smoothness.",
+                "sections": [
+                  {
+                    "number": "1.",
+                    "heading": "Understanding How Keratin Works",
+                    "content": "Keratin is the natural structural protein that comprises your hair. Professional salon treatments replenish lost keratin, rebuilding fragile cuticles and restoring tensile strength."
+                  },
+                  {
+                    "number": "2.",
+                    "heading": "Who Can Benefit the Most",
+                    "content": "Ideal for anyone dealing with stubborn frizz, coarse texture, or post-color dryness. It transforms unmanageable locks into soft, effortless tresses that cut daily blow-drying time in half."
+                  },
+                  {
+                    "number": "3.",
+                    "heading": "Aftercare Routine for Maximum Longevity",
+                    "content": "Use only sulfate-free and sodium chloride-free shampoos to maintain the treatment. Avoid washing your hair for the first 72 hours after the salon session."
+                  },
+                  {
+                    "number": "4.",
+                    "heading": "Deep Nourishment and Conditioning",
+                    "content": "Incorporate a weekly hydrating hair mask rich in argan oil or shea butter to lock in luminosity and extend the smooth finish for up to five months."
+                  }
+                ],
+                "quote": "“Keratin doesn't change your hair; it unlocks its most flawless, radiant potential.”",
+                "quoteAuthor": "Hair Restoration Clinic at Haicraft"
+              },
+              {
+                "id": "5",
+                "category": "STYLING TIPS",
+                "date": "28 JUL 2025",
+                "author": "Artistic Director",
+                "readTime": "5 Min Read",
+                "title": "Mastering the Classic Pompadour Fade",
+                "description": "Step-by-step techniques to achieve, style, and sustain an iconic high-volume pompadour with a sharp fade.",
+                "image": "https://i.pinimg.com/1200x/2c/15/6b/2c156bbdf80c718f1ed5fa62d5e6c8ed.jpg",
+                "slug": "/blog/mastering-the-classic-pompadour-fade",
+                "introText": "The pompadour fade remains an everlasting emblem of masculine sophistication and precision styling. Combining volume, clean gradient sides, and sculptured form, it strikes the perfect harmony between classic vintage charisma and sleek contemporary luxury.",
+                "sections": [
+                  {
+                    "number": "1.",
+                    "heading": "Selecting the Right Pomade or Clay",
+                    "content": "A water-soluble pomade gives a high-gloss, slick finish for formal occasions, while a matte clay provides modern texture and pliable hold for everyday refinement."
+                  },
+                  {
+                    "number": "2.",
+                    "heading": "Blow-Drying with Directional Flow",
+                    "content": "Use a round vented brush while blow-drying upward and backward to construct natural lift and volume at the crown before applying any styling product."
+                  },
+                  {
+                    "number": "3.",
+                    "heading": "Keeping the Fade Ultra Sharp",
+                    "content": "A skin or taper fade demands crisp maintenance. Schedule a side touch-up every two to three weeks to keep the contrast between sides and top impeccably defined."
+                  },
+                  {
+                    "number": "4.",
+                    "heading": "Finishing with Flexible Setting Spray",
+                    "content": "Lock your silhouette in place with a light misting of fine finishing spray that holds the arch all day without feeling stiff or brittle."
+                  }
+                ],
+                "quote": "“A great pompadour is architecture for the modern gentleman.”",
+                "quoteAuthor": "Grooming Masters at Haicraft"
+              },
+              {
+                "id": "6",
+                "category": "TRENDS & INSPIRATION",
+                "date": "20 JUL 2025",
+                "author": "Creative Colorist",
+                "readTime": "5 Min Read",
+                "title": "Luxury Hair Color Trends for the Modern Era",
+                "description": "Explore this season's most demanded hair coloring styles, from subtle balayage to rich espresso tones.",
+                "image": "https://i.pinimg.com/1200x/82/eb/92/82eb927e2d0b1ffd7c0d5fa6cfd14441.jpg",
+                "slug": "/blog/luxury-hair-color-trends-for-the-modern-era",
+                "introText": "Hair color is the ultimate medium for personal expression, elevating your natural features and injecting bespoke elegance into your daily persona. This season celebrates rich dimensional depth, customized gloss tones, and low-maintenance multi-tonal brilliance.",
+                "sections": [
+                  {
+                    "number": "1.",
+                    "heading": "Sun-Kissed Caramel Balayage",
+                    "content": "Hand-painted dimensional ribbons of warm caramel and honey blend effortlessly into darker bases, producing soft illumination that grows out gracefully without harsh roots."
+                  },
+                  {
+                    "number": "2.",
+                    "heading": "Rich Espresso & Velvety Brunettes",
+                    "content": "Deep, monochromatic mocha and espresso shades infused with reflective gloss treatments deliver unmatched depth, opulent shine, and healthy-looking fullness."
+                  },
+                  {
+                    "number": "3.",
+                    "heading": "Color-Safe Scalp & Strand Care",
+                    "content": "Protect vibrancy with antioxidant-rich shampoos and UV barrier shields that preserve tone fidelity and safeguard pigment from environmental fading."
+                  },
+                  {
+                    "number": "4.",
+                    "heading": "The Power of Gloss & Glaze Treatments",
+                    "content": "A semi-permanent gloss between full color sessions refreshes vibrancy, seals split cuticles, and restores mirror-like shine in less than 30 minutes."
+                  }
+                ],
+                "quote": "“Color is not just about changing shades — it's about illuminating the person underneath.”",
+                "quoteAuthor": "Color Atelier at Haicraft"
               }
             ]
           }
@@ -1679,78 +2328,78 @@
               "images": [
                 {
                   "id": "1",
-                  "src": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop",
-                  "alt": "Salon interior stations"
+                  "src": "https://i.pinimg.com/1200x/82/eb/92/82eb927e2d0b1ffd7c0d5fa6cfd14441.jpg",
+                  "alt": "Luxury hair styling & color transformation"
                 },
                 {
                   "id": "2",
-                  "src": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop",
-                  "alt": "Highlighted hair styling"
+                  "src": "https://i.pinimg.com/736x/19/21/3b/19213b6091246d62a136773854be45e0.jpg",
+                  "alt": "Modern salon interior & styling stations"
                 },
                 {
                   "id": "3",
-                  "src": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop",
-                  "alt": "Product shelf display"
+                  "src": "https://i.pinimg.com/736x/18/0d/1f/180d1f25b3fcdd0a9bde5e17ffac0a32.jpg",
+                  "alt": "Precision haircut and blow dry styling"
                 },
                 {
                   "id": "4",
-                  "src": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800&auto=format&fit=crop",
-                  "alt": "Stylist trimming hair"
+                  "src": "https://i.pinimg.com/736x/dc/5b/c3/dc5bc36424bebfb54f6c2402bf4ea577.jpg",
+                  "alt": "Executive grooming & sharp beard trim"
                 },
                 {
                   "id": "5",
-                  "src": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=800&auto=format&fit=crop",
-                  "alt": "Long wavy hair result"
+                  "src": "https://i.pinimg.com/1200x/f0/dd/2b/f0dd2b88ba8a3d2802d8ae3c3efb095b.jpg",
+                  "alt": "Classic pompadour and taper fade"
                 },
                 {
                   "id": "6",
-                  "src": "https://images.unsplash.com/photo-1622287162692-0382f1e0b64f?q=80&w=800&auto=format&fit=crop",
-                  "alt": "Mens fading haircut"
+                  "src": "https://i.pinimg.com/1200x/94/5a/a7/945aa784551e244a274012a2cb8969dc.jpg",
+                  "alt": "Bespoke bridal and wedding hairstyle"
                 },
                 {
                   "id": "7",
-                  "src": "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=800&auto=format&fit=crop",
-                  "alt": "Hair washing session"
+                  "src": "https://i.pinimg.com/1200x/2c/41/c1/2c41c1ced72a212a5fae79d6db78d2f3.jpg",
+                  "alt": "Vibrant hair coloring & balayage highlights"
                 },
                 {
                   "id": "8",
-                  "src": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?q=80&w=800&auto=format&fit=crop",
-                  "alt": "Short bob haircut style"
+                  "src": "https://i.pinimg.com/1200x/4f/fb/b6/4ffbb63c0a34cf8dc79d737687f01a33.jpg",
+                  "alt": "Premium hair spa & scalp therapy"
                 },
                 {
                   "id": "9",
-                  "src": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop",
-                  "alt": "Blow drying with round brush"
+                  "src": "https://i.pinimg.com/1200x/f0/50/46/f05046d58f610d3a1bd615c08b5c48e5.jpg",
+                  "alt": "Creative texturizing and smooth finish"
                 },
                 {
                   "id": "10",
-                  "src": "https://images.unsplash.com/photo-1583234947900-474d284fb8e9?q=80&w=800&auto=format&fit=crop",
-                  "alt": "Shampoo sinks setup"
+                  "src": "https://i.pinimg.com/1200x/c7/00/99/c7009936a65bbc72f4f82697d3be1c2f.jpg",
+                  "alt": "Expert stylist consultation and treatment"
                 },
                 {
                   "id": "11",
-                  "src": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop",
-                  "alt": "Wavy hair styling"
+                  "src": "https://i.pinimg.com/736x/2d/6b/6b/2d6b6b1882cc3bde5f78f112e38ac7b6.jpg",
+                  "alt": "Clean aesthetic salon styling mirrors"
                 },
                 {
                   "id": "12",
-                  "src": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800&auto=format&fit=crop",
-                  "alt": "Green plants & counter products"
+                  "src": "https://i.pinimg.com/736x/0c/75/91/0c75918a8c8facfb07dbf4a90ab8d073.jpg",
+                  "alt": "Luxury haircare and grooming products"
                 },
                 {
                   "id": "13",
-                  "src": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=800&auto=format&fit=crop",
-                  "alt": "Haircut back profile"
+                  "src": "https://i.pinimg.com/736x/10/df/ad/10dfad43b25fc0d8cb8d78c31de3108a.jpg",
+                  "alt": "Signature hair styling and finish"
                 },
                 {
                   "id": "14",
-                  "src": "https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=800&auto=format&fit=crop",
-                  "alt": "Illuminated styling mirrors"
+                  "src": "https://i.pinimg.com/1200x/c0/6f/79/c06f795f20bbd41605b91e1d83d0c190.jpg",
+                  "alt": "Modern salon aesthetic and styling"
                 },
                 {
                   "id": "15",
-                  "src": "https://images.unsplash.com/photo-1583234947900-474d284fb8e9?q=80&w=800&auto=format&fit=crop",
-                  "alt": "Brunette highlights look"
+                  "src": "https://i.pinimg.com/736x/25/6c/11/256c110fe2ab0a406ec1aeb9efa1ad47.jpg",
+                  "alt": "Professional hair grooming and treatment"
                 }
               ]
             },
@@ -1792,6 +2441,422 @@
                   "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
                 }
               ]
+            }
+          }
+        }
+      },
+      "faqs": {
+        "variants": {
+          "HairCraftFaqs1": {
+            "badge": "FAQS",
+            "title": "Your Questions,",
+            "titleHighlight": "Answered",
+            "description": "We've compiled answers to common questions to help you make the most of your Haicraft experience.",
+            "sideCard": {
+              "image": {
+                "src": "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=800&auto=format&fit=crop",
+                "alt": "Salon interior stations"
+              },
+              "title": "More Than a Salon",
+              "tags": [
+                {
+                  "label": "BEAUTY"
+                },
+                {
+                  "label": "CARE"
+                },
+                {
+                  "label": "CONFIDENCE"
+                }
+              ],
+              "button": {
+                "text": "Book an Appointment",
+                "href": "/contact-us",
+                "icon": "Calendar"
+              }
+            },
+            "icons": {
+              "openIcon": "Minus",
+              "closedIcon": "Plus"
+            },
+            "cta": {
+              "text": "Still Have Questions?",
+              "description": "Can't find the answer you're looking for? Reach out to our dedicated support team.",
+              "button": {
+                "text": "Contact Us",
+                "href": "/contact-us",
+                "icon": "ArrowRight"
+              }
+            },
+            "items": [
+              {
+                "id": "1",
+                "number": "1.",
+                "question": "Do I need to book an appointment in advance?",
+                "answer": "While walk-ins are always welcome, we highly recommend booking an appointment in advance to ensure your preferred time and stylist are available."
+              },
+              {
+                "id": "2",
+                "number": "2.",
+                "question": "What services do you offer?",
+                "answer": "We offer a comprehensive range of hair care and grooming services including precision haircuts, styling, global hair colors, hair treatments, spa therapies, beard grooming, and bridal/event styling."
+              },
+              {
+                "id": "3",
+                "number": "3.",
+                "question": "How long does a typical appointment take?",
+                "answer": "Appointment durations vary depending on the service. A standard haircut typically takes 30-45 minutes, while coloring or specialized treatments can take anywhere from 1.5 to 3 hours."
+              },
+              {
+                "id": "4",
+                "number": "4.",
+                "question": "Do you use professional hair care products?",
+                "answer": "Yes! We exclusively use premium, professional-grade hair care and styling products known for nourishing hair health and delivering long-lasting results."
+              },
+              {
+                "id": "5",
+                "number": "5.",
+                "question": "Can I get a hair consultation before the service?",
+                "answer": "Absolutely. Every appointment begins with a personalized consultation where our expert stylists understand your preferences, hair type, and recommend the best look."
+              },
+              {
+                "id": "6",
+                "number": "6.",
+                "question": "What is your cancellation policy?",
+                "answer": "We request that you notify us at least 24 hours in advance if you need to reschedule or cancel your appointment so we can accommodate other clients."
+              },
+              {
+                "id": "7",
+                "number": "7.",
+                "question": "Do you offer services for special occasions?",
+                "answer": "Yes, we specialize in wedding grooming, bridal hair styling, and special event makeovers tailored to match your attire and occasion."
+              },
+              {
+                "id": "8",
+                "number": "8.",
+                "question": "Are your stylists trained and certified?",
+                "answer": "All our stylists are certified professionals with years of experience in advanced cutting, coloring, and modern grooming techniques."
+              },
+              {
+                "id": "9",
+                "number": "9.",
+                "question": "Do you offer any membership or loyalty programs?",
+                "answer": "Yes, we have exclusive membership packages and loyalty perks for our regular clients. Ask our front desk team for more details during your visit."
+              },
+              {
+                "id": "10",
+                "number": "10.",
+                "question": "How can I contact you for more information?",
+                "answer": "You can reach us via phone at +91 98765 43210, email us at info@haicraftsalon.com, or visit our salon at 123 Styling Street, New Delhi."
+              }
+            ]
+          }
+        }
+      },
+      "contact": {
+        "variants": {
+          "HairCraftContact1": {
+            "infoCards": [
+              {
+                "id": "location",
+                "icon": "MapPin",
+                "title": "Our Location",
+                "details": [
+                  "123 Styling Street,",
+                  "New Delhi, India 110001"
+                ]
+              },
+              {
+                "id": "phone",
+                "icon": "Phone",
+                "title": "Call Us",
+                "details": [
+                  "+91 98765 43210",
+                  "+91 11 4567 8900"
+                ]
+              },
+              {
+                "id": "email",
+                "icon": "Mail",
+                "title": "Email Us",
+                "details": [
+                  "info@haicraftsalon.com",
+                  "support@haicraftsalon.com"
+                ]
+              },
+              {
+                "id": "hours",
+                "icon": "Clock",
+                "title": "Working Hours",
+                "details": [
+                  "Mon – Sat: 10:00 AM – 8:00 PM",
+                  "Sunday: 10:00 AM – 6:00 PM"
+                ]
+              }
+            ],
+            "formSection": {
+              "tag": "SEND US A MESSAGE",
+              "title": "We're Here to Help",
+              "description": "Fill out the form below and our team will get back to you as soon as possible.",
+              "fields": {
+                "fullName": {
+                  "label": "Full Name",
+                  "placeholder": "Enter your full name",
+                  "required": true
+                },
+                "emailAddress": {
+                  "label": "Email Address",
+                  "placeholder": "Enter your email address",
+                  "required": true
+                },
+                "phoneNumber": {
+                  "label": "Phone Number",
+                  "placeholder": "Enter your phone number",
+                  "required": true
+                },
+                "subject": {
+                  "label": "Subject",
+                  "placeholder": "Select a subject",
+                  "required": true,
+                  "options": [
+                    "General Inquiry",
+                    "Appointment Support",
+                    "Feedback & Reviews",
+                    "Partnership"
+                  ]
+                },
+                "message": {
+                  "label": "Your Message",
+                  "placeholder": "Write your message here...",
+                  "required": true
+                }
+              },
+              "submitButton": {
+                "text": "Send Message",
+                "icon": "ArrowRight"
+              },
+              "securityNote": {
+                "text": "Your information is secure with us.",
+                "icon": "Lock"
+              },
+              "successState": {
+                "icon": "CheckCircle2",
+                "title": "Message Sent Successfully!",
+                "description": "We have received your message and will contact you shortly.",
+                "buttonText": "Send Another Message"
+              }
+            },
+            "mapSection": {
+              "title": "Our Location",
+              "description": "Visit our salon and experience exceptional care in a relaxing and stylish environment.",
+              "image": {
+                "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28017.31828263614!2d77.19665187499552!3d28.62482294277834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2b43a255341%3A0x2b687f3210cdd91d!2sNew%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1790581645211!5m2!1sen!2sin",
+                "alt": "Map preview"
+              },
+              "pinBadge": {
+                "text": "Haicraft Hair Salon",
+                "icon": "MapPin"
+              },
+              "info": {
+                "title": "Find Us Easily",
+                "description": "We are conveniently located in the heart of New Delhi, with easy access and parking facilities nearby."
+              },
+              "button": {
+                "text": "Get Directions",
+                "href": "https://maps.google.com",
+                "icon": "MapPin",
+                "arrowIcon": "ArrowRight"
+              }
+            }
+          }
+        }
+      },
+      "legal": {
+        "privacyPolicy": {
+          "policyTag": "OUR POLICY",
+          "policyTitle": "Privacy Policy",
+          "introText": "At Haicraft, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. By using our website, you agree to the practices described in this policy.",
+          "sections": [
+            {
+              "number": "1.",
+              "title": "Information We Collect",
+              "content": "We may collect personal information such as your name, email address, phone number, and any other details you provide when you book an appointment, fill out a form, or contact us. We also collect non-personal information like browser type, device information, and website usage data to improve your experience."
+            },
+            {
+              "number": "2.",
+              "title": "How We Use Your Information",
+              "content": "Your information is used to provide and improve our services, confirm appointments, respond to inquiries, send important updates, and enhance your overall experience with Haicraft. We may also use your information for internal analysis and customer support."
+            },
+            {
+              "number": "3.",
+              "title": "Information Sharing",
+              "content": "We do not sell, trade, or rent your personal information to third parties. We may share your information with trusted service providers who assist us in operating our website and services, under strict confidentiality agreements."
+            },
+            {
+              "number": "4.",
+              "title": "Cookies and Tracking Technologies",
+              "content": "Our website uses cookies to enhance your browsing experience, analyze site traffic, and understand user behavior. You can choose to disable cookies through your browser settings, but this may affect certain features of the website."
+            },
+            {
+              "number": "5.",
+              "title": "Data Security",
+              "content": "We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure."
+            },
+            {
+              "number": "6.",
+              "title": "Your Rights",
+              "content": "You have the right to access, update, or request the deletion of your personal information. If you have any questions or requests regarding your data, please contact us using the details provided below."
+            },
+            {
+              "number": "7.",
+              "title": "Changes to This Policy",
+              "content": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with the updated effective date."
+            },
+            {
+              "number": "8.",
+              "title": "Contact Us",
+              "content": "If you have any questions about this Privacy Policy or how we handle your information, please get in touch with us."
+            }
+          ],
+          "calloutBanner": {
+            "icon": "ShieldCheck",
+            "title": "Still Have Questions?",
+            "description": "We're here to help. Feel free to contact us for any queries related to your policy or data.",
+            "button": {
+              "text": "Contact Us",
+              "href": "/contact-us",
+              "icon": "ArrowRight"
+            }
+          }
+        },
+        "termsAndConditions": {
+          "policyTag": "LEGAL AGREEMENT",
+          "policyTitle": "Terms & Conditions",
+          "introText": "Welcome to Haicraft. By accessing our salon premises, utilizing our styling services, or using our website, you acknowledge and agree to be bound by the following terms and conditions. Please read them carefully before scheduling an appointment.",
+          "sections": [
+            {
+              "number": "1.",
+              "title": "Appointments & Bookings",
+              "content": "Appointments can be booked online, by phone, or in person. We recommend booking in advance to secure your preferred slot and stylist. Walk-ins are welcomed subject to availability."
+            },
+            {
+              "number": "2.",
+              "title": "Arrival Time",
+              "content": "Please arrive at least 10 minutes prior to your scheduled appointment. Late arrivals may result in reduced service time or rescheduling to ensure courtesy to other clients."
+            },
+            {
+              "number": "3.",
+              "title": "Pricing & Payments",
+              "content": "All prices are subject to change without prior notice. Payment is due upon completion of services. We accept major credit/debit cards, UPI, and cash."
+            },
+            {
+              "number": "4.",
+              "title": "Consultations & Allergic Reactions",
+              "content": "Clients are required to disclose any allergies, sensitivities, or pre-existing scalp/hair conditions prior to chemical treatments or coloring. Haicraft is not liable for undisclosed conditions."
+            },
+            {
+              "number": "5.",
+              "title": "Personal Belongings",
+              "content": "Clients are responsible for their personal belongings while in the salon. Haicraft is not responsible for lost or damaged personal items."
+            },
+            {
+              "number": "6.",
+              "title": "Service Guarantee",
+              "content": "We take pride in our artistry. If you are not satisfied with your service, please notify us within 48 hours so we can arrange a complimentary adjustment."
+            },
+            {
+              "number": "7.",
+              "title": "Modifications to Terms",
+              "content": "Haicraft reserves the right to modify these Terms and Conditions at any time. Continued use of our website or services constitutes acceptance of revised terms."
+            }
+          ],
+          "calloutBanner": {
+            "icon": "HelpCircle",
+            "title": "Need Clarification on Our Terms?",
+            "description": "If you have questions about our terms of service, our team is always ready to assist.",
+            "button": {
+              "text": "Contact Us",
+              "href": "/contact-us",
+              "icon": "ArrowRight"
+            }
+          }
+        },
+        "cancellationPolicy": {
+          "policyTag": "BOOKING GUIDELINES",
+          "policyTitle": "Cancellation Policy",
+          "introText": "We understand that unforeseen events happen. To ensure fairness to all our guests and stylists whose time is reserved exclusively for you, we kindly request adherence to our cancellation guidelines.",
+          "sections": [
+            {
+              "number": "1.",
+              "title": "24-Hour Notice Required",
+              "content": "We require at least 24 hours advance notice to cancel or reschedule an appointment without penalty. This allows us time to accommodate clients on our waiting list."
+            },
+            {
+              "number": "2.",
+              "title": "Late Cancellations",
+              "content": "Cancellations made less than 24 hours before your scheduled appointment time may incur a fee of up to 50% of the scheduled service value."
+            },
+            {
+              "number": "3.",
+              "title": "No-Shows",
+              "content": "Clients who fail to arrive without prior notification will be marked as a no-show and may be required to prepay for future bookings."
+            },
+            {
+              "number": "4.",
+              "title": "Group & Bridal Bookings",
+              "content": "Special event and bridal bookings require a 48-hour cancellation notice. Deposits made for large group bookings may be non-refundable if cancelled late."
+            },
+            {
+              "number": "5.",
+              "title": "Emergency Exceptions",
+              "content": "We understand genuine emergencies occur. Exceptions to this policy will be considered on a case-by-case basis at the salon management's discretion."
+            }
+          ],
+          "calloutBanner": {
+            "icon": "Calendar",
+            "title": "Need to Reschedule?",
+            "description": "Give us a call or reach out to our front desk team to easily reschedule your appointment.",
+            "button": {
+              "text": "Contact Us",
+              "href": "/contact-us",
+              "icon": "ArrowRight"
+            }
+          }
+        }
+      },
+      "notFound": {
+        "variants": {
+          "HairCraftNotFound1": {
+            "tag": "OOPS!",
+            "code": "404",
+            "highlightDigit": "0",
+            "subheading": "Page Not Found",
+            "description": "The page you're looking for doesn't seem to exist or may have been moved. Let's get you back on track.",
+            "primaryButton": {
+              "text": "Go to Homepage",
+              "href": "/",
+              "icon": "Home",
+              "arrowIcon": "ArrowRight"
+            },
+            "secondaryButton": {
+              "text": "Browse Our Services",
+              "href": "/services",
+              "icon": "Scissors"
+            },
+            "sideQuote": {
+              "lines": [
+                "Good",
+                "Hair Days",
+                "Are Always",
+                "Here"
+              ]
+            },
+            "sideCard": {
+              "image": {
+                "src": "/images/error-banner.png",
+                "alt": "Salon styling station counter"
+              },
+              "badge": "\"Look Good Feel Better\""
             }
           }
         }
