@@ -79,22 +79,6 @@
               }
             ]
           },
-          "whyChooseUs": {
-            "components": [
-              {
-                "key": "pageTopSection",
-                "component": "HairCraftPageTop1"
-              },
-              {
-                "key": "whyChooseUs",
-                "component": "HairCraftWhyChooseUs1"
-              },
-              {
-                "key": "process",
-                "component": "HairCraftProcess1"
-              }
-            ]
-          },
           "why-choose-us": {
             "components": [
               {
@@ -108,30 +92,6 @@
               {
                 "key": "process",
                 "component": "HairCraftProcess1"
-              }
-            ]
-          },
-          "team": {
-            "components": [
-              {
-                "key": "pageTopSection",
-                "component": "HairCraftPageTop1"
-              },
-              {
-                "key": "team",
-                "component": "HairCraftTeam1"
-              }
-            ]
-          },
-          "ourTeam": {
-            "components": [
-              {
-                "key": "pageTopSection",
-                "component": "HairCraftPageTop1"
-              },
-              {
-                "key": "team",
-                "component": "HairCraftTeam1"
               }
             ]
           },
@@ -195,18 +155,6 @@
               }
             ]
           },
-          "getAQuote": {
-            "components": [
-              {
-                "key": "pageTopSection",
-                "component": "HairCraftPageTop1"
-              },
-              {
-                "key": "getAQuote",
-                "component": "HairCraftGetAQuote1"
-              }
-            ]
-          },
           "get-a-quote": {
             "components": [
               {
@@ -231,54 +179,6 @@
               }
             ]
           },
-          "faqsPage": {
-            "components": [
-              {
-                "key": "pageTopSection",
-                "component": "HairCraftPageTop1"
-              },
-              {
-                "key": "faqs",
-                "component": "HairCraftFaqs1"
-              }
-            ]
-          },
-          "contact": {
-            "components": [
-              {
-                "key": "pageTopSection",
-                "component": "HairCraftPageTop1"
-              },
-              {
-                "key": "contact",
-                "component": "HairCraftContact1"
-              }
-            ]
-          },
-          "contactUs": {
-            "components": [
-              {
-                "key": "pageTopSection",
-                "component": "HairCraftPageTop1"
-              },
-              {
-                "key": "contact",
-                "component": "HairCraftContact1"
-              }
-            ]
-          },
-          "contactPage": {
-            "components": [
-              {
-                "key": "pageTopSection",
-                "component": "HairCraftPageTop1"
-              },
-              {
-                "key": "contact",
-                "component": "HairCraftContact1"
-              }
-            ]
-          },
           "contact-us": {
             "components": [
               {
@@ -291,43 +191,7 @@
               }
             ]
           },
-          "privacyPolicy": {
-            "components": [
-              {
-                "key": "pageTopSection",
-                "component": "HairCraftPageTop1"
-              },
-              {
-                "key": "legal",
-                "component": "HairCraftLegal1"
-              }
-            ]
-          },
           "privacy-policy": {
-            "components": [
-              {
-                "key": "pageTopSection",
-                "component": "HairCraftPageTop1"
-              },
-              {
-                "key": "legal",
-                "component": "HairCraftLegal1"
-              }
-            ]
-          },
-          "termsConditions": {
-            "components": [
-              {
-                "key": "pageTopSection",
-                "component": "HairCraftPageTop1"
-              },
-              {
-                "key": "legal",
-                "component": "HairCraftLegal1"
-              }
-            ]
-          },
-          "termsAndConditions": {
             "components": [
               {
                 "key": "pageTopSection",
@@ -351,18 +215,6 @@
               }
             ]
           },
-          "cancellationPolicy": {
-            "components": [
-              {
-                "key": "pageTopSection",
-                "component": "HairCraftPageTop1"
-              },
-              {
-                "key": "legal",
-                "component": "HairCraftLegal1"
-              }
-            ]
-          },
           "cancellation-policy": {
             "components": [
               {
@@ -375,59 +227,11 @@
               }
             ]
           },
-          "notFound": {
+          "not-found": {
             "components": [
               {
                 "key": "notFound",
                 "component": "HairCraftNotFound1"
-              }
-            ]
-          },
-          "pageTopSection": {
-            "components": [
-              {
-                "key": "pageTopSection",
-                "component": "HairCraftPageTop1"
-              }
-            ]
-          },
-          "hero": {
-            "components": [
-              {
-                "key": "hero",
-                "component": "HairCraftHero1"
-              }
-            ]
-          },
-          "process": {
-            "components": [
-              {
-                "key": "process",
-                "component": "HairCraftProcess1"
-              }
-            ]
-          },
-          "cta": {
-            "components": [
-              {
-                "key": "cta",
-                "component": "HairCraftCta1"
-              }
-            ]
-          },
-          "legal": {
-            "components": [
-              {
-                "key": "legal",
-                "component": "HairCraftLegal1"
-              }
-            ]
-          },
-          "legalPage": {
-            "components": [
-              {
-                "key": "legal",
-                "component": "HairCraftLegal1"
               }
             ]
           }
@@ -626,9 +430,9 @@
             },
             "contact": {
               "title": "Contact Us",
-              "address": "123 Styling Street, New Delhi, India - 110001",
-              "phone": "+91 98765 43210",
-              "email": "info@haicraftsalon.com",
+              "address": "3170 Rosewood Lane Unit 200 , Beverly Hills, CA 90210",
+              "phone": "+1 000000000",
+              "email": "info@xyz",
               "hours": {
                 "days": "Mon – Sun: 10:00 AM – 8:00 PM",
                 "note": "(Closed on Tuesday)"
@@ -696,7 +500,10 @@
               "href": "/contact-us"
             },
             "ctaVideo": {
-              "text": "Watch Our Salon"
+              "text": "Watch Our Salon",
+              "title": "Hair Craft — Luxury Salon Experience",
+              "description": "Step inside Hair Craft and witness our signature hair transformations, luxury spa therapies, and expert styling.",
+              "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
             },
             "features": [
               {
@@ -1202,7 +1009,7 @@
             "titlePart1": "Ready for a",
             "titlePart2": "New You?",
             "description": "Book your appointment today and let our expert stylists bring out the best version of you.",
-            "bgImage": "https://i.pinimg.com/736x/e8/10/e4/e810e4131f86a7d0848a9ea749087931.jpg",
+            "bgImage": "/images/great-hairs.png",
             "bgImageMobile": "https://i.pinimg.com/736x/ad/1a/87/ad1a8727d6eb8337b3cc5ab9d47844dd.jpg",
             "features": [
               {
@@ -1561,10 +1368,11 @@
                 "categoriesTitle": "Categories",
                 "categories": [
                   "Hair Care",
-                  "Styling Tips",
+                  "Beard Care",
+                  "Skincare",
                   "Hair Treatments",
-                  "Trends & Inspiration",
-                  "Salon Life"
+                  "Styling Tips",
+                  "Trends & Inspiration"
                 ],
                 "promoCard": {
                   "title": "Ready for Healthier, More Beautiful Hair?",
@@ -2650,7 +2458,7 @@
               "title": "Our Location",
               "description": "Visit our salon and experience exceptional care in a relaxing and stylish environment.",
               "image": {
-                "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28017.31828263614!2d77.19665187499552!3d28.62482294277834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2b43a255341%3A0x2b687f3210cdd91d!2sNew%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1790581645211!5m2!1sen!2sin",
+                "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.88307334034!2d-118.74138533738686!3d34.02003918266803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1790770460542!5m2!1sen!2sin",
                 "alt": "Map preview"
               },
               "pinBadge": {

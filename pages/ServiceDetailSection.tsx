@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import * as LucideIcons from "lucide-react";
@@ -133,6 +133,22 @@ export default function ServiceDetailSection({
     const currentService =
         allServices.find((s) => s.id === activeServiceId) || initialService || defaultService || allServices[0];
 
+    const contentRef = useRef<HTMLDivElement>(null);
+
+    const handleServiceSelect = (srv: any) => {
+        setActiveServiceId(srv.id);
+        if (typeof window !== "undefined") {
+            if (srv.href) {
+                window.history.pushState(null, "", srv.href);
+            }
+            if (window.innerWidth < 1024 && contentRef.current) {
+                const yOffset = -90;
+                const y = contentRef.current.getBoundingClientRect().top + window.scrollY + yOffset;
+                window.scrollTo({ top: y, behavior: "smooth" });
+            }
+        }
+    };
+
     const appointmentCard =
         currentService?.appointmentCard || passedAppointmentCard || defaultAppointmentCard;
 
@@ -148,13 +164,13 @@ export default function ServiceDetailSection({
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
 
                     {/* Left Sidebar Column (Span 4) */}
-                    <div className="lg:col-span-4 space-y-4 lg:space-y-6">
+                    <div className="order-2 lg:order-1 lg:col-span-4 space-y-4 lg:space-y-6">
 
                         {/* Our Services Menu Card */}
                         <motion.div
                             initial="hidden"
                             whileInView="visible"
-                            viewport={{ once: true, amount: 0.15 }}
+                            viewport={{ once: true, amount: 0.05 }}
                             variants={fadeInUpVariants}
                             className="bg-white rounded-lg border border-gray-200/80 shadow-xl shadow-gray-200/40 overflow-hidden"
                         >
@@ -169,15 +185,21 @@ export default function ServiceDetailSection({
                                     return (
                                         <button
                                             key={srv.id}
-                                            onClick={() => setActiveServiceId(srv.id)}
-                                            className={`w-full flex items-center justify-between px-6 py-4 text-left text-sm font-medium transition-all duration-200 ${isActive
-                                                ? "bg-[#DFB261]/10 text-[#DFB261] font-semibold"
-                                                : "text-gray-700 hover:bg-gray-50 hover:text-[#DFB261]"
+                                            type="button"
+                                            onClick={() => handleServiceSelect(srv)}
+                                            className={`w-full flex items-center justify-between px-5 sm:px-6 py-3.5 sm:py-4 text-left text-sm font-medium transition-all duration-200 cursor-pointer ${isActive
+                                                ? "bg-[#DFB261]/15 text-[#DFB261] font-semibold border-l-4 border-[#DFB261]"
+                                                : "text-gray-700 hover:bg-gray-50 hover:text-[#DFB261] border-l-4 border-transparent"
                                                 }`}
                                         >
-                                            <span>{srv.name || srv.title}</span>
+                                            <div className="flex items-center gap-2.5">
+                                                {isActive && (
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-[#DFB261] shrink-0" />
+                                                )}
+                                                <span>{srv.name || srv.title}</span>
+                                            </div>
                                             <LucideIcons.ChevronRight
-                                                className={`w-4 h-4 transition-transform ${isActive ? "text-[#DFB261] translate-x-1" : "text-gray-400"
+                                                className={`w-4 h-4 transition-transform ${isActive ? "text-[#DFB261] translate-x-1" : "text-gray-400 group-hover:translate-x-1"
                                                     }`}
                                             />
                                         </button>
@@ -287,7 +309,31 @@ export default function ServiceDetailSection({
                     </div>
 
                     {/* Right Main Content Column (Span 8) */}
-                    <div className="lg:col-span-8 space-y-4 lg:space-y-6">
+                    <div ref={contentRef} className="order-1 lg:order-2 lg:col-span-8 space-y-4 lg:space-y-6">
+
+                        {/* Mobile Quick Service Selector Pills */}
+                        <div className="lg:hidden bg-white p-2.5 rounded-lg border border-gray-200/80 shadow-sm overflow-x-auto scrollbar-none">
+                            <div className="flex items-center gap-2 min-w-max">
+                                <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-1">Services:</span>
+                                {allServices.map((srv) => {
+                                    const isActive = srv.id === currentService?.id;
+                                    return (
+                                        <button
+                                            key={srv.id}
+                                            type="button"
+                                            onClick={() => handleServiceSelect(srv)}
+                                            className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 whitespace-nowrap cursor-pointer ${
+                                                isActive
+                                                    ? "bg-[#DFB261] text-[#121212] font-semibold shadow-sm"
+                                                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                                            }`}
+                                        >
+                                            {srv.name || srv.title}
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </div>
 
                         <AnimatePresence mode="wait">
                             {currentService && (

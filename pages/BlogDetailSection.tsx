@@ -46,6 +46,7 @@ export interface BlogDetailProps {
     detailConfig?: BlogDetailPageData | any;
     metaIcons?: Record<string, any>;
     recentPosts?: BlogPost[] | any[];
+    initialCategory?: string;
 }
 
 export default function BlogDetailSection({
@@ -53,8 +54,9 @@ export default function BlogDetailSection({
     detailConfig,
     metaIcons,
     recentPosts,
+    initialCategory,
 }: BlogDetailProps) {
-    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(initialCategory || null);
 
     const title = post?.title || "";
     const category = post?.category || "";
@@ -75,7 +77,64 @@ export default function BlogDetailSection({
     const categoriesTitle = sidebar?.categoriesTitle || "Categories";
     const promo = sidebar?.promoCard;
 
-    const postsList = recentPosts || [];
+    const allPosts: any[] = recentPosts || [];
+
+    // Helper: format category nicely (e.g. "HAIR CARE" -> "Hair Care")
+    const formatCategory = (cat: string) => {
+        if (!cat) return "";
+        return cat
+            .toLowerCase()
+            .split(" ")
+            .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+            .join(" ");
+    };
+
+    // Calculate dynamic category counts
+    const categoryCounts = React.useMemo(() => {
+        const counts: Record<string, number> = {};
+        allPosts.forEach((p) => {
+            const raw = (p.category || "").trim();
+            if (raw) {
+                const key = raw.toUpperCase();
+                counts[key] = (counts[key] || 0) + 1;
+            }
+        });
+        return counts;
+    }, [allPosts]);
+
+    // Build unique categories list
+    const availableCategories = React.useMemo(() => {
+        const map = new Map<string, string>();
+        allPosts.forEach((p) => {
+            const raw = (p.category || "").trim();
+            if (raw) {
+                map.set(raw.toUpperCase(), formatCategory(raw));
+            }
+        });
+        sidebarCategories.forEach((cat: string) => {
+            const raw = (cat || "").trim();
+            if (raw && !map.has(raw.toUpperCase())) {
+                map.set(raw.toUpperCase(), raw);
+            }
+        });
+        return Array.from(map.entries()).map(([key, label]) => ({
+            key,
+            label,
+            count: categoryCounts[key] || 0,
+        }));
+    }, [allPosts, sidebarCategories, categoryCounts]);
+
+    // Filter posts for the sidebar list
+    const displayedPosts = React.useMemo(() => {
+        if (!selectedCategory) {
+            return allPosts;
+        }
+        return allPosts.filter(
+            (p) =>
+                p.category?.toUpperCase().trim() ===
+                selectedCategory.toUpperCase().trim()
+        );
+    }, [allPosts, selectedCategory]);
 
     return (
         <section className="bg-[#fcfbfa] text-[#1a1a1a] py-8 lg:py-14 relative overflow-hidden">
@@ -113,9 +172,12 @@ export default function BlogDetailSection({
                             </h2>
 
                             <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-xs font-semibold text-gray-500 pt-1">
-                                <span className="px-2.5 py-0.5 rounded-full bg-[#DFB261]/15 text-[#DFB261] border border-[#DFB261]/30 uppercase tracking-wider text-[11px]">
+                                <Link
+                                    href={`/blog?category=${encodeURIComponent(category)}`}
+                                    className="px-2.5 py-0.5 rounded-full bg-[#DFB261]/15 hover:bg-[#DFB261] hover:text-black text-[#DFB261] border border-[#DFB261]/30 uppercase tracking-wider text-[11px] transition-colors cursor-pointer"
+                                >
                                     {category}
-                                </span>
+                                </Link>
                                 <div className="flex items-center gap-1.5">
                                     {renderIcon(icons?.calendar, LucideIcons.Calendar, "w-3.5 h-3.5 text-[#DFB261]")}
                                     <span>{date}</span>
@@ -201,7 +263,7 @@ export default function BlogDetailSection({
                         {/* Recent Posts Card */}
                         <motion.div
                             variants={fadeInUpVariants}
-                            className="bg-[#F9F4EE] rounded-lg p-4  border border-gray-200/80 shadow-xl shadow-gray-200/40 space-y-4">
+                            className="bg-[#F9F4EE] rounded-lg p-4 border border-gray-200/80 shadow-xl shadow-gray-200/40 space-y-4">
                             <div className="">
                                 <h3
                                     className="text-xl sm:text-2xl font-semibold text-[#121212] leading-tight"
@@ -212,34 +274,42 @@ export default function BlogDetailSection({
                             </div>
 
                             <div className="space-y-3 pt-1">
-                                {postsList.map((post) => (
-                                    <Link
-                                        key={post.id}
-                                        href={post.slug}
-                                        className="flex items-center gap-3.5 group  rounded-lg ">
-                                        <div className="w-18 h-16 sm:w-20 sm:h-16 rounded-lg overflow-hidden shrink-0 shadow-sm border border-gray-200/60 bg-black/5">
-                                            <img
-                                                src={post.image}
-                                                alt={post.title}
-                                                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
-                                            />
-                                        </div>
-                                        <div className="space-y-1 flex-1 min-w-0">
-                                            <h4
-                                                className="text-xs sm:text-sm font-semibold text-[#121212] group-hover:text-[#DFB261] transition-colors leading-snug line-clamp-2">
-                                                {post.title}
-                                            </h4>
-                                            <div className="flex items-center gap-1.5 text-[11px] text-gray-500 font-medium">
-                                                {renderIcon(icons?.calendar, LucideIcons.Calendar, "w-3.5 h-3.5 text-[#DFB261]")}
-                                                <span>{post.date}</span>
+                                {allPosts.map((p) => {
+                                    const isCurrent = p.id === post?.id;
+                                    return (
+                                        <Link
+                                            key={p.id}
+                                            href={p.slug}
+                                            className={`flex items-center gap-3.5 group rounded-lg p-1.5 transition-colors ${
+                                                isCurrent ? "bg-[#DFB261]/10 border border-[#DFB261]/30" : "hover:bg-black/5"
+                                            }`}
+                                        >
+                                            <div className="w-18 h-16 sm:w-20 sm:h-16 rounded-lg overflow-hidden shrink-0 shadow-sm border border-gray-200/60 bg-black/5">
+                                                <img
+                                                    src={p.image}
+                                                    alt={p.title}
+                                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                                />
                                             </div>
-                                        </div>
-                                    </Link>
-                                ))}
+                                            <div className="space-y-1 flex-1 min-w-0">
+                                                <h4
+                                                    className="text-xs sm:text-sm font-semibold text-[#121212] group-hover:text-[#DFB261] transition-colors leading-snug line-clamp-2">
+                                                    {p.title}
+                                                </h4>
+                                                <div className="flex items-center gap-2 text-[11px] text-gray-500 font-medium">
+                                                    <span className="text-[10px] text-[#997327] font-semibold bg-[#DFB261]/20 px-1.5 py-0.5 rounded">
+                                                        {formatCategory(p.category)}
+                                                    </span>
+                                                    <span>{p.date}</span>
+                                                </div>
+                                            </div>
+                                        </Link>
+                                    );
+                                })}
                             </div>
                         </motion.div>
 
-                        {/* Categories Card */}
+                        {/* Categories Card - Direct links to each category's blog */}
                         <motion.div
                             variants={fadeInUpVariants}
                             className="bg-[#F9F4EE] rounded-lg p-4 border border-gray-200/80 shadow-xl shadow-gray-200/40 space-y-4">
@@ -253,22 +323,54 @@ export default function BlogDetailSection({
                             </div>
 
                             <div className="divide-y divide-gray-200/60 pt-1">
-                                {sidebarCategories.map((cat: string, index: number) => {
-                                    const isSelected = selectedCategory === cat;
+                                {availableCategories.map((item, index) => {
+                                    const matchingPost = allPosts.find(
+                                        (p) => p.category?.toUpperCase().trim() === item.key
+                                    );
+                                    const targetHref =
+                                        matchingPost?.slug || `/blog?category=${encodeURIComponent(item.label)}`;
+                                    const isCurrentPost = matchingPost && matchingPost.id === post?.id;
+
                                     return (
-                                        <button
+                                        <Link
                                             key={index}
-                                            type="button"
-                                            onClick={() => setSelectedCategory(isSelected ? null : cat)}
-                                            className={`w-full flex items-center justify-between py-2.5 text-left text-xs sm:text-sm font-medium transition-colors cursor-pointer group ${isSelected
-                                                ? "text-[#DFB261] font-semibold"
-                                                : "text-gray-700 hover:text-[#DFB261]"
-                                                }`}>
-                                            <span className="group-hover:translate-x-1 transition-transform">
-                                                {cat}
+                                            href={targetHref}
+                                            className={`w-full flex items-center justify-between py-2.5 text-left text-xs sm:text-sm font-medium transition-all group cursor-pointer ${
+                                                isCurrentPost
+                                                    ? "text-[#DFB261] font-semibold"
+                                                    : "text-gray-700 hover:text-[#DFB261]"
+                                            }`}
+                                        >
+                                            <span className="group-hover:translate-x-1.5 transition-transform flex items-center gap-2">
+                                                {isCurrentPost ? (
+                                                    <span className="w-2 h-2 rounded-full bg-[#DFB261] shrink-0" />
+                                                ) : (
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-[#DFB261] transition-colors shrink-0" />
+                                                )}
+                                                <span>{item.label}</span>
+                                                {isCurrentPost && (
+                                                    <span className="text-[10px] text-[#DFB261] bg-[#DFB261]/15 px-2 py-0.5 rounded font-normal">
+                                                        Active
+                                                    </span>
+                                                )}
                                             </span>
-                                            {renderIcon(icons?.chevronRight, LucideIcons.ChevronRight, "w-4 h-4 text-gray-400 group-hover:text-[#DFB261] transition-colors")}
-                                        </button>
+                                            <div className="flex items-center gap-2 shrink-0">
+                                                <span
+                                                    className={`text-[10px] font-semibold px-2 py-0.5 rounded-full transition-colors ${
+                                                        isCurrentPost
+                                                            ? "bg-[#DFB261] text-black font-bold"
+                                                            : "bg-black/5 text-gray-500 group-hover:bg-[#DFB261]/20 group-hover:text-black"
+                                                    }`}
+                                                >
+                                                    {item.count}
+                                                </span>
+                                                {renderIcon(
+                                                    icons?.chevronRight,
+                                                    LucideIcons.ChevronRight,
+                                                    "w-4 h-4 text-gray-400 group-hover:text-[#DFB261] group-hover:translate-x-0.5 transition-all"
+                                                )}
+                                            </div>
+                                        </Link>
                                     );
                                 })}
                             </div>
@@ -297,13 +399,13 @@ export default function BlogDetailSection({
                                     {promo?.description || "Book your appointment today and let our experts take care of your styling needs."}
                                 </p>
                                 <div className="pt-2">
-                                    <motion.div {...buttonLuxuryLift} className="w-auto inline-block lg:w-full">
+                                    <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-fit lg:w-full">
                                         <Link
                                             href={promo?.button?.href || "/contact-us"}
-                                            className="inline-flex lg:flex items-center justify-center lg:justify-between gap-3 w-auto lg:w-full bg-[#DFB261] hover:bg-[#cfa554] text-black font-semibold px-5 py-3 rounded-full text-xs uppercase tracking-wider shadow-lg shadow-[#DFB261]/20 transition-all duration-200 group"
+                                            className="inline-flex lg:flex w-auto lg:w-full items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-6 py-2.5 sm:px-8 lg:py-3 rounded-full transition-all duration-300 text-sm lg:text-base tracking-wide group"
                                         >
-                                            <span className="whitespace-nowrap">{promo?.button?.text || "Book an Appointment"}</span>
-                                            {renderIcon(promo?.button?.icon || icons?.arrowRight, LucideIcons.ArrowRight, "w-4 h-4 shrink-0 transform group-hover:translate-x-1 transition-transform")}
+                                            <span>{promo?.button?.text || "Book an Appointment"}</span>
+                                            <LucideIcons.ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                                         </Link>
                                     </motion.div>
                                 </div>

@@ -124,7 +124,7 @@ export default function Footer() {
                             <span className="absolute bottom-0 left-0 w-8 h-[2px] bg-[#DFB261]"></span>
                         </h3>
                         <motion.ul variants={linkContainerVariants} className="space-y-4 pt-2 text-sm lg:text-md ">
-                            <motion.li variants={linkItemVariants} whileHover={{ x: 5 }} transition={{ duration: 0.2 }} className="flex items-center lg:items-start gap-3">
+                            <motion.li variants={linkItemVariants} whileHover={{ x: 5 }} transition={{ duration: 0.2 }} className="flex items-center lg:items-center gap-3">
                                 <div className="w-10 h-10 lg:w-14 lg:h-14 rounded-full bg-[#DFB261]/10 flex items-center justify-center shrink-0 mt-0.5 text-[#DFB261]">
                                     <BiSolidMap className="w-5 h-5 lg:w-7 lg:h-7" />
                                 </div>

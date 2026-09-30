@@ -5,24 +5,33 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import siteData from "@/data/index";
 
-interface HeroSlide {
-    id: number;
-    subtitle: string;
-    titlePart1: string;
-    titlePart2: string;
-    description: string;
-    image: string;
-    neonText?: string;
+function getEmbedUrl(url?: string): string {
+    if (!url) return "https://www.youtube.com/embed/dQw4w9WgXcQ";
+    if (url.includes("/embed/")) return url;
+
+    const ytMatch = url.match(/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/);
+    if (ytMatch && ytMatch[1]) {
+        return `https://www.youtube.com/embed/${ytMatch[1]}`;
+    }
+
+    const vimeoMatch = url.match(/vimeo\.com\/(\d+)/);
+    if (vimeoMatch && vimeoMatch[1]) {
+        return `https://player.vimeo.com/video/${vimeoMatch[1]}`;
+    }
+
+    return url;
 }
 
-import siteData from "@/data/index";
 
 const { slides, ctaPrimary, ctaVideo, features } = siteData.home.hero;
 
 export default function HeroSection() {
     const [api, setApi] = useState<CarouselApi>();
     const [current, setCurrent] = useState(0);
+    const [isVideoOpen, setIsVideoOpen] = useState(false);
 
     useEffect(() => {
         if (!api) {
@@ -125,15 +134,18 @@ export default function HeroSection() {
                                                             </Link>
                                                         </motion.div>
 
+                                                        {/* video play button  */}
                                                         <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                                                             <button
-                                                                onClick={() => alert("Playing salon tour video...")}
-                                                                className="inline-flex items-center gap-3 px-2 sm:px-6 text-sm lg:text-base tracking-wide group"
+                                                                type="button"
+                                                                onClick={() => setIsVideoOpen(true)}
+                                                                className="inline-flex items-center gap-3 px-2 sm:px-6 text-sm lg:text-base tracking-wide group cursor-pointer focus:outline-none"
+                                                                aria-label={ctaVideo.text || "Watch Salon Video"}
                                                             >
-                                                                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-full border border-2 border-[#DFB261] text-black flex items-center justify-center">
-                                                                    <Play className="w-4 h-4 sm:w-5 sm:h-5 text-white fill-white ml-0.5 " />
+                                                                <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-full border-2 border-[#DFB261] text-black flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:bg-[#DFB261]/20 group-hover:shadow-[0_0_20px_rgba(223,178,97,0.4)]">
+                                                                    <Play className="w-4 h-4 sm:w-5 sm:h-5 text-white fill-white ml-0.5 transition-transform duration-300 group-hover:scale-110" />
                                                                 </div>
-                                                                <span className="text-white">{ctaVideo.text}</span>
+                                                                <span className="text-white group-hover:text-[#DFB261] transition-colors">{ctaVideo.text}</span>
                                                             </button>
                                                         </motion.div>
                                                     </motion.div>
@@ -194,6 +206,61 @@ export default function HeroSection() {
                     </div>
                 </div>
             </div>
+
+            {/* Video Player Modal */}
+            <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+                <DialogContent
+                    showCloseButton={true}
+                    className="max-w-3xl sm:max-w-4xl bg-[#141414] border border-[#DFB261]/40 rounded-2xl p-4 sm:p-6 shadow-[0_0_50px_rgba(223,178,97,0.25)] ring-0 text-white outline-none [&_[data-slot=dialog-close]]:text-white/80 [&_[data-slot=dialog-close]]:hover:text-white [&_[data-slot=dialog-close]]:hover:bg-white/10 [&_[data-slot=dialog-close]]:top-4 [&_[data-slot=dialog-close]]:right-4 [&_[data-slot=dialog-close]]:rounded-full [&_[data-slot=dialog-close]]:p-1.5"
+                >
+                    <DialogHeader className="gap-1 pr-10 text-left">
+                        <DialogTitle
+                            className="text-xl sm:text-2xl font-semibold text-white tracking-wide"
+                            style={{ fontFamily: "'Playfair Display', serif" }}
+                        >
+                            {(ctaVideo as any)?.title || "Hair Craft Luxury Salon Experience"}
+                        </DialogTitle>
+                        <div className="w-12 h-[2px] bg-[#DFB261] my-1" />
+                        <DialogDescription className="text-gray-300 text-xs sm:text-sm font-medium">
+                            {(ctaVideo as any)?.description || "Step inside Hair Craft and witness our signature hair transformations, luxury spa therapies, and expert styling."}
+                        </DialogDescription>
+                    </DialogHeader>
+
+                    {/* Video Player Container */}
+                    <div className="relative aspect-video w-full rounded-xl overflow-hidden bg-black border border-white/10 shadow-2xl mt-2">
+                        {isVideoOpen && (
+                            (() => {
+                                const videoSrc = (ctaVideo as any)?.videoUrl || "https://www.youtube.com/embed/dQw4w9WgXcQ";
+                                const isDirect = videoSrc.endsWith(".mp4") || videoSrc.endsWith(".webm") || videoSrc.endsWith(".ogg");
+
+                                if (isDirect) {
+                                    return (
+                                        <video
+                                            src={videoSrc}
+                                            controls
+                                            autoPlay
+                                            className="w-full h-full object-contain bg-black"
+                                        />
+                                    );
+                                }
+
+                                const embedUrl = getEmbedUrl(videoSrc);
+                                const finalUrl = `${embedUrl}${embedUrl.includes("?") ? "&" : "?"}autoplay=1&rel=0`;
+
+                                return (
+                                    <iframe
+                                        src={finalUrl}
+                                        title={(ctaVideo as any)?.title || "Salon Tour Video"}
+                                        className="w-full h-full border-0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowFullScreen
+                                    />
+                                );
+                            })()
+                        )}
+                    </div>
+                </DialogContent>
+            </Dialog>
         </section>
     );
 }

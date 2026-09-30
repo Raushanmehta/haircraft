@@ -11,10 +11,15 @@ export function generateStaticParams() {
 
 export default async function BlogDetailPage({
     params,
+    searchParams,
 }: {
     params: Promise<{ slug: string }>;
+    searchParams?: Promise<{ category?: string }>;
 }) {
     const { slug } = await params;
+    const resolvedSearchParams = searchParams ? await searchParams : undefined;
+    const initialCategory = resolvedSearchParams?.category;
+
     const blogData = siteData.blog;
     const posts = blogData?.posts || [];
     const activePost =
@@ -28,7 +33,8 @@ export default async function BlogDetailPage({
                 title={"Blog Details"}
                 breadcrumbs={[
                     { label: "Home", href: "/" },
-                    { label: "Blog Details", href: "blog-details" },
+                    { label: "Blog Detail", href: "/blog Details" },
+
                 ]}
             />
             <BlogDetailSection
@@ -36,6 +42,7 @@ export default async function BlogDetailPage({
                 detailConfig={blogData?.detailPage}
                 metaIcons={blogData?.metaIcons}
                 recentPosts={posts}
+                initialCategory={initialCategory}
             />
         </main>
     );

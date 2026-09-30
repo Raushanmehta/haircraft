@@ -216,19 +216,6 @@ export default function FAQsSection({ data }: FAQsSectionProps) {
                                 ))}
                             </div>
 
-                            {/* Optional Side Card Button */}
-                            {sideButton && (
-                                <div className="pt-2">
-                                    <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-                                        <Link
-                                            href={sideButton.href}
-                                            className="inline-flex items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-6 py-2.5 sm:px-8 lg:py-3 rounded-full  transition-all duration-300 text-sm lg:text-base tracking-wide group">
-                                            <span>{sideButton.text}</span>
-                                            <LucideIcons.ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                                        </Link>
-                                    </motion.div>
-                                </div>
-                            )}
                         </div>
                     </motion.div>
 

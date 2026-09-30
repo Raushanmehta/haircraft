@@ -78,40 +78,40 @@ export default function NotFoundSection({ data }: NotFoundSectionProps) {
     };
 
     return (
-        <section className="relative min-h-[100vh] text-[#1a1a1a] flex items-center justify-center overflow-hidden py-8 lg:py-14 ">
+        <section className="bg-[#fcfbfa] relative min-h-[80vh] lg:min-h-[100vh] text-[#1a1a1a] flex items-center justify-center overflow-hidden py-12 sm:py-16 lg:py-20">
             {/* Background Image Layer */}
-            <div className="absolute inset-0 z-0 pointer-events-none">
+            <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
                 <img
                     src={cardImage}
                     alt={cardImageAlt}
-                    className="w-full h-full "
+                    className="w-[calc(100%+120px)] sm:w-[calc(100%+240px)] lg:w-[calc(100%+360px)] max-w-none h-full object-cover object-right -translate-x-14 sm:-translate-x-24 lg:-translate-x-40"
                 />
             </div>
 
             {/* Background Ambient Glow */}
-            <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-[#DFB261]/10 rounded-full blur-3xl pointer-events-none z-0" />
 
-            <div className="max-w-[1400px] mx-auto px-4 relative z-10  ">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+            <div className="max-w-[1400px] w-full mx-auto px-4  relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-14 items-center">
 
                     {/* Left Column: 404 Text & CTAs (Span 7) */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, ease: "easeOut" }}
-                        className="lg:col-span-7 space-y-6"
+                        className="lg:col-span-7 space-y-4 sm:space-y-6"
                     >
                         {/* OOPS! Tag */}
                         <div className="flex items-center gap-3">
-                            <span className="text-xs uppercase tracking-[0.3em] text-[#DFB261] font-semibold">
+                            <span className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#DFB261] font-semibold">
                                 {tag}
                             </span>
-                            <span className="w-12 h-[2px] bg-[#DFB261]"></span>
+                            <span className="w-10 sm:w-14 h-[2px] bg-[#DFB261]"></span>
                         </div>
 
                         {/* Giant 404 Title with Gold Middle Zero */}
                         <h1
-                            className="text-7xl sm:text-[200px] font-bold tracking-tight text-[#121212] select-none leading-none"
+                            className="text-6xl sm:text-7xl md:text-8xl lg:text-[140px] xl:text-[170px] font-bold tracking-tight text-[#121212] select-none leading-none"
                             style={{ fontFamily: "'Playfair Display', serif" }}
                         >
                             {renderCode()}
@@ -119,7 +119,7 @@ export default function NotFoundSection({ data }: NotFoundSectionProps) {
 
                         {/* Subheading */}
                         <h2
-                            className="text-3xl sm:text-4xl font-bold text-[#121212]"
+                            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#121212] tracking-tight"
                             style={{ fontFamily: "'Playfair Display', serif" }}
                         >
                             {subheading}
@@ -131,13 +131,13 @@ export default function NotFoundSection({ data }: NotFoundSectionProps) {
                         </p>
 
                         {/* Action Buttons */}
-                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2 w-full sm:w-auto">
+                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-3 sm:pt-4 w-full sm:w-auto">
                             {/* Primary Gold Button */}
                             {primaryButton && (
                                 <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-full sm:w-auto">
                                     <Link
                                         href={primaryButton.href || "/"}
-                                        className="w-full sm:w-auto inline-flex items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-6 py-2.5 sm:px-8 lg:py-3 rounded-full transition-all duration-300 text-sm lg:text-base tracking-wide group"
+                                        className="w-full sm:w-auto inline-flex items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-6 py-3 sm:px-8 sm:py-3.5 rounded-full transition-all duration-300 text-sm sm:text-base tracking-wide group shadow-sm hover:shadow-md"
                                     >
                                         {renderIcon(primaryButton.icon, LucideIcons.Home, "w-4 h-4")}
                                         <span>{primaryButton.text}</span>
@@ -155,7 +155,7 @@ export default function NotFoundSection({ data }: NotFoundSectionProps) {
                                 <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-full sm:w-auto">
                                     <Link
                                         href={secondaryButton.href || "/services"}
-                                        className="w-full sm:w-auto inline-flex items-center justify-center font-medium gap-3 border border-[#DFB261] hover:bg-[#DFB261] text-[#121212] hover:text-black px-6 py-2.5 sm:px-8 lg:py-3 rounded-full transition-all duration-300 text-sm lg:text-base tracking-wide group"
+                                        className="w-full sm:w-auto inline-flex items-center justify-center font-medium gap-3 border border-[#DFB261] hover:bg-[#DFB261] text-[#121212] hover:text-black px-6 py-3 sm:px-8 sm:py-3.5 rounded-full transition-all duration-300 text-sm sm:text-base tracking-wide group"
                                     >
                                         {renderIcon(
                                             secondaryButton.icon,
@@ -174,12 +174,12 @@ export default function NotFoundSection({ data }: NotFoundSectionProps) {
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-                        className="lg:col-span-5 flex flex-col items-center lg:items-end justify-center gap-4 relative"
+                        className="lg:col-span-5 flex flex-col items-center lg:items-end justify-center pt-6 lg:pt-0 relative lg:-left-[400px]"
                     >
                         {/* Cursive Quote Floating Text */}
-                        <div className="text-center lg:text-right space-y-2">
+                        <div className="text-center lg:text-right space-y-2 sm:space-y-3 max-w-md lg:max-w-none">
                             <p
-                                className="text-3xl sm:text-4xl lg:text-5xl text-[#121212] italic leading-snug drop-shadow-sm select-none"
+                                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#121212] italic leading-snug drop-shadow-sm select-none"
                                 style={{ fontFamily: "'Playfair Display', serif" }}
                             >
                                 {quoteLines.map((line: string, idx: number) => (
@@ -189,10 +189,10 @@ export default function NotFoundSection({ data }: NotFoundSectionProps) {
                                     </React.Fragment>
                                 ))}
                             </p>
-                            <div className="w-24 h-[2px] bg-[#DFB261] mx-auto lg:ml-auto lg:mr-0 mt-4" />
+                            <div className="w-16 sm:w-24 h-[2px] bg-[#DFB261] mx-auto lg:ml-auto lg:mr-0 mt-3 sm:mt-4" />
                             {cardBadge && (
                                 <p
-                                    className="text-xs uppercase tracking-[0.25em] text-[#DFB261] font-semibold pt-2"
+                                    className="text-xs uppercase tracking-[0.25em] text-[#DFB261] font-semibold pt-1 sm:pt-2"
                                 >
                                     {cardBadge}
                                 </p>

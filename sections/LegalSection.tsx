@@ -110,8 +110,8 @@ export default function LegalSection({
         sections && sections.length > 0
             ? sections
             : data?.sections && data.sections.length > 0
-            ? data.sections
-            : defaultSections;
+                ? data.sections
+                : defaultSections;
 
     const banner = data?.calloutBanner;
     const bannerButton = banner?.button;
@@ -171,9 +171,8 @@ export default function LegalSection({
                                 key={index}
                                 variants={fadeInUpVariants}
                                 whileHover={{ x: 6, transition: { duration: 0.25, ease: "easeOut" } }}
-                                className={`space-y-2 mt-2 lg:mt-4 transition-all duration-200 group ${
-                                    !isLast ? "pb-4 border-b border-gray-200/80" : ""
-                                }`}
+                                className={`space-y-2 mt-2 lg:mt-4 transition-all duration-200 group ${!isLast ? "pb-4 border-b border-gray-200/80" : ""
+                                    }`}
                             >
                                 <h3
                                     style={{ fontFamily: "'Playfair Display', serif" }}

@@ -101,13 +101,13 @@ export default function CtaSection() {
                     </motion.div>
                 </motion.div>
 
-                {/* Floating Gold Badge (Moved to the right side of the screen on desktop) */}
+                {/* Floating Gold Badge (Moved to the left side of the right-image on desktop) */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true, amount: 0.8 }}
                     transition={{ delay: 0.5, duration: 0.6, ease: "easeOut" }}
-                    className="absolute top-[30%] right-10 lg:right-[450px] xl:right-[450px] -translate-y-1/2 hidden md:flex w-36 h-36 lg:w-44 lg:h-44 rounded-full bg-[#1a1a1a]/40 border-2 border-[#DFB261] flex-col items-center justify-center text-center p-4 lg:p-6 shadow-2xl shadow-black/50 backdrop-blur-md z-20">
+                    className="absolute top-[30%] right-16 md:right-28 lg:right-[600px] xl:right-[670px] -translate-y-1/2 hidden md:flex w-36 h-36 lg:w-44 lg:h-44 rounded-full bg-[#1a1a1a]/40 border-2 border-[#DFB261] flex-col items-center justify-center text-center p-4 lg:p-6 shadow-2xl shadow-black/50 backdrop-blur-md z-20">
                     <p className="text-[9px] lg:text-[11px] uppercase tracking-widest text-gray-300 font-light">
                         {cta.badge.line1}
                     </p>

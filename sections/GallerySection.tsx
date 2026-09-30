@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
-import { motion } from "framer-motion";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X, ChevronLeft, ChevronRight, ChevronDown } from "lucide-react";
 import GalleryVideoCard from "@/components/cards/GalleryVideoCard";
 import GalleryImageCard from "@/components/cards/GalleryImageCard";
 import { fadeInUpVariants, textContainerVariants } from "@/utils/animations";
@@ -29,6 +29,20 @@ export default function GallerySection({
 
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [activeVideo, setActiveVideo] = useState<any | null>(null);
+    const [showAllImages, setShowAllImages] = useState(false);
+
+    const INITIAL_IMAGE_COUNT = 10;
+    const displayedImages = showAllImages ? imagesList : imagesList.slice(0, INITIAL_IMAGE_COUNT);
+
+    const galleryGridRef = useRef<HTMLDivElement>(null);
+
+    const handleToggleImages = () => {
+        if (showAllImages && galleryGridRef.current) {
+            const topPos = galleryGridRef.current.getBoundingClientRect().top + window.scrollY - 100;
+            window.scrollTo({ top: topPos, behavior: "smooth" });
+        }
+        setShowAllImages((prev) => !prev);
+    };
 
     const currentIndex = imagesList.findIndex((item: any) => item.src === selectedImage);
 
@@ -69,7 +83,7 @@ export default function GallerySection({
             <div className="max-w-[1400px] mx-auto px-4 relative z-10 space-y-4">
 
                 {/* PART 1: IMAGE GALLERY */}
-                <div className="space-y-4">
+                <div ref={galleryGridRef} className="space-y-4">
 
                     {/* Image Section Header */}
                     <motion.div
@@ -100,17 +114,58 @@ export default function GallerySection({
                         </motion.p>
                     </motion.div>
 
-                    {/* Image Grid */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-4">
-                        {imagesList.map((img: any, index: number) => (
-                            <GalleryImageCard
-                                key={img.id}
-                                index={index}
-                                img={img}
-                                setSelectedImage={setSelectedImage}
-                            />
-                        ))}
-                    </div>
+                    {/* Image Grid with Smooth Layout Animation */}
+                    <motion.div
+                        layout
+                        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-4"
+                    >
+                        <AnimatePresence>
+                            {displayedImages.map((img: any, index: number) => (
+                                <motion.div
+                                    key={img.id}
+                                    layout
+                                    initial={{ opacity: 0, scale: 0.9, y: 15 }}
+                                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                                    exit={{ opacity: 0, scale: 0.9, y: 15 }}
+                                    transition={{
+                                        duration: 0.35,
+                                        ease: "easeOut",
+                                        delay: index >= INITIAL_IMAGE_COUNT ? (index - INITIAL_IMAGE_COUNT) * 0.03 : 0,
+                                    }}
+                                    className="h-44 sm:h-52 lg:h-60"
+                                >
+                                    <GalleryImageCard
+                                        img={img}
+                                        index={index}
+                                        setSelectedImage={setSelectedImage}
+                                    />
+                                </motion.div>
+                            ))}
+                        </AnimatePresence>
+                    </motion.div>
+
+                    {/* View More / Show Less Button in Center */}
+                    {imagesList.length > INITIAL_IMAGE_COUNT && (
+                        <div className="flex justify-center items-center pt-2 sm:pt-4">
+                            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+                                <button
+                                    type="button"
+                                    onClick={handleToggleImages}
+                                    className="inline-flex items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-8 py-3 rounded-full transition-all duration-300 text-sm lg:text-base tracking-wide group cursor-pointer shadow-md"
+                                >
+                                    <span>{showAllImages ? "Show Less" : "View More"}</span>
+                                    <motion.div
+                                        animate={{ rotate: showAllImages ? 180 : 0 }}
+                                        transition={{ duration: 0.35, ease: "easeInOut" }}
+                                        className="flex items-center justify-center"
+                                    >
+                                        <ChevronDown className="w-4 h-4" />
+                                    </motion.div>
+                                </button>
+                            </motion.div>
+                        </div>
+                    )}
 
                 </div>
 
