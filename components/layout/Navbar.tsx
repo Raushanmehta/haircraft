@@ -71,7 +71,15 @@ export default function Navbar() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
                         <Link href={siteData.navbar.logo.href} className="flex items-center group">
-                            <Image src={siteData.navbar.logo.src} alt={siteData.navbar.logo.alt} width={200} height={200} className="w-[140px] sm:w-[200px] h-auto" />
+                            <Image
+                                src={siteData.navbar.logo.src}
+                                alt={siteData.navbar.logo.alt}
+                                width={200}
+                                height={200}
+                                priority
+                                className="w-[140px] sm:w-[200px] h-auto"
+                                style={{ height: "auto", width: "auto" }}
+                            />
                         </Link>
                     </motion.div>
 

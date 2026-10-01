@@ -32,7 +32,14 @@ export default function Footer() {
                     <motion.div variants={columnVariants} className="lg:col-span-4 space-y-6">
                         <motion.div whileHover={{ scale: 1.04 }} transition={{ duration: 0.3 }} className="inline-block w-fit">
                             <Link href={footerData.logo.href} className="flex items-center gap-3 group inline-flex">
-                                <Image src={footerData.logo.src} alt={footerData.logo.alt} width={200} height={200} className="w-[140px] sm:w-[200px] h-auto" />
+                                <Image
+                                    src={footerData.logo.src}
+                                    alt={footerData.logo.alt}
+                                    width={200}
+                                    height={200}
+                                    className="w-[140px] sm:w-[200px] h-auto"
+                                    style={{ height: "auto", width: "auto" }}
+                                />
                             </Link>
                         </motion.div>
 
