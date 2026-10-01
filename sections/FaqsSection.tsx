@@ -102,7 +102,7 @@ const defaultFaqsData = [
         number: "10.",
         question: "How can I contact you for more information?",
         answer:
-            "You can reach us via phone at +91 98765 43210, email us at info@haicraftsalon.com, or visit our salon at 123 Styling Street, New Delhi.",
+            "You can reach us via phone at +1 000000000, email us at info@xyz, or visit our salon at 3170 Rosewood Lane Unit 200 , Beverly Hills, CA 90210.",
     },
 ];
 

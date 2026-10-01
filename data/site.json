@@ -602,11 +602,11 @@
             },
             "needHelpCard": {
               "title": "Need Help?",
-              "phone": "+91 98765 43210",
+              "phone": "+1 000000000",
               "phoneIcon": "MdCall",
-              "email": "info@haicraftsalon.com",
+              "email": "info@xyz",
               "emailIcon": "IoMdMail",
-              "address": "123 Styling Street, New Delhi, India",
+              "address": "3170 Rosewood Lane Unit 200 , Beverly Hills, CA 90210",
               "addressIcon": "FaMapMarkerAlt"
             },
             "ServiceItem": [
@@ -1088,9 +1088,9 @@
                 ],
                 "experience": "8+ Years",
                 "specialization": "Haircut, Beard Styling, Men's Grooming",
-                "location": "New Delhi, India",
-                "email": "devendra@haicraftsalon.com",
-                "phone": "+91 98765 43210",
+                "location": "Beverly Hills, CA",
+                "email": "devendra@xyz",
+                "phone": "+1 000000000",
                 "description": "Specializes in modern haircuts, fades and classic grooming with attention to every detail.",
                 "image": "https://i.pinimg.com/1200x/61/f4/6c/61f46c28fb398260a0507f46ed258a64.jpg",
                 "skills": [],
@@ -1130,9 +1130,9 @@
                 ],
                 "experience": "6+ Years",
                 "specialization": "Haircut, Beard Styling, Men's Grooming",
-                "location": "New Delhi, India",
-                "email": "simran@haicraftsalon.com",
-                "phone": "+91 98765 43212",
+                "location": "Beverly Hills, CA",
+                "email": "simran@xyz",
+                "phone": "+1 000000000",
                 "skills": [],
                 "stack": {
                   "name1": "Haircut & Styling",
@@ -1164,9 +1164,9 @@
                 ],
                 "experience": "7+ Years",
                 "specialization": "Haircut, Beard Styling, Men's Grooming",
-                "location": "New Delhi, India",
-                "email": "arvind@haicraftsalon.com",
-                "phone": "+91 98765 43213",
+                "location": "Beverly Hills, CA",
+                "email": "arvind@xyz",
+                "phone": "+1 000000000",
                 "skills": [],
                 "stack": {
                   "name1": "Haircut & Styling",
@@ -1198,9 +1198,9 @@
                 ],
                 "experience": "8+ Years",
                 "specialization": "Haircut, Beard Styling, Men's Grooming",
-                "location": "New Delhi, India",
-                "email": "rohit@haicraftsalon.com",
-                "phone": "+91 98765 43214",
+                "location": "Beverly Hills, CA",
+                "email": "rohit@xyz",
+                "phone": "+1 000000000",
                 "skills": [],
                 "stack": {
                   "name1": "Haircut & Styling",
@@ -1409,7 +1409,7 @@
                 "date": "12 AUG 2025",
                 "author": "Senior Stylist",
                 "readTime": "5 Min Read",
-                "title": "Top Haircut Trends for Men This Season",
+                "title": "Haircut Trends for Men This Season",
                 "description": "Discover the latest haircut styles that are right now and find the perfect look to match your personality.",
                 "image": "https://i.pinimg.com/1200x/18/d7/53/18d753382d91c489fa8ef4b74bc2c813.jpg",
                 "slug": "/blog/top-haircut-trends-for-men",
@@ -1523,7 +1523,7 @@
                 "author": "Keratin Specialist",
                 "readTime": "7 Min Read",
                 "title": "The Ultimate Guide to Keratin Treatments",
-                "description": "Unlock smooth, frizz-free, and lustrous hair with our comprehensive guide to professional keratin hair therapy.",
+                "description": "Unlock smooth, frizz-free, and hair with our comprehensive guide to keratin hair therapy.",
                 "image": "https://i.pinimg.com/1200x/42/de/fc/42defc6427189cf6e3451fca721cd6bc.jpg",
                 "slug": "/blog/the-ultimate-guide-to-keratin-treatments",
                 "introText": "Frizz, humidity, and daily heat exposure can leave hair feeling unmanageable and dry. Keratin treatments have revolutionized modern hair therapy by restoring essential protein and sealing moisture deep into the hair cuticle for silky, lasting smoothness.",
@@ -1559,7 +1559,7 @@
                 "author": "Artistic Director",
                 "readTime": "5 Min Read",
                 "title": "Mastering the Classic Pompadour Fade",
-                "description": "Step-by-step techniques to achieve, style, and sustain an iconic high-volume pompadour with a sharp fade.",
+                "description": "Step-by-step techniques to style, and sustain an iconic high-volume pompadour with a sharp fade.",
                 "image": "https://i.pinimg.com/1200x/2c/15/6b/2c156bbdf80c718f1ed5fa62d5e6c8ed.jpg",
                 "slug": "/blog/mastering-the-classic-pompadour-fade",
                 "introText": "The pompadour fade remains an everlasting emblem of masculine sophistication and precision styling. Combining volume, clean gradient sides, and sculptured form, it strikes the perfect harmony between classic vintage charisma and sleek contemporary luxury.",
@@ -1853,7 +1853,7 @@
               {
                 "id": "senior-hair-stylist",
                 "title": "Senior Hair Stylist",
-                "location": "New Delhi",
+                "location": "Beverly Hills, CA",
                 "type": "Full Time",
                 "experience": "3-5 Years",
                 "department": "Hair Styling",
@@ -1900,7 +1900,7 @@
               {
                 "id": "salon-manager",
                 "title": "Salon Manager",
-                "location": "New Delhi",
+                "location": "Beverly Hills, CA",
                 "type": "Full Time",
                 "experience": "3-6 Years",
                 "department": "Operations & Management",
@@ -1945,7 +1945,7 @@
               {
                 "id": "hair-color-specialist",
                 "title": "Hair Color Specialist",
-                "location": "Mumbai",
+                "location": "Beverly Hills, CA",
                 "type": "Full Time",
                 "experience": "2-4 Years",
                 "department": "Color & Chemistry",
@@ -1989,7 +1989,7 @@
               {
                 "id": "receptionist",
                 "title": "Receptionist",
-                "location": "New Delhi",
+                "location": "Beverly Hills, CA",
                 "type": "Full Time",
                 "experience": "1-2 Years",
                 "department": "Front Desk & Hospitality",
@@ -2371,7 +2371,7 @@
                 "id": "10",
                 "number": "10.",
                 "question": "How can I contact you for more information?",
-                "answer": "You can reach us via phone at +91 98765 43210, email us at info@haicraftsalon.com, or visit our salon at 123 Styling Street, New Delhi."
+                "answer": "You can reach us via phone at +1 000000000, email us at info@xyz, or visit our salon at 3170 Rosewood Lane Unit 200 , Beverly Hills, CA 90210."
               }
             ]
           }
@@ -2386,8 +2386,8 @@
                 "icon": "MapPin",
                 "title": "Our Location",
                 "details": [
-                  "123 Styling Street,",
-                  "New Delhi, India 110001"
+                  "3170 Rosewood Lane Unit 200 ,",
+                  "Beverly Hills, CA 90210"
                 ]
               },
               {
@@ -2395,8 +2395,7 @@
                 "icon": "Phone",
                 "title": "Call Us",
                 "details": [
-                  "+91 98765 43210",
-                  "+91 11 4567 8900"
+                  "+1 000000000"
                 ]
               },
               {
@@ -2404,8 +2403,7 @@
                 "icon": "Mail",
                 "title": "Email Us",
                 "details": [
-                  "info@haicraftsalon.com",
-                  "support@haicraftsalon.com"
+                  "info@xyz"
                 ]
               },
               {
@@ -2483,7 +2481,7 @@
               },
               "info": {
                 "title": "Find Us Easily",
-                "description": "We are conveniently located in the heart of New Delhi, with easy access and parking facilities nearby."
+                "description": "We are conveniently located at 3170 Rosewood Lane Unit 200 , Beverly Hills, CA 90210, with easy access and parking facilities nearby."
               },
               "button": {
                 "text": "Get Directions",

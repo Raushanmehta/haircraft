@@ -40,19 +40,19 @@ const defaultInfoCards = [
         id: "location",
         icon: "MapPin",
         title: "Our Location",
-        details: ["123 Styling Street,", "New Delhi, India 110001"],
+        details: ["3170 Rosewood Lane Unit 200 ,", "Beverly Hills, CA 90210"],
     },
     {
         id: "phone",
         icon: "Phone",
         title: "Call Us",
-        details: ["+91 98765 43210", "+91 11 4567 8900"],
+        details: ["+1 000000000"],
     },
     {
         id: "email",
         icon: "Mail",
         title: "Email Us",
-        details: ["info@haicraftsalon.com", "support@haicraftsalon.com"],
+        details: ["info@xyz"],
     },
     {
         id: "hours",
@@ -386,7 +386,7 @@ export default function ContactSection({ data }: ContactSectionProps) {
                             </h4>
                             <p className="text-gray-600 text-xs sm:text-sm font-medium leading-relaxed">
                                 {mapInfo?.description ||
-                                    "We are conveniently located in the heart of New Delhi, with easy access and parking facilities nearby."}
+                                    "We are conveniently located at 3170 Rosewood Lane Unit 200 , Beverly Hills, CA 90210, with easy access and parking facilities nearby."}
                             </p>
                         </div>
 

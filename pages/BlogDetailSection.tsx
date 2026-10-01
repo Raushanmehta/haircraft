@@ -280,9 +280,8 @@ export default function BlogDetailSection({
                                         <Link
                                             key={p.id}
                                             href={p.slug}
-                                            className={`flex items-center gap-3.5 group rounded-lg p-1.5 transition-colors ${
-                                                isCurrent ? "bg-[#DFB261]/10 border border-[#DFB261]/30" : "hover:bg-black/5"
-                                            }`}
+                                            className={`flex items-center gap-3.5 group rounded-lg p-1.5 transition-colors ${isCurrent ? "bg-[#DFB261]/10 border border-[#DFB261]/30" : "hover:bg-black/5"
+                                                }`}
                                         >
                                             <div className="w-18 h-16 sm:w-20 sm:h-16 rounded-lg overflow-hidden shrink-0 shadow-sm border border-gray-200/60 bg-black/5">
                                                 <img
@@ -309,72 +308,6 @@ export default function BlogDetailSection({
                             </div>
                         </motion.div>
 
-                        {/* Categories Card - Direct links to each category's blog */}
-                        <motion.div
-                            variants={fadeInUpVariants}
-                            className="bg-[#F9F4EE] rounded-lg p-4 border border-gray-200/80 shadow-xl shadow-gray-200/40 space-y-4">
-                            <div>
-                                <h3
-                                    className="text-xl sm:text-2xl font-semibold text-[#121212] leading-tight"
-                                    style={{ fontFamily: "'Playfair Display', serif" }}>
-                                    {categoriesTitle}
-                                </h3>
-                                <div className="w-10 h-[2px] bg-[#DFB261] mt-2" />
-                            </div>
-
-                            <div className="divide-y divide-gray-200/60 pt-1">
-                                {availableCategories.map((item, index) => {
-                                    const matchingPost = allPosts.find(
-                                        (p) => p.category?.toUpperCase().trim() === item.key
-                                    );
-                                    const targetHref =
-                                        matchingPost?.slug || `/blog?category=${encodeURIComponent(item.label)}`;
-                                    const isCurrentPost = matchingPost && matchingPost.id === post?.id;
-
-                                    return (
-                                        <Link
-                                            key={index}
-                                            href={targetHref}
-                                            className={`w-full flex items-center justify-between py-2.5 text-left text-xs sm:text-sm font-medium transition-all group cursor-pointer ${
-                                                isCurrentPost
-                                                    ? "text-[#DFB261] font-semibold"
-                                                    : "text-gray-700 hover:text-[#DFB261]"
-                                            }`}
-                                        >
-                                            <span className="group-hover:translate-x-1.5 transition-transform flex items-center gap-2">
-                                                {isCurrentPost ? (
-                                                    <span className="w-2 h-2 rounded-full bg-[#DFB261] shrink-0" />
-                                                ) : (
-                                                    <span className="w-1.5 h-1.5 rounded-full bg-gray-300 group-hover:bg-[#DFB261] transition-colors shrink-0" />
-                                                )}
-                                                <span>{item.label}</span>
-                                                {isCurrentPost && (
-                                                    <span className="text-[10px] text-[#DFB261] bg-[#DFB261]/15 px-2 py-0.5 rounded font-normal">
-                                                        Active
-                                                    </span>
-                                                )}
-                                            </span>
-                                            <div className="flex items-center gap-2 shrink-0">
-                                                <span
-                                                    className={`text-[10px] font-semibold px-2 py-0.5 rounded-full transition-colors ${
-                                                        isCurrentPost
-                                                            ? "bg-[#DFB261] text-black font-bold"
-                                                            : "bg-black/5 text-gray-500 group-hover:bg-[#DFB261]/20 group-hover:text-black"
-                                                    }`}
-                                                >
-                                                    {item.count}
-                                                </span>
-                                                {renderIcon(
-                                                    icons?.chevronRight,
-                                                    LucideIcons.ChevronRight,
-                                                    "w-4 h-4 text-gray-400 group-hover:text-[#DFB261] group-hover:translate-x-0.5 transition-all"
-                                                )}
-                                            </div>
-                                        </Link>
-                                    );
-                                })}
-                            </div>
-                        </motion.div>
 
                         {/* Luxury Dark Promo Card */}
                         <motion.div
@@ -399,7 +332,7 @@ export default function BlogDetailSection({
                                     {promo?.description || "Book your appointment today and let our experts take care of your styling needs."}
                                 </p>
                                 <div className="pt-2">
-                                    <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-fit lg:w-full">
+                                    <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-fit ">
                                         <Link
                                             href={promo?.button?.href || "/contact-us"}
                                             className="inline-flex lg:flex w-auto lg:w-full items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-6 py-2.5 sm:px-8 lg:py-3 rounded-full transition-all duration-300 text-sm lg:text-base tracking-wide group"

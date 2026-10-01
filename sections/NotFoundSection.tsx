@@ -78,13 +78,23 @@ export default function NotFoundSection({ data }: NotFoundSectionProps) {
     };
 
     return (
-        <section className="bg-[#fcfbfa] relative min-h-[80vh] lg:min-h-[100vh] text-[#1a1a1a] flex items-center justify-center overflow-hidden py-12 sm:py-16 lg:py-20">
+        <section className="bg-[#fcfbfa] relative min-h-[80vh] lg:min-h-[100vh] text-[#1a1a1a] flex items-center justify-center overflow-hidden pt-24 pb-12 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20">
             {/* Background Image Layer */}
             <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
                 <img
                     src={cardImage}
                     alt={cardImageAlt}
                     className="w-[calc(100%+120px)] sm:w-[calc(100%+240px)] lg:w-[calc(100%+360px)] max-w-none h-full object-cover object-right -translate-x-14 sm:-translate-x-24 lg:-translate-x-40"
+                />
+
+                {/* Dark Shade Gradient for Small & Medium Screens (sm & md) */}
+                <div
+                    className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-black/20 lg:hidden pointer-events-none"
+                    aria-hidden="true"
+                />
+                <div
+                    className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/50 lg:hidden pointer-events-none"
+                    aria-hidden="true"
                 />
             </div>
 
@@ -103,7 +113,7 @@ export default function NotFoundSection({ data }: NotFoundSectionProps) {
                     >
                         {/* OOPS! Tag */}
                         <div className="flex items-center gap-3">
-                            <span className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#DFB261] font-semibold">
+                            <span className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#DFB261] font-semibold drop-shadow-sm">
                                 {tag}
                             </span>
                             <span className="w-10 sm:w-14 h-[2px] bg-[#DFB261]"></span>
@@ -111,7 +121,7 @@ export default function NotFoundSection({ data }: NotFoundSectionProps) {
 
                         {/* Giant 404 Title with Gold Middle Zero */}
                         <h1
-                            className="text-6xl sm:text-7xl md:text-8xl lg:text-[140px] xl:text-[170px] font-bold tracking-tight text-[#121212] select-none leading-none"
+                            className="text-6xl sm:text-7xl md:text-8xl lg:text-[140px] xl:text-[170px] font-bold tracking-tight text-white lg:text-[#121212] select-none leading-none drop-shadow-md lg:drop-shadow-none"
                             style={{ fontFamily: "'Playfair Display', serif" }}
                         >
                             {renderCode()}
@@ -119,14 +129,14 @@ export default function NotFoundSection({ data }: NotFoundSectionProps) {
 
                         {/* Subheading */}
                         <h2
-                            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#121212] tracking-tight"
+                            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white lg:text-[#121212] tracking-tight drop-shadow-md lg:drop-shadow-none"
                             style={{ fontFamily: "'Playfair Display', serif" }}
                         >
                             {subheading}
                         </h2>
 
                         {/* Description */}
-                        <p className="text-gray-600 text-sm sm:text-base font-light max-w-lg leading-relaxed">
+                        <p className="text-gray-200 lg:text-gray-600 text-sm sm:text-base font-normal lg:font-light max-w-lg leading-relaxed drop-shadow-sm lg:drop-shadow-none">
                             {description}
                         </p>
 
@@ -134,10 +144,10 @@ export default function NotFoundSection({ data }: NotFoundSectionProps) {
                         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-3 sm:pt-4 w-full sm:w-auto">
                             {/* Primary Gold Button */}
                             {primaryButton && (
-                                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-full sm:w-auto">
+                                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-fit sm:w-auto">
                                     <Link
                                         href={primaryButton.href || "/"}
-                                        className="w-full sm:w-auto inline-flex items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-6 py-3 sm:px-8 sm:py-3.5 rounded-full transition-all duration-300 text-sm sm:text-base tracking-wide group shadow-sm hover:shadow-md"
+                                        className="w-fit sm:w-auto inline-flex items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-6 py-3 sm:px-8 sm:py-3.5 rounded-full transition-all duration-300 text-sm sm:text-base tracking-wide group shadow-sm hover:shadow-md"
                                     >
                                         {renderIcon(primaryButton.icon, LucideIcons.Home, "w-4 h-4")}
                                         <span>{primaryButton.text}</span>
@@ -152,10 +162,10 @@ export default function NotFoundSection({ data }: NotFoundSectionProps) {
 
                             {/* Secondary Outline Button */}
                             {secondaryButton && (
-                                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-full sm:w-auto">
+                                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-fit sm:w-auto">
                                     <Link
                                         href={secondaryButton.href || "/services"}
-                                        className="w-full sm:w-auto inline-flex items-center justify-center font-medium gap-3 border border-[#DFB261] hover:bg-[#DFB261] text-[#121212] hover:text-black px-6 py-3 sm:px-8 sm:py-3.5 rounded-full transition-all duration-300 text-sm sm:text-base tracking-wide group"
+                                        className="w-fit sm:w-auto inline-flex items-center justify-center font-medium gap-3 border border-[#DFB261] hover:bg-[#DFB261] text-white lg:text-[#121212] hover:text-black px-6 py-3 sm:px-8 sm:py-3.5 rounded-full transition-all duration-300 text-sm sm:text-base tracking-wide group"
                                     >
                                         {renderIcon(
                                             secondaryButton.icon,
@@ -169,12 +179,12 @@ export default function NotFoundSection({ data }: NotFoundSectionProps) {
                         </div>
                     </motion.div>
 
-                    {/* Right Column: Cursive Branding Quote (Span 5) */}
+                    {/* Right Column: Cursive Branding Quote (Span 5) - Hidden on sm/md, visible on lg */}
                     <motion.div
                         initial={{ opacity: 0, x: 30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-                        className="lg:col-span-5 flex flex-col items-center lg:items-end justify-center pt-6 lg:pt-0 relative lg:-left-[400px]"
+                        className="hidden lg:flex lg:col-span-5 flex-col items-center lg:items-end justify-center pt-6 lg:pt-0 relative lg:-left-[400px]"
                     >
                         {/* Cursive Quote Floating Text */}
                         <div className="text-center lg:text-right space-y-2 sm:space-y-3 max-w-md lg:max-w-none">

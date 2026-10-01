@@ -241,7 +241,7 @@ export default function ServiceDetailSection({
                                     {appointmentCard?.description || "Get expert care and a fresh new look. Choose your preferred date and time."}
                                 </p>
                                 <div className="pt-2">
-                                    <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-fit lg:w-full">
+                                    <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-fit">
                                         <Link
                                             href={appointmentCard?.buttonHref || "/contact-us"}
                                             className="inline-flex lg:flex w-auto lg:w-full items-center justify-center font-medium gap-3 bg-[#DFB261] hover:bg-black hover:border hover:border-[#DFB261] text-black hover:text-white border border-[#DFB261] px-6 py-2.5 sm:px-8 lg:py-3 rounded-full transition-all duration-300 text-sm lg:text-base tracking-wide group">
@@ -276,7 +276,7 @@ export default function ServiceDetailSection({
                                         {renderIcon(needHelpCard?.phoneIcon, MdCall, "w-5 h-5")}
                                     </motion.div>
                                     <span className="font-medium text-[#121212] lg:text-sm text-xs">
-                                        {needHelpCard?.phone || "+91 98765 43210"}
+                                        {needHelpCard?.phone || "+1 000000000"}
                                     </span>
                                 </div>
                                 <div className="flex items-center gap-3 group">
@@ -288,7 +288,7 @@ export default function ServiceDetailSection({
                                         {renderIcon(needHelpCard?.emailIcon, IoMdMail, "w-5 h-5")}
                                     </motion.div>
                                     <span className="font-medium text-[#121212] lg:text-sm text-xs break-all">
-                                        {needHelpCard?.email || "info@haicraftsalon.com"}
+                                        {needHelpCard?.email || "info@xyz"}
                                     </span>
                                 </div>
                                 <div className="flex items-center gap-3 group">
@@ -300,7 +300,7 @@ export default function ServiceDetailSection({
                                         {renderIcon(needHelpCard?.addressIcon, FaMapMarkerAlt, "w-5 h-5")}
                                     </motion.div>
                                     <span className="font-medium text-[#121212] lg:text-sm text-xs">
-                                        {needHelpCard?.address || "123 Styling Street, New Delhi, India"}
+                                        {needHelpCard?.address || "3170 Rosewood Lane Unit 200 , Beverly Hills, CA 90210"}
                                     </span>
                                 </div>
                             </div>
@@ -322,11 +322,10 @@ export default function ServiceDetailSection({
                                             key={srv.id}
                                             type="button"
                                             onClick={() => handleServiceSelect(srv)}
-                                            className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 whitespace-nowrap cursor-pointer ${
-                                                isActive
+                                            className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 whitespace-nowrap cursor-pointer ${isActive
                                                     ? "bg-[#DFB261] text-[#121212] font-semibold shadow-sm"
                                                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                                            }`}
+                                                }`}
                                         >
                                             {srv.name || srv.title}
                                         </button>
