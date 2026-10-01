@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, useInView, animate } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useEffect, useRef } from "react";
@@ -31,7 +32,13 @@ function Counter({ from, to, duration = 2 }: { from: number; to: number; duratio
 
 import siteData from "@/data/index";
 
-export default function AboutSection() {
+interface AboutSectionProps {
+    showButton?: boolean;
+}
+
+export default function AboutSection({ showButton }: AboutSectionProps = {}) {
+    const pathname = usePathname();
+    const shouldShowButton = showButton !== undefined ? showButton : pathname !== "/about";
     const { about } = siteData.home;
 
     return (
@@ -89,16 +96,18 @@ export default function AboutSection() {
                         ))}
 
                         {/* CTA Button */}
-                        <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }} className="pt-2">
-                            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="inline-block">
-                                <Link
-                                    href={about.cta.href}
-                                    className="inline-flex items-center gap-3 bg-[#DFB261] hover:bg-black text-black hover:text-white border border-[#DFB261] hover:border-black font-medium px-10 py-4 shadow-lg shadow-[#d4af37]/20 transition-all duration-300 text-sm lg:text-md tracking-wide group">
-                                    <span>{about.cta.text}</span>
-                                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                                </Link>
+                        {shouldShowButton && (
+                            <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }} className="pt-2">
+                                <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="inline-block">
+                                    <Link
+                                        href={about.cta.href}
+                                        className="inline-flex items-center gap-3 bg-[#DFB261] hover:bg-black text-black hover:text-white border border-[#DFB261] hover:border-black font-medium px-10 py-4 shadow-lg shadow-[#d4af37]/20 transition-all duration-300 text-sm lg:text-md tracking-wide group">
+                                        <span>{about.cta.text}</span>
+                                        <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                                    </Link>
+                                </motion.div>
                             </motion.div>
-                        </motion.div>
+                        )}
 
                         {/* Statistics Grid */}
                         <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } } }} className="flex justify-between sm:grid sm:grid-cols-3 gap-2 sm:gap-6 ">

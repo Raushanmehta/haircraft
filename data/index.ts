@@ -45,6 +45,7 @@ export type HairCraftLegalData = HairCraftSections["legal"];
 export type PolicyPageData = HairCraftLegalData["privacyPolicy"];
 export type PolicySectionItem = PolicyPageData["sections"][number];
 export type HairCraftNotFoundData = HairCraftSections["notFound"]["variants"]["HairCraftNotFound1"];
+export type HairCraftThankYouData = HairCraftSections["thankYou"]["variants"]["HairCraftThankYou1"];
 
 // ── Canonical Mapped Site Data Object ──
 const sec = siteData.HairCraft.sections;
@@ -81,6 +82,7 @@ const siteMap = {
   termsAndConditions: sec.legal.termsAndConditions,
   cancellationPolicy: sec.legal.cancellationPolicy,
   notFound: sec.notFound.variants.HairCraftNotFound1,
+  thankYou: sec.thankYou.variants.HairCraftThankYou1,
 
   // Compatibility object so existing components importing `siteData.home.hero` don't break
   home: {

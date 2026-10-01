@@ -234,6 +234,18 @@
                 "component": "HairCraftNotFound1"
               }
             ]
+          },
+          "thank-you": {
+            "components": [
+              {
+                "key": "pageTopSection",
+                "component": "HairCraftPageTop1"
+              },
+              {
+                "key": "thankYou",
+                "component": "HairCraftThankYou1"
+              }
+            ]
           }
         }
       }
@@ -388,6 +400,10 @@
                 {
                   "label": "Contact Us",
                   "href": "/contact-us"
+                },
+                {
+                  "label": "Thank You",
+                  "href": "/thank-you"
                 }
               ]
             },
@@ -2665,6 +2681,39 @@
                 "alt": "Salon styling station counter"
               },
               "badge": "\"Look Good Feel Better\""
+            }
+          }
+        }
+      },
+      "thankYou": {
+        "variants": {
+          "HairCraftThankYou1": {
+            "pageTop": {
+              "title": "Thank You",
+              "breadcrumbs": [
+                {
+                  "label": "Home",
+                  "href": "/"
+                },
+                {
+                  "label": "Thank You",
+                  "href": "/thank-you"
+                }
+              ]
+            },
+            "tag": "Request Submitted Successfully",
+            "titlePart1": "Thank You for Choosing",
+            "titlePart2": "HairCraft",
+            "description": "We have received your request and our styling team is already on it. A dedicated concierge will reach out to you within a few hours to confirm all details.",
+            "primaryButton": {
+              "text": "Back to Home",
+              "href": "/",
+              "icon": "Home"
+            },
+            "secondaryButton": {
+              "text": "Explore Services",
+              "href": "/services",
+              "icon": "ArrowRight"
             }
           }
         }
